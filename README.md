@@ -7,5 +7,7 @@ Nuestro Ecommerce brinda bebidas alcoholicas a todo el pais, en nuestro catoalog
 2- Una breve descripción de los integrantes del equipo.
  
  Valentin Laurenzano tengo 26 años, Estudio derecho en la UBA. 
+ Lucas García Ronzoni tengo 32 años, Estudio licenciatura en Artes de la Escritura en la UNA.
+ 
  
 
