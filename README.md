@@ -6,5 +6,6 @@ Nuestro Ecommerce brinda bebidas alcoholicas a todo el pais, en nuestro catoalog
 
 2- Una breve descripción de los integrantes del equipo.
  
- Valentin Laurenzano tengo 26 años, 
+ Valentin Laurenzano tengo 26 años, Estudio derecho en la UBA. 
+ 
 
