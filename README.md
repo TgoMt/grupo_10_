@@ -18,5 +18,4 @@ Nuestro Ecommerce brinda bebidas alcoholicas a todo el pais, en nuestro catoalog
  https://www.solodeportes.com.ar/ --> lo que nos gusto de esta pagina es que en su cuerpo de pagina hay un menu por filtros de cada deporte que uno practica, filtrando los productos por deportes especificos.
  
  4 - Crear un wireframe y un boceto del sitio
- 
-
+Los bocetos y el wireframe los hicimos en el Trello, aqui el link: https://trello.com/b/6Es18YFN/wireframe
