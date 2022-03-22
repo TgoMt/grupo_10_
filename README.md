@@ -10,5 +10,13 @@ Nuestro Ecommerce brinda bebidas alcoholicas a todo el pais, en nuestro catoalog
  
  Lucas García Ronzoni tengo 32 años, Estudio licenciatura en Artes de la Escritura en la UNA.
  
+ 3 - Buscar referentes de paginas 5 
+ https://www.fullescabio.com/ --> lo que nos gusto de esta pagina es el pequño menu con fotos de los prodcutos que se mueven en lista.
+ https://www.bodegalaabeja.com.ar/ --> lo que nos atrae de esta pagina es el menu superior que acompaña en el movimiento de toda la pagina siendo el mismo translucido
+ https://siempreencasa.com.ar/ --> lo que nos atrae de esta pagina es su apartado de "como funciona" detallando el procedimiento que maneja como Ecommerce
+ https://www.jagermeister.com/es-ES/ --> la gama de colores que maneja la pagina nos parece sumamente interesante como propuesta, con colores soios y elegantes.
+ https://www.solodeportes.com.ar/ --> lo que nos gusto de esta pagina es que en su cuerpo de pagina hay un menu por filtros de cada deporte que uno practica, filtrando los productos por deportes especificos.
+ 
+ 4 - Crear un wireframe y un boceto del sitio
  
 
