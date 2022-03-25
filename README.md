@@ -10,6 +10,10 @@ Nuestro Ecommerce brinda bebidas alcoholicas a todo el pais, en nuestro catoalog
  
  Lucas García Ronzoni tengo 32 años, Estudio licenciatura en Artes de la Escritura en la UNA.
  
+ Maximo Colombo Vicchi tengo 19 años, soy de Mendoza y Estudio programacion en la UTN(FRM).
+ 
+ Thiago Duran ------
+ 
  3 - Buscar referentes de paginas 5 
  https://www.fullescabio.com/ --> lo que nos gusto de esta pagina es el pequño menu con fotos de los prodcutos que se mueven en lista.
  https://www.bodegalaabeja.com.ar/ --> lo que nos atrae de esta pagina es el menu superior que acompaña en el movimiento de toda la pagina siendo el mismo translucido
