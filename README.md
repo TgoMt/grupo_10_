@@ -12,7 +12,7 @@ Nuestro Ecommerce brinda bebidas alcoholicas a todo el pais, en nuestro catoalog
  
  Maximo Colombo Vicchi tengo 19 años, soy de Mendoza y Estudio programacion en la UTN(FRM).
  
- Thiago Duran ------
+ Thiago Duran tengo 21 años. Estudio Licenciatura en Artes Audiovisuales en la UNA y soy competidor amateur de MMA. 
  
  3 - Buscar referentes de paginas 5 
  https://www.fullescabio.com/ --> lo que nos gusto de esta pagina es el pequño menu con fotos de los prodcutos que se mueven en lista.
