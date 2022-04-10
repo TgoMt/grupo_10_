@@ -1,0 +1,63 @@
+:root {
+    --Verde: #335D47;
+    --Rojo: #FB582F;
+    --Marron:#E47718;
+    --Azul:#052963;
+
+    --Cuerpos_de_texto: 12px;
+    --Titulares: 24px;
+    --Precios: 18px;
+    --Descripciones: 16px;
+}
+
+header{
+    background-color: var(--Verde);
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+header div{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 200px
+
+}
+
+header nav ul{
+   /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;*/
+    font-size: var(--Cuerpos_de_texto);
+    color: var(--Azul);
+    list-style: none;
+}
+
+header a{
+    color: var(--Azul);
+}
+
+.fa-search{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main{
+    background-color: var(--Rojo);
+}
+
+.producto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.precios-descripcion{
+    display: flex;
+    flex-wrap: wrap;
+}
