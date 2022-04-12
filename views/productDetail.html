@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,56 +8,79 @@
     <title>Producto. Si pinta</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/productDetail.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
-        <div>
-            <img class="logo" src="img/logo_duende.png" alt="logo SiPintaPinta"></div>
-        <div>
-            <nav>
+        <div class="header-completo">
+            <img class="logo" src="img/logo_duende.png" alt="logo SiPintaPinta">
+            <nav class="vinculos">
                 <ul>
                     <li><a href="http://localhost:3333/index">Inicio</a><i class="fas fa-house-user"></i></li>
                     <li><a href="http://localhost:3333/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
+                </ul>
+                <ul>
                     <li><a href="http://localhost:3333/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
                     <li><a href="http://localhost:3333/Register">Registrarse</a><i class="fas fa-registered"></i></li>
+                    <li><a href="http://localhost:3333/productDetail">Productos</a><i class="fas fa-beer"></i></li>
                 </ul>
-            </nav></div>
-            <div>
-                <i class="fas fa-search"></i>
-            </div>
+            </nav>
+        </div>
+        <div class="buscador-barra">
+            <form class="barra-buscador" action="/register" method="POST">
+                <input type="text" name="buscador" id="buscador" placeholder="Buscar productos, marcas">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
     </header>
     <main>
-        <section class="imagen-producto">
-            <div>
-                <img class="producto" src="img/cerveza_andes.jpg" alt="cerveza andes roja">
-            </div>
-        </section>
-        <section class="precios-descripcion">
-            <div>
-            <h1>Andes Roja x 473cc</h1>
-            <p>introduzca cantidad</p><p>total</p>
-            <p>Precio por unidad</p><p>$200,00</p>
-            <p>Precio por pack</p><p>$1000</p>
-            <p>Precio al por mayor (mas de 12 unidades)</p><p>$150,00c/u</p>
-            </div>
-            <h2>Sobre Andes pura malta roja</h2>
-            <p>Dicen que la Andes Origen Roja es la favorita. Está hecha con tres maltas, entre ellas la malta Caramelo que además de darle un aroma suave y sabor balanceado, la visten de un color ámbar cobrizo.
-                Al probarla va a notar una leve acidez con final seco, el amargor justo y un cuerpo intenso. Para que su experiencia sea mucho mejor, no es un dato menor tomarla en copa, así mantendrá los aromas por más tiempo.</p>
-            <p>ALCOHOL
-                5,1%
-                AMARGO
-                18 IBU
-                COLOR
-                18 EBC
-                Estilo: Vienna Lager.
-                Escuela cervecera: Alemana.
-                Ingredientes: Agua, Malta de Cebada, Lúpulo
-                Maltas: Pilsen (argentina), Munich (argentina), Caramelo (argentina)
-                Lúpulos: Cascade (argentina), Zeus (EEUU)
-                Levadura: Lager</p>
-                <div>Valoracion de los clientes</div>
-        </section>
+        <div>
+            <section class="main-productDetail">
+                <section class="imagen-producto">
+                    <div>
+                        <img class="producto" src="img/cerveza_andes.jpg" alt="cerveza andes roja">
+                    </div>
+                </section>
+                <section class="precios-descripcion">
+                    <div>
+                        <h1>Andes Roja x 473cc</h1>
+                        <p>introduzca cantidad</p>
+                        <p>total</p>
+                        <p>Precio por unidad</p>
+                        <p>$200,00</p>
+                        <p>Precio por pack</p>
+                        <p>$1000</p>
+                        <p>Precio al por mayor (mas de 12 unidades)</p>
+                        <p>$150,00c/u</p>
+                    </div>
+                    <h2>Sobre Andes pura malta roja</h2>
+                    <p>Dicen que la Andes Origen Roja es la favorita. Está hecha con tres maltas, entre ellas la malta
+                        Caramelo que además de darle un aroma suave y sabor balanceado, la visten de un color ámbar
+                        cobrizo.
+                        Al probarla va a notar una leve acidez con final seco, el amargor justo y un cuerpo intenso.
+                        Para
+                        que su experiencia sea mucho mejor, no es un dato menor tomarla en copa, así mantendrá los
+                        aromas
+                        por más tiempo.</p>
+                    <p>ALCOHOL
+                        5,1%
+                        AMARGO
+                        18 IBU
+                        COLOR
+                        18 EBC
+                        Estilo: Vienna Lager.
+                        Escuela cervecera: Alemana.
+                        Ingredientes: Agua, Malta de Cebada, Lúpulo
+                        Maltas: Pilsen (argentina), Munich (argentina), Caramelo (argentina)
+                        Lúpulos: Cascade (argentina), Zeus (EEUU)
+                        Levadura: Lager</p>
+                    <div>Valoracion de los clientes</div>
+                </section>
+            </section>
+        </div>
     </main>
 </body>
+
 </html>
