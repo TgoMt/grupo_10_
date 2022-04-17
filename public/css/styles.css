@@ -1,0 +1,59 @@
+:root {
+    --Verde: #335D47;
+    --Rojo: #FB582F;
+    --Marron:#E47718;
+    --Azul:#052963;
+
+    --Cuerpos_de_texto: 15px;
+    --Titulares: 24px;
+}
+
+header{
+    background-color: var(--Verde);
+    display: block;
+    padding: 10px;
+}
+
+header div{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+}
+
+
+.logo{
+    display: flex;
+    flex-wrap: nowrap;
+    max-width: 35%
+}
+
+header nav ul{
+    font-size: var(--Cuerpos_de_texto);
+    color: var(--Azul);
+    list-style: none;
+}
+
+header ul a{
+    color: var(--Azul);
+    text-decoration: none;
+}
+
+header ul li{
+    margin-top: 15px;
+}
+
+.fa-search{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vinculos{
+    display: flex;
+    justify-content: start;
+    padding: 0px;
+}
+
+.buscador-barra{
+    justify-content: space-around;
+    align-items: center;
+}

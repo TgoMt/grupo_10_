@@ -1,0 +1,17 @@
+
+
+.main-productDetail{
+    background-color: var(--Rojo);
+}
+
+.producto{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+}
+
+.precios-descripcion{
+    display: flex;
+    flex-wrap: wrap;
+}
+
