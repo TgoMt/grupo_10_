@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,17 +32,26 @@
         </form>
     </div>
 </header>
+
 <body>
     <main>
         <form action="/login" method="POST">
             <div class="formulario-login">
-                    <input type="text" name="nombre-usuario" id="nombre-usuario" placeholder="Nombre de usuario" required>
-                    <input type="password" name="contraseña" id="contraseña"placeholder="Elegí tu contraseña" required>
-                <!-- <button> -->
-                    <input class="boton-enviar" type="submit" value="Enviar">
-
-        </div>
+                <label for="email">Correo Electronico</label><br>
+                 <input type="email" name="email" id="email" required><br>
+                <label for="contraseña">Contraseña</label><br>
+                 <input type="password" name="contraseña" id="contraseña" required><br>
+                <div class="olvide-contraseña"><button>Olvide mi contraseña</button></div><br>
+                 <input class="boton-enviar" type="submit" value="Iniciar Sesion">
+            </div><br><br>
         </form>
-        </main>    
+        <div class="entrar-con"> 
+            <button>Continuar con Google</button><br><br>
+            <button>Continuar con Facebook</button><br>
+            <p>¿Aun no tienes una cuenta?
+               <a href="/register"><button>Crear Cuenta</button></a></p> 
+        </div>
+    </main>
 </body>
+
 </html>
