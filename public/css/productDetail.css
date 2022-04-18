@@ -18,6 +18,7 @@
     right: 15px;
     list-style: none;
     margin-right: 10px;
+    line-height: 25px;
 }
 
 .producto{
@@ -32,6 +33,7 @@
 .datos{
     max-width: 50%;
     margin-left: 10px;
+    line-height: 25px;
 }
 
 .informacion{
@@ -59,4 +61,22 @@
         padding: 10px;
     }
 
+    .precios ul{
+        line-height: 70px;
+    }
+
+    .datos{
+        line-height: 35px;
+    }
+
+}
+
+@media (min-width: 1024px){
+    .precios ul{
+        line-height: 90px;
+    }
+
+    .sobre-andes p{
+        line-height: 40px;
+    }
 }
