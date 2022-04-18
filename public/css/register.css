@@ -1,0 +1,25 @@
+.formulario-register{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: orange;
+    width: 70%;
+    padding: 5px;
+}
+
+.columna1{
+   margin: 3px;
+}
+.columna2{
+    margin: 3px;
+}
+
+
+main input{
+    margin-bottom: 4px;
+    outline: none;
+}
+
+h2{
+    text-align: center;
+}
