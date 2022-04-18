@@ -1,25 +1,81 @@
-.formulario-register{
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    background-color: orange;
-    width: 70%;
-    padding: 5px;
+.questions{
+ margin: 10px;
 }
-
-.columna1{
-   margin: 3px;
+.questions label{
+display: block;
 }
-.columna2{
-    margin: 3px;
+.networks{
+display: flex;
+justify-content: space-evenly;
 }
-
-
-main input{
-    margin-bottom: 4px;
-    outline: none;
+.main-register{
+background-color: white;
 }
-
-h2{
+.title{
     text-align: center;
+}
+.title , .information{
+    background-color: #E47718;
+}
+.networks img{
+margin-top: 4px;
+border: 1px solid gray;
+box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.form-questions{
+    border: solid 1px black;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+.information-tablet{
+    display: none;
+}
+.discount{
+    border: 1px solid rgb(189, 183, 183);
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    margin-top: 3px;
+}
+.follow-us{
+font-family: 'Quicksand', sans-serif;    
+}
+/* TABLET */
+@media (min-width: 425px) {
+.information{
+display: none;
+}
+.form-questions{
+    width: 50%;
+    border: none;
+    box-shadow: none;
+}
+.information-tablet{
+    display: flex;
+    width: 50%;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-right:1px double black;
+    padding-right: 8px;
+}
+.information-questions{
+    display: flex;
+}
+}
+/* Computadora */
+@media (min-width: 768px) {
+.questions label{
+display: contents;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.questions{
+    margin: none;
+}
+.information-tablet{
+    width: 50%;
+}
+.form-questions{
+    padding-left: 10px;
+}
+
 }

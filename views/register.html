@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,57 +8,107 @@
     <title>Registro</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/register.css">
+    <link href="css/register.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+
+
 </head>
+
 <body>
     <header>
-        <div class="header-completo">
+        <div>
             <img class="logo" src="img/logo_duende.png" alt="logo SiPintaPinta">
-            <nav class="vinculos">
+        </div>
+        <div>
+            <nav>
                 <ul>
-                    <li><a href="/index">Inicio</a><i class="fas fa-house-user"></i></li>
-                    <li><a href="/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
-                </ul>
-                <ul>
-                    <li><a href="/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
-                    <li><a href="/Register">Registrarse</a><i class="fas fa-registered"></i></li>
-                    <li><a href="/productDetail">Productos</a><i class="fas fa-beer"></i></li>
+                    <li><a href="http://localhost:3333/index">Inicio</a><i class="fas fa-house-user"></i></li>
+                    <li><a href="http://localhost:3333/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
+                    <li><a href="http://localhost:3333/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="http://localhost:3333/Register">Registrarse</a><i class="fas fa-registered"></i></li>
                 </ul>
             </nav>
         </div>
-        <div class="buscador-barra">
-            <form class="barra-buscador" action="/register" method="POST">
-                <input type="text" name="buscador" id="buscador" placeholder="Buscar productos, marcas">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
+        <div>
+            <i class="fas fa-search"></i>
         </div>
     </header>
-    <main>
-        <h2>Saludo de Bienvenida</h2><br>
-        <form action="/register" method="POST">
-            <div class="formulario-register">
-               <div class="columna1">
-                    <label for="nombre">Nombre</label><br>
-                <input type="text" name="nombre" id="nombre" required><br>
-                <label for="dni">DNI</label><br>
-                <input type="number" name="dni" id="dni" required><br>
-                <label for="contraseña">Contraseña</label><br>
-                <input type="password" name="contraseña" id="contraseña" required><br>
-                <input type="checkbox" name="terminos-y-condiciones" id="terminos-y-condiciones" required>
-                <label for="terminos-y-condiciones">Terminos y condiciones</label>
-            </div>
-            <div class="columna2">
-                <label for="apellido">Apellido</label><br>
-                <input type="text" name="apellido" id="apellido" required><br>
-                <label for="direccion">Direccion</label><br>
-                <input type="text" name="direccion" id="direccion" required><br>
-                <label for="confirmar-contraseña">Confirmar contraseña</label><br>
-                <input type="password" name="confirmar-contraseña" id="confirmar-contraseña" required>
-            </div>
-            </div>
-        </form>
-
+    <main class="main-register">
+        <article class="title">
+            <h2>Bienvenidos a Si Pinta, Pinta</h2>
+        </article>
+        <article class="information">
+            <p>Nuestro trabajo se basa en poder formar una relacion cliente-prveedor, lo que buscamos es poder vender
+                bebibas a todo el pais dirigido a un publico mayor de edad(Argentina +18)</p>
+        </article>
+        <div class="information-questions">
+            <article class="information-tablet">
+                <p>Nuestro trabajo se basa en poder formar una relacion cliente-prveedor, lo que buscamos es poder
+                    vender
+                    bebibas a todo el pais dirigido a un publico mayor de edad(Argentina +18)</p>
+                <p>Al ingresar tus datos, aceptas la politica y privacidad de la pagina entendiendo que te haces
+                    responsable por todas las operaciones realizadas dentro de la pagina</p>
+            </article>
+            <article class="form-questions">
+                <form action="/register" method="POST" class="form">
+                    <div class="questions">
+                        <label for="name">Nombre</label>
+                        <input type="text" name="name" id="name" required>
+                    </div>
+                    <div class="questions">
+                        <label for="lastname">Apellido</label>
+                        <input type="text" name="lastname" id="lastname" required>
+                    </div>
+                    <div class="questions">
+                        <label for="dni">D.N.I</label>
+                        <input type="number" name="dni" id="dni" minlength="8" maxlength="9" required>
+                    </div>
+                    <div class="questions">
+                        <label for="adress">Direccion</label>
+                        <input type="text" name="adress" id="adress" required>
+                    </div>
+                    <div class="questions">
+                        <label for="password">Contraseña</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="questions">
+                        <label for="ConfirmPassword">Confirmar Contraseña</label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="questions">
+                        <label for="Terms And Conditions">Terminos y Condiciones</label>
+                        <input type="checkbox" name="terms" id="terms" required>
+                    </div>
+                    <div class="questions">
+                        <button type="submit">Enviar</button>
+                        <button type="reset">Borrar</button>
+                    </div>
+                </form>
+            </article>
+        </div>
     </main>
+    <footer>
+        <div class="discount-networks">
+            <div class="discount">
+                <img src="/img/descuentos1.jpg" width=100% height="150px" art="ImagenDescuentos">
+            </div>
+            <div class="follow-us"><marquee><h3>Seguinos en todas nuestras redes</h3></marquee></div>
+            <div class="networks">
+                <a href="https://www.instagram.com/"><img src="/img/instagram.jpg" alt="Instagram" width=60px
+                        height="60px"></a>
+                <a href="https://www.twitter.com/"><img src="/img/twitter.png" alt="Twitter" width=60px
+                        height="60px"></a>
+                <a href="https://web.whatsapp.com/"><img src="/img/whatsapp.png" alt="Whatsapp" width=60px
+                        height="60px"></a>
+
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
