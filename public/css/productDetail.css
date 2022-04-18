@@ -1,17 +1,82 @@
-
-
 .main-productDetail{
     background-color: var(--Rojo);
 }
 
+.producto-precios{
+    display: flex;
+}
+
+.titulo-precios{
+    max-width: 50%;
+}
+
+.producto-precios h1{
+    display: block;
+}
+
+.precios ul{
+    right: 15px;
+    list-style: none;
+    margin-right: 10px;
+    line-height: 25px;
+}
+
 .producto{
-    display: flex;
-    flex-wrap: wrap;
-    width: 200px;
+    max-width: 50%;
 }
 
-.precios-descripcion{
-    display: flex;
-    flex-wrap: wrap;
+.sobre-andes{
+    max-width: 50%;
+    margin-left: 10px;
 }
 
+.datos{
+    max-width: 50%;
+    margin-left: 10px;
+    line-height: 25px;
+}
+
+.informacion{
+    display: flex;
+}
+
+.valoracion{
+    margin-left: 10px;
+}
+
+@media (min-width: 767px) {
+    .titulo-precios{
+        font-size: 24px;
+    }
+
+    .informacion{
+        font-size: 22px;
+    }
+
+    .valoracion{
+        font-size: 22px;
+    }
+
+    .vinculos ul li{
+        padding: 10px;
+    }
+
+    .precios ul{
+        line-height: 70px;
+    }
+
+    .datos{
+        line-height: 35px;
+    }
+
+}
+
+@media (min-width: 1024px){
+    .precios ul{
+        line-height: 90px;
+    }
+
+    .sobre-andes p{
+        line-height: 40px;
+    }
+}

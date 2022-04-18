@@ -57,3 +57,20 @@ header ul li{
     justify-content: space-around;
     align-items: center;
 }
+
+@media (min-width: 767px) {
+    header nav ul{
+        font-size: 24px;
+    }
+
+    .buscador-barra{
+        font-size: 24px;
+    }
+}
+
+@media (min-width: 1024px){
+    header nav ul{
+        font-size: 35px;
+        display: inline-block;
+    }
+}

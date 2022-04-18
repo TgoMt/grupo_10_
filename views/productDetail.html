@@ -18,13 +18,13 @@
             <img class="logo" src="img/logo_duende.png" alt="logo SiPintaPinta">
             <nav class="vinculos">
                 <ul>
-                    <li><a href="http://localhost:3333/index">Inicio</a><i class="fas fa-house-user"></i></li>
-                    <li><a href="http://localhost:3333/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
+                    <li><a href="/index">Inicio</a><i class="fas fa-house-user"></i></li>
+                    <li><a href="/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
                 </ul>
                 <ul>
-                    <li><a href="http://localhost:3333/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
-                    <li><a href="http://localhost:3333/Register">Registrarse</a><i class="fas fa-registered"></i></li>
-                    <li><a href="http://localhost:3333/productDetail">Productos</a><i class="fas fa-beer"></i></li>
+                    <li><a href="/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
+                    <li><a href="/Register">Registrarse</a><i class="fas fa-registered"></i></li>
+                    <li><a href="/productDetail">Productos</a><i class="fas fa-beer"></i></li>
                 </ul>
             </nav>
         </div>
@@ -36,25 +36,22 @@
         </div>
     </header>
     <main>
-        <div>
-            <section class="main-productDetail">
-                <section class="imagen-producto">
-                    <div>
-                        <img class="producto" src="img/cerveza_andes.jpg" alt="cerveza andes roja">
+        <div class="main-productDetail">
+            <section class="producto-precios">
+                <img class="producto" src="img/cerveza_andes.jpg" alt="cerveza andes roja">
+                <div class="titulo-precios">
+                    <h1>Andes Roja x 473cc</h1>
+                    <div class="precios">
+                        <ul>
+                            <li class="precios-descripcion">Precio por unidad $200,00</li>
+                            <li class="precios-descripcion">Precio por pack $1000</li>
+                            <li class="precios-descripcion">Precio al por mayor (más de 12 unidades) $150,00c/u</li>
+                        </ul>
                     </div>
-                </section>
-                <section class="precios-descripcion">
-                    <div>
-                        <h1>Andes Roja x 473cc</h1>
-                        <p>introduzca cantidad</p>
-                        <p>total</p>
-                        <p>Precio por unidad</p>
-                        <p>$200,00</p>
-                        <p>Precio por pack</p>
-                        <p>$1000</p>
-                        <p>Precio al por mayor (mas de 12 unidades)</p>
-                        <p>$150,00c/u</p>
-                    </div>
+                </div>
+            </section>
+            <section class="informacion">
+                <div class="sobre-andes">
                     <h2>Sobre Andes pura malta roja</h2>
                     <p>Dicen que la Andes Origen Roja es la favorita. Está hecha con tres maltas, entre ellas la malta
                         Caramelo que además de darle un aroma suave y sabor balanceado, la visten de un color ámbar
@@ -64,21 +61,20 @@
                         que su experiencia sea mucho mejor, no es un dato menor tomarla en copa, así mantendrá los
                         aromas
                         por más tiempo.</p>
-                    <p>ALCOHOL
-                        5,1%
-                        AMARGO
-                        18 IBU
-                        COLOR
-                        18 EBC
-                        Estilo: Vienna Lager.
-                        Escuela cervecera: Alemana.
-                        Ingredientes: Agua, Malta de Cebada, Lúpulo
-                        Maltas: Pilsen (argentina), Munich (argentina), Caramelo (argentina)
-                        Lúpulos: Cascade (argentina), Zeus (EEUU)
-                        Levadura: Lager</p>
-                    <div>Valoracion de los clientes</div>
-                </section>
+                </div>
+                <div class="datos">
+                    <p class="datos-reglon">ALCOHOL 5,1%
+                    <br>AMARGO 18 IBU
+                    <br>COLOR 18 EBC
+                    <br>Estilo: Vienna Lager.
+                    <br>Escuela cervecera: Alemana.
+                    <br>Ingredientes: Agua, Malta de Cebada, Lúpulo
+                    <br>Maltas: Pilsen (argentina), Munich (argentina), Caramelo (argentina)
+                    <br>Lúpulos: Cascade (argentina), Zeus (EEUU)
+                    <br>Levadura: Lager</p>
+                </div>
             </section>
+            <div class="valoracion">Valoración de los clientes</div>
         </div>
     </main>
 </body>
