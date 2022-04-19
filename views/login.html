@@ -8,6 +8,7 @@
     <title>Logueo</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
     <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
 </head>
 <header>
@@ -20,7 +21,7 @@
             </ul>
             <ul>
                 <li><a href="/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
-                <li><a href="/Register">Registrarse</a><i class="fas fa-registered"></i></li>
+                <li><a href="/register">Registrarse</a><i class="fas fa-registered"></i></li>
                 <li><a href="/productDetail">Productos</a><i class="fas fa-beer"></i></li>
             </ul>
         </nav>
@@ -35,25 +36,52 @@
 
 <body>
     <main>
-        <a href="#">Texto de regreso</a>
-        <p>Inicio de Sesion</p>
+        <a href="/">Volver a inicio</a>
+        <h3>Inicio de Sesion</h3>
+        <div class="estructura-completa">
         <form action="/login" method="POST">
+            
             <div class="formulario-login">
+                <div class="log">
                 <label for="email">Correo Electronico</label><br>
                  <input type="email" name="email" id="email" required><br>
                 <label for="contraseña">Contraseña</label><br>
                  <input type="password" name="contraseña" id="contraseña" required><br>
-                <div class="olvide-contraseña"><button>Olvide mi contraseña</button></div><br>
-                 <input class="boton-enviar" type="submit" value="Iniciar Sesion">
-            </div><br><br>
-        </form>
+                <a href="#">Olvide mi contraseña</a><br>
+                 <input class="inicio-sesion" type="submit" value="Iniciar Sesion">
+           <br><br>
+        </div>
         <div class="entrar-con"> 
             <button>Continuar con Google</button><br><br>
             <button>Continuar con Facebook</button><br>
             <p>¿Aun no tienes una cuenta?
                <a href="/register"><button>Crear Cuenta</button></a></p> 
         </div>
+        </div>
+        <!-- <div class="logo-body"> 
+            <img src="/img/logo_duende.png" alt="logo" ></div> -->
+        </form>
+        <!-- <div class="logo-body">
+            <img src="/img/logo_duende.png" alt="logo" ></div> -->
+    </div>
     </main>
+    <footer>
+        <div class="discount-networks">
+            <!-- <div class="discount">
+                <img src="/img/descuentos1.jpg" width=100% height="150px" art="ImagenDescuentos">
+            </div> -->
+            <div class="follow-us"><marquee><h3>Seguinos en todas nuestras redes</h3></marquee></div><br>
+            <div class="networks">
+                <a href="https://www.instagram.com/"><img src="/img/instagram.jpg" alt="Instagram" width=60px
+                        height="60px"></a>
+                <a href="https://www.twitter.com/"><img src="/img/twitter.png" alt="Twitter" width=60px
+                        height="60px"></a>
+                <a href="https://web.whatsapp.com/"><img src="/img/whatsapp.png" alt="Whatsapp" width=60px
+                        height="60px"></a>
+
+            </div>
+        
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,158 @@
+
+/* .imagen-body{
+    width: 40%;
+    max-width: 30%;
+} */
+
+.logo-body{
+    display: none;
+}
+main {
+    background-color: #E47718;
+}
+
+form {
+    text-align: center;
+}
+
+form input {
+    margin-bottom: 3px;
+    outline: none;
+}
+
+main a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+h3 {
+    text-align: center;
+}
+
+footer h3{
+    margin: 0;
+}
+
+.networks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.networks img {
+    margin-top: 4px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+
+
+/* ------TABLET Y DESKTOP----- */
+@media (min-width: 768px) {
+    .formulario-login {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+        justify-content: space-between;
+        margin-right: 7px;
+    }
+    .logo-body{
+        display: block;
+        justify-content: flex-end;
+    }
+    main{
+        position: relative;
+    }
+
+    main img{
+        height: 200px;
+        /* position: absolute;
+        right: 200px; */
+    }
+   
+
+    main a {
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        color: black;
+        /* margin-top: 5px; */
+    }
+
+    main input{
+        width: 50%;
+    }
+    h3 {
+        text-align: center;
+    }
+    
+    footer h3{
+        margin: 0;
+    }
+
+    main form a {
+        display: flex;
+        color: blue;
+    }
+
+    .log {
+        width: 38%;
+
+    }
+
+    .entrar-con {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        margin-top: 10px;
+        align-items: center;
+    }
+
+
+    .entrar-con p {
+        text-align: center;
+    }
+
+    .entrar-con a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .inicio-sesion {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nosotros {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+     
+
+    .networks img {
+        margin-top: 4px;
+        border: 1px solid gray;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    }
+
+    .nosotros img {
+        width: 90%;
+    }
+
+    .networks {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .follow-us {
+        font-family: 'Quicksand', sans-serif;
+    }
+}
