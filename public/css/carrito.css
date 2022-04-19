@@ -58,3 +58,6 @@ font-family: 'Quicksand', sans-serif;
     display: flex;
     justify-content: space-evenly;
 }
+.product-description input{
+    width:80%;
+}
