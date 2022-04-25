@@ -1,0 +1,162 @@
+* {
+          box-sizing: border-box;
+}
+
+main {
+          font-family: 'Gill Sans';
+       /*    background-image: url(/images/barra-de-bar.png);
+          background-attachment: fixed;
+          width: 100%;
+           */
+           background-color: orange;
+}
+
+main section article img {
+          width: 50%;
+          text-align: center;
+}
+
+article {
+          width: 100%;
+          padding-top: 5px;
+          margin: 5px;
+}
+
+h2 {
+          font-family: 'Gill Sans';
+          display: flex;
+          justify-content: center;
+          color: #BF9C53;
+          text-shadow: black 0.1em 0.1em 0.1em
+}
+
+
+
+.Producto a {
+          text-decoration: none;
+          color: black;
+          font-family: 'Gill Sans';
+
+}
+
+.Producto a:hover {
+          text-decoration: underline;
+}
+
+.Producto .imgProducto {
+          overflow: hidden;
+          border-radius: 15px;
+          
+}
+
+.Producto .imgProducto img {
+          width: 100%;
+          transition: all 0.5s;
+}
+
+.Producto:hover .imgProducto img {
+          transform: scale(1.2);
+}
+
+
+
+/* estilo B */
+.Producto a .imgProducto .descuento{
+          position: relative;
+          bottom: 550px;        
+          left: -245px;
+          font-size: 20px;
+          background: yellow;
+          padding: 10px;
+          color: black;
+          border-bottom-right-radius: 25px;
+          border-top-right-radius: 25px;
+}
+
+.Producto .conjuntoDescriptivo .add-cart{
+          display: inline-block;
+          margin-top: 2px;
+          text-decoration: none;
+          background-color: #BF9C53;
+          padding: 10px;
+          border: 1px solid #BF9C53;
+          border-radius: 25px;
+}
+
+.Producto .conjuntoDescriptivo .add-cart:hover{
+          color:#BF9C53;
+          background-color: white;
+          border: 1px solid #BF9C53;
+          
+}
+
+.Producto .conjuntoDescriptivo{
+         display: flex; 
+         flex-direction: column;
+         flex-wrap: wrap;
+         
+}
+.Producto .conjuntoDescriptivo h4{
+          margin: 0px;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 320px) {
+
+          article {
+                    width: 100%;
+                    padding-top: 5px;
+          }
+
+          main section article img {
+                    width: 100%;
+          }
+
+
+          .Ofertas {
+                    display: flex;
+                    justify-content: center;
+                    display: flex;
+                    text-align: center;
+                    width: 100%;
+
+          }
+
+          .Producto {
+                    font-family: sans-serif;
+          }
+
+          .Producto a .imgProducto .descuento{
+                    position: relative;
+                    bottom: 550px;        
+                    left: -245px;
+                    font-size: 20px;
+                    background: yellow;
+                    padding: 10px;
+                    color: black;
+                    border-bottom-right-radius: 25px;
+                    border-top-right-radius: 25px;
+          }
+
+
+
+}
