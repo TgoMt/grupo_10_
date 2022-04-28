@@ -8,17 +8,24 @@ app.listen(3333, ()=>
     console.log("esta funcionando http://localhost:3333")
 );
 
-app.get("/", (req, res)=> {
-    res.sendFile(path.resolve(__dirname, "./views/index.html"))
-});
+const indexRoutes = require("./routes/indexRoutes")
+const userRoutes = require("./routes/userRoutes")
+const productCartRoutes = require("./routes/productCartRoutes")
+const productDetailRoutes = require("./routes/productDetailRoutes")
 
-app.post("/", (req, res)=> {
-    res.sendFile(path.resolve(__dirname, "./views/index.html"))
-});
+app.use("/",indexRoutes)
+app.use("/users",userRoutes)
+app.use("/cart",productCartRoutes)
+app.use("/detail",productDetailRoutes)
 
-app.get("/register", (req, res)=> {
+/* app.post("/", (req, res)=> {
+    res.sendFile(path.resolve(__dirname, "./views/index.html"))
+}); */ 
+
+
+/* app.get("/register", (req, res)=> {
     res.sendFile(path.resolve(__dirname, "./views/register.html"))
-});
+}); */
 
 app.post("/register", (req, res) => {
     console.log("Llegó el formulario completo");
@@ -26,14 +33,14 @@ app.post("/register", (req, res) => {
     res.sendFile(htmlPath)
 })
 
-app.get("/login", (req, res)=> {
+/* app.get("/login", (req, res)=> {
     res.sendFile(path.resolve(__dirname, "./views/login.html"))
 });
-
-app.get("/productCart", (req, res)=> {
+ */
+/* app.get("/productCart", (req, res)=> {
     res.sendFile(path.resolve(__dirname, "./views/productCart.html"))
 });
-
-app.get("/productDetail", (req, res)=> {
+ */
+/* app.get("/productDetail", (req, res)=> {
     res.sendFile(path.resolve(__dirname, "./views/productDetail.html"))
-});
+}); */
