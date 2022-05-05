@@ -58,6 +58,25 @@ header ul li{
     align-items: center;
 }
 
+
+
+footer h3{
+    margin: 0;
+}
+
+.networks {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.networks img {
+    margin-top: 4px;
+    border: 1px solid gray;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+
+
 @media (min-width: 767px) {
     header nav ul{
         font-size: 24px;
@@ -65,6 +84,17 @@ header ul li{
 
     .buscador-barra{
         font-size: 24px;
+    }
+    .networks img {
+        margin-top: 4px;
+        border: 1px solid gray;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+
+    }
+    .networks {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
     }
 }
 

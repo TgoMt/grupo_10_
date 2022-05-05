@@ -1,11 +1,16 @@
+
 const path = require("path");
 
 const userControllers = {
     register:(req, res)=> {
-        res.render("login")
+        res.render("./users/register")
     },
     login: (req, res)=> {
-        res.render("register")
+        res.render("./users/login")
+    },
+    sendIndex : 
+    (req, res)=> {
+        render.post("../index")
     }
     
 }

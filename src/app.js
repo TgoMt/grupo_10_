@@ -14,14 +14,12 @@ app.listen(3333, ()=>
 
 const indexRoutes = require("./routes/indexRoutes")
 const userRoutes = require("./routes/userRoutes")
-const productCartRoutes = require("./routes/productCartRoutes")
-const productDetailRoutes = require("./routes/productDetailRoutes")
+const productsRoutes = require("./routes/productsRoutes")
 
-app.use("/",indexRoutes)
+
 app.use("/users",userRoutes)
-app.use("/cart",productCartRoutes)
-app.use("/detail",productDetailRoutes)
-
+app.use("/products",productsRoutes)
+app.use("/",indexRoutes)
 
 
 

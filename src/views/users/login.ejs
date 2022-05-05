@@ -1,38 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logueo</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="/css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/login.css">
-    <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+        <link href="/css/styles.css" rel="stylesheet">
+        <link rel="stylesheet" href="/css/login.css">
+        <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
 </head>
-<header>
-    <div class="header-completo">
-        <img class="logo" src="/img/logo_duende.png" alt="logo SiPintaPinta">
-        <nav class="vinculos">
-            <ul>
-                <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>
-                <li><a href="/cart/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
-            </ul>
-            <ul>
-                <li><a href="/users/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
-                <li><a href="/users/register">Registrarse</a><i class="fas fa-registered"></i></li>
-                <li><a href="/detail/productDetail">Productos</a><i class="fas fa-beer"></i></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="buscador-barra">
-        <form class="barra-buscador" action="/register" method="POST">
-            <input type="text" name="buscador" id="buscador" placeholder="Buscar productos, marcas">
-            <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-</header>
+
+    
+<%- include("../partials/header") %> 
 
 <body>
     <main>
@@ -44,9 +24,9 @@
             <div class="formulario-login">
                 <div class="log">
                 <label for="email">Correo Electronico</label><br>
-                 <input type="email" name="email" id="email" required><br>
+                 <input type="email" name="email" id="email" ><br>
                 <label for="contraseña">Contraseña</label><br>
-                 <input type="password" name="contraseña" id="contraseña" required><br>
+                 <input type="password" name="contraseña" id="contraseña" ><br>
                 <a href="#">Olvide mi contraseña</a><br>
                  <input class="inicio-sesion" type="submit" value="Iniciar Sesion">
            <br><br>
@@ -65,23 +45,7 @@
             <img src="/img/logo_duende.png" alt="logo" ></div> -->
     </div>
     </main>
-    <footer>
-        <div class="discount-networks">
-            <!-- <div class="discount">
-                <img src="/img/descuentos1.jpg" width=100% height="150px" art="ImagenDescuentos">
-            </div> -->
-            <div class="follow-us"><marquee><h3>Seguinos en todas nuestras redes</h3></marquee></div><br>
-            <div class="networks">
-                <a href="https://www.instagram.com/"><img src="/img/instagram.jpg" alt="Instagram" width=60px
-                        height="60px"></a>
-                <a href="https://www.twitter.com/"><img src="/img/twitter.png" alt="Twitter" width=60px
-                        height="60px"></a>
-                <a href="https://web.whatsapp.com/"><img src="/img/whatsapp.png" alt="Whatsapp" width=60px
-                        height="60px"></a>
-
-            </div>
-        
-    </footer>
+    <%- include("../partials/footer.ejs") %>
 </body>
 
 </html>
