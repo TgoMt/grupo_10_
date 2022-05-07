@@ -9,9 +9,8 @@ const userControllers = {
         res.render("./users/login")
     },
     sendIndex : 
-    (req, res)=> {
-        render.post("../index")
+        (req, res)=> {
+        res.send("Se registro correctamente")
     }
-    
 }
 module.exports = userControllers;

@@ -16,7 +16,41 @@
     <%- include("../partials/header") %>
 </body>
 </html>
+<article class="create-questions">
+<form action="./create" method="POST" class="create-form"></form>
+<div class="#">
+    <label for="name">Nombre del producto</label>
+    <input type="text" name="name" id="name">
+</div>
+<div class="#">
+    <label for="Description">Descripcion del producto</label>
+    <!-- <input type="text" name="Description" id="Description"> -->
+    <textarea name="description" id="description" class="#"></textarea>
+</div>
+<div class="#">
+    <label for="file">Imagen</label>
+    <input type="file" name="file" id="file" accept="jpg,png">
+</div>
+<div class="#">
+    <label for="category">Categoria</label>
+    <select name="category" id="category" class="#">
+        <option value="">Elegi</option>
+        <option value="">Bebidas Blancas</option>
+        <option value="">Cervezas</option>
+        <option value="">Licores</option>
+        <option value="">Vinos</option>
+        <option value="">Aperitivos</option>
+    </select>
+</div>
+<div class="#">
+    <label for="price">Precio</label>
+    <input type="number" name="price" id="price">
+</div>
 
+
+
+
+</article>
 
 
 
