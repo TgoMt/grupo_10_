@@ -15,23 +15,23 @@
 <%- include("../partials/header") %> 
 
 <body>
-    <main>
+    <main class="main-login">
         <a href="/">Volver a inicio</a>
-        <h3>Inicio de Sesion</h3>
-        <div class="estructura-completa">
-        <form action="/login" method="POST">
+        <h3 class="title-login">Inicio de Sesion</h3>
+        <div class="full-structure">
+        <form action="/login" method="POST" class="form-login">
             
-            <div class="formulario-login">
+            <div class="login-form">
                 <div class="log">
                 <label for="email">Correo Electronico</label><br>
                  <input type="email" name="email" id="email" ><br>
-                <label for="contraseña">Contraseña</label><br>
+                <label for="password-login">Contraseña</label><br>
                  <input type="password" name="contraseña" id="contraseña" ><br>
                 <a href="#">Olvide mi contraseña</a><br>
-                 <input class="inicio-sesion" type="submit" value="Iniciar Sesion">
+                 <input class="start-session" type="submit" value="Iniciar Sesion">
            <br><br>
         </div>
-        <div class="entrar-con"> 
+        <div class="enter-with"> 
             <button>Continuar con Google</button><br><br>
             <button>Continuar con Facebook</button><br>
             <p>¿Aun no tienes una cuenta?
