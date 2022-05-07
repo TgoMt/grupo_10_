@@ -2,58 +2,58 @@
     background-color: var(--Rojo);
 }
 
-.producto-precios{
+.product-price{
     display: flex;
 }
 
-.titulo-precios{
+.title-prices{
     max-width: 50%;
 }
 
-.producto-precios h1{
+.product-price h1{
     display: block;
 }
 
-.precios ul{
+.prices-pdetail ul{
     right: 15px;
     list-style: none;
     margin-right: 10px;
     line-height: 25px;
 }
 
-.producto{
+.product-img{
     max-width: 50%;
 }
 
-.sobre-andes{
+.over-andes{
     max-width: 50%;
     margin-left: 10px;
 }
 
-.datos{
+.data{
     max-width: 50%;
     margin-left: 10px;
     line-height: 25px;
 }
 
-.informacion{
+.information{
     display: flex;
 }
 
-.valoracion{
+.valoration{
     margin-left: 10px;
 }
 
 @media (min-width: 767px) {
-    .titulo-precios{
+    .title-prices{
         font-size: 24px;
     }
 
-    .informacion{
+    .information{
         font-size: 22px;
     }
 
-    .valoracion{
+    .valoration{
         font-size: 22px;
     }
 
@@ -61,22 +61,22 @@
         padding: 10px;
     } */
 
-    .precios ul{
+    .prices-pdetail ul{
         line-height: 70px;
     }
 
-    .datos{
+    .data{
         line-height: 35px;
     }
 
 }
 
 @media (min-width: 1024px){
-    .precios ul{
+    .prices-pdetail ul{
         line-height: 90px;
     }
 
-    .sobre-andes p{
+    .over-andes p{
         line-height: 40px;
     }
 }

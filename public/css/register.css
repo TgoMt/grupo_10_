@@ -11,10 +11,10 @@ justify-content: space-evenly;
 .main-register{
 background-color: white;
 }
-.title{
+.title-register{
     text-align: center;
 }
-.title , .information{
+.title-register , .information-register{
     background-color: #E47718;
 }
 .networks img{
@@ -39,7 +39,7 @@ font-family: 'Quicksand', sans-serif;
 }
 /* TABLET */
 @media (min-width: 425px) {
-.information{
+.information-register{
 display: none;
 }
 .form-questions{

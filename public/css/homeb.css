@@ -2,7 +2,7 @@
           box-sizing: border-box;
 }
 
-main {
+.main-homeb {
           font-family: 'Gill Sans';
        /*    background-image: url(/images/barra-de-bar.png);
           background-attachment: fixed;
@@ -11,18 +11,18 @@ main {
            background-color: orange;
 }
 
-main section article img {
+.main-homeb section article img {
           width: 50%;
           text-align: center;
 }
 
-article {
+.product {
           width: 100%;
           padding-top: 5px;
           margin: 5px;
 }
 
-h2 {
+.offers-title {
           font-family: 'Gill Sans';
           display: flex;
           justify-content: center;
@@ -32,36 +32,36 @@ h2 {
 
 
 
-.Producto a {
+.product a {
           text-decoration: none;
           color: black;
           font-family: 'Gill Sans';
 
 }
 
-.Producto a:hover {
+.product a:hover {
           text-decoration: underline;
 }
 
-.Producto .imgProducto {
+.product .imgProduct {
           overflow: hidden;
           border-radius: 15px;
           
 }
 
-.Producto .imgProducto img {
+.product .imgProduct img {
           width: 100%;
           transition: all 0.5s;
 }
 
-.Producto:hover .imgProducto img {
+.product:hover .imgProduct img {
           transform: scale(1.2);
 }
 
 
 
 /* estilo B */
-.Producto a .imgProducto .descuento{
+.product a .imgProduct .discount{
           position: relative;
           bottom: 550px;        
           left: -245px;
@@ -73,7 +73,7 @@ h2 {
           border-top-right-radius: 25px;
 }
 
-.Producto .conjuntoDescriptivo .add-cart{
+.product .conjuntoDescriptivo .add-cart{
           display: inline-block;
           margin-top: 2px;
           text-decoration: none;
@@ -83,20 +83,20 @@ h2 {
           border-radius: 25px;
 }
 
-.Producto .conjuntoDescriptivo .add-cart:hover{
+.product .productDescription .add-cart:hover{
           color:#BF9C53;
           background-color: white;
           border: 1px solid #BF9C53;
           
 }
 
-.Producto .conjuntoDescriptivo{
+.product .productDescription{
          display: flex; 
          flex-direction: column;
          flex-wrap: wrap;
          
 }
-.Producto .conjuntoDescriptivo h4{
+.product .productDescription h4{
           margin: 0px;
  }
 

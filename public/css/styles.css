@@ -47,13 +47,13 @@ header ul li{
     flex-wrap: wrap;
 }
 
-.vinculos{
+.header-links{
     display: flex;
     justify-content: start;
     padding: 0px;
 }
 
-.buscador-barra{
+.finder-bar{
     justify-content: space-around;
     align-items: center;
 }
@@ -82,7 +82,7 @@ footer h3{
         font-size: 24px;
     }
 
-    .buscador-barra{
+    .finder-bar{
         font-size: 24px;
     }
     .networks img {
