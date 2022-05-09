@@ -1,56 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Crear</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <link href="/css/styles.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    </head>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet" />
+    <link href="/css/crear.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
+</head>
+
 <body>
-    <%- include("../partials/header") %>
-</body>
+    <header>
+        <%- include("../partials/header") %>
+    </header>
+<main>
 </html>
-<article class="create-questions">
-<form action="./create" method="POST" class="create-form"></form>
-<div class="#">
-    <label for="name">Nombre del producto</label>
-    <input type="text" name="name" id="name">
+<div class="title-create">
+    <h2>Creando Un Producto</h2>
 </div>
-<div class="#">
-    <label for="Description">Descripcion del producto</label>
-    <!-- <input type="text" name="Description" id="Description"> -->
-    <textarea name="description" id="description" class="#"></textarea>
-</div>
-<div class="#">
-    <label for="file">Imagen</label>
-    <input type="file" name="file" id="file" accept="jpg,png">
-</div>
-<div class="#">
-    <label for="category">Categoria</label>
-    <select name="category" id="category" class="#">
-        <option value="">Elegi</option>
-        <option value="">Bebidas Blancas</option>
-        <option value="">Cervezas</option>
-        <option value="">Licores</option>
-        <option value="">Vinos</option>
-        <option value="">Aperitivos</option>
-    </select>
-</div>
-<div class="#">
-    <label for="price">Precio</label>
-    <input type="number" name="price" id="price">
-</div>
+<article class="create-form">
+    <form action="./create" method="POST">
+<div class="create-questions-separated">
+    <div class="create-questions">
+        <label for="name">Nombre del producto</label>
+        <input type="text" name="name" id="name" placeholder="Ejemplo: Cerveza Andes" class="create-questions-input"/>
+    </div>
 
+    <div class="create-questions">
+        <label for="Description">Descripcion del producto</label>
+        <textarea name="description" id="description" class="create-questions-input"></textarea>
+    </div>
+</div>
+    <div class="create-questions">
+        <label for="file">Imagen</label>
+        <input type="file" name="file" id="file" class="create-questions-input" accept="jpg,png" />
+    </div>
 
+    <div class="create-questions">
+        <label for="category">Categoria</label>
+        <select name="category" id="category" class="create-questions-input">
+            <option value="">Elegi</option>
+            <option value="">Bebidas Blancas</option>
+            <option value="">Cervezas</option>
+            <option value="">Licores</option>
+            <option value="">Vinos</option>
+            <option value="">Aperitivos</option>
+        </select>
+    </div>
 
-
+    <div class="create-questions">
+        <label for="price">Precio</label>
+        <input type="number" name="price" id="price"placeholder="Ejemplo: 150$" class="create-questions-input"/>
+    </div>
+    <div class="create-buttons">
+        <button type="submit">Aceptar</button>
+        <button type="reset">Borrar</button>
+    </div>
+</form>
 </article>
-
-
-
+</main>
+<footer>
+    <%- include("../partials/footer.ejs") %>
+</footer>
+</body>
