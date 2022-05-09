@@ -42,6 +42,23 @@ background-color:#ff973b ;
     margin-top: 10px;
 }
 
+.accept{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    width: 19vw;
+}
+.delete{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    width: 19vw;
+}
+
 
 /* ------- Edit View --------- */
 .edit-button{
@@ -72,5 +89,8 @@ background-color:#ff973b ;
 }
 .guardar:hover{
     background-color:aquamarine;
+}
+.accept:hover, .delete:hover{
+    background-color: aquamarine;
 }
 }
