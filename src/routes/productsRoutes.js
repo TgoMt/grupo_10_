@@ -11,5 +11,5 @@ router.get("/crear", productsControllers.crear)
 router.post("/", productsControllers.crearAgregado)
 
 router.get("/editar", productsControllers.editar)
-
+router.patch("/edit",productsControllers.sendEditar)
 module.exports = router;

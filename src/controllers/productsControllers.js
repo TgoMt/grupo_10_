@@ -17,8 +17,10 @@ res.send("Producto Creado")
 },
 editar:(req,res) => {
     res.render("./products/editar")
+},
+sendEditar:(req, res) => {
+    res.send("Producto Editado")
 }
-
 }
 
 module.exports = productsControllers;
