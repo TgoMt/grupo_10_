@@ -57,7 +57,10 @@
 .product:hover .imgProduct img {
           transform: scale(1.2);
 }
-
+.follow-us{
+   font-family: 'Quicksand', sans-serif;
+   margin-top: 10px;
+}
 
 
 /* estilo B */

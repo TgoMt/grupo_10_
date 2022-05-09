@@ -12,6 +12,9 @@ productDetail:(req, res)=> {
 crear:(req, res) => {
     res.render("./products/crear")
 },
+crearAgregado:(req, res) => {
+res.send("Producto Creado")
+},
 editar:(req,res) => {
     res.render("./products/editar")
 }

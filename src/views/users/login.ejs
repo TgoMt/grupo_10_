@@ -19,7 +19,7 @@
         <a href="/">Volver a inicio</a>
         <h3 class="title-login">Inicio de Sesion</h3>
         <div class="full-structure">
-        <form action="/login" method="POST" class="form-login">
+        <form action="/users/log" method="POST" class="form-login">
             
             <div class="login-form">
                 <div class="log">
@@ -34,15 +34,17 @@
         <div class="enter-with"> 
             <button>Continuar con Google</button><br><br>
             <button>Continuar con Facebook</button><br>
-            <p>¿Aun no tienes una cuenta?
-               <a href="/register"><button>Crear Cuenta</button></a></p> 
+            <!-- <p>¿Aun no tienes una cuenta?
+               <a href="/register"><button>Crear Cuenta</button></a></p> --> 
         </div>
         </div>
         <!-- <div class="logo-body"> 
             <img src="/img/logo_duende.png" alt="logo" ></div> -->
         </form>
-        <!-- <div class="logo-body">
-            <img src="/img/logo_duende.png" alt="logo" ></div> -->
+        <p class="text-register">¿Aun no tienes una cuenta?</p>
+        <form action="/users/reg" method="POST" class="form-login">
+            <input class="start-session" type="submit" value="Registrarse">
+        </form>
     </div>
     </main>
     <%- include("../partials/footer.ejs") %>

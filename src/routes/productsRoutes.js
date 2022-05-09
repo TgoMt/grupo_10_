@@ -8,6 +8,7 @@ router.get("/productCart",productsControllers.productCart)
 router.get("/productDetail",productsControllers.productDetail)
 
 router.get("/crear", productsControllers.crear)
+router.post("/", productsControllers.crearAgregado)
 
 router.get("/editar", productsControllers.editar)
 
