@@ -11,6 +11,9 @@ productDetail:(req, res)=> {
 },
 crear:(req, res) => {
     res.render("./products/crear")
+},
+editar:(req,res) => {
+    res.render("./products/editar")
 }
 
 }

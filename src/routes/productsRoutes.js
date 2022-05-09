@@ -9,4 +9,6 @@ router.get("/productDetail",productsControllers.productDetail)
 
 router.get("/crear", productsControllers.crear)
 
+router.get("/editar", productsControllers.editar)
+
 module.exports = router;

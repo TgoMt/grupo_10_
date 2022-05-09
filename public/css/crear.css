@@ -12,7 +12,9 @@
     margin-top: 2px;
     width: 100%;
     height: 30px;
+    outline: none;
 }
+
 .create-buttons{
     margin: 6px;
     display: flex;
@@ -40,10 +42,35 @@ background-color:#ff973b ;
     margin-top: 10px;
 }
 
+
+/* ------- Edit View --------- */
+.edit-button{
+   text-align: center;
+   margin-top: 15px;
+   margin-bottom: 25px;
+}
+.guardar{
+    padding: 7px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+}
+/* ----------       ------------ */
+
+
 @media (min-width: 425px) {
 .create-questions-separated{
     display: flex;
     width: 100%;
+    justify-content: space-around;
 }
-
+.create-questions-separated input{
+    width: 40vw;
+}
+.create-questions-separated textarea{
+    width: 40vw;
+}
+.guardar:hover{
+    background-color:aquamarine;
+}
 }
