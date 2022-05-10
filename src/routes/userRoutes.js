@@ -11,6 +11,9 @@ router.post("/log",userControllers.sendLogin)
 router.post("/reg",userControllers.sendToRegister)
 //cartel de se registro
 router.post("/registrado",userControllers.sendIndex)
-
+//cartel se logueo con google
+router.post("/reg/google",userControllers.sendLoginGoogle)
+//cartel se logueo con facebook
+router.post("/reg/facebook",userControllers.sendLoginFacebook)
 
 module.exports = router;

@@ -22,11 +22,7 @@ const productsRoutes = require("./routes/productsRoutes")
 app.use("/users",userRoutes)
 app.use("/products",productsRoutes)
 app.use("/",indexRoutes)
-
-
-//en el crear y editar creo que no deberia ir el follow us
+//por que en login(con google) va reg/google en vez de /reg/google
+//en el crear y editar tal vez sacar el follow us.......
 //falta hacer el productos
 //en el loguearse esta mal puesto el continuar con google y facebook--------------
-//cambiar la letra de los follow us
-//en el loguarse podriamos hacer que solo el form tenga el fondo naranja
-//en el index se ven corridas las imagenes

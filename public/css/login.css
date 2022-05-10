@@ -7,6 +7,9 @@
     font-family: 'Quicksand', sans-serif;
     margin-top: 10px;
 }
+.account-register{
+    padding-bottom: 15px;
+}
 .logo-body{
     display: none;
 }

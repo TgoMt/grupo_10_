@@ -18,5 +18,11 @@ const userControllers = {
     sendToRegister:(req, res)=> {
         res.redirect("/users/register")
     },
+    sendLoginGoogle:(req, res)=> {
+        res.send("Se logueo correctamente con Google")
+    },
+    sendLoginFacebook:(req, res)=> {
+        res.send("Se logueo correctamente con Facebook")
+    },
 }
 module.exports = userControllers;
