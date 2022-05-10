@@ -3,7 +3,10 @@
     width: 40%;
     max-width: 30%;
 } */
-
+.follow-us {
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 10px;
+}
 .logo-body{
     display: none;
 }

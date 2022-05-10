@@ -35,7 +35,8 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
     margin-top: 3px;
 }
 .follow-us{
-font-family: 'Quicksand', sans-serif;    
+font-family: 'Quicksand', sans-serif;
+margin-top: 10px;    
 }
 /* TABLET */
 @media (min-width: 425px) {

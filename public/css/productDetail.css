@@ -1,6 +1,10 @@
 .main-productDetail{
     background-color: var(--Rojo);
 }
+.follow-us{
+    font-family: 'Quicksand', sans-serif;
+    margin-top: 10px;    
+}
 
 .product-price{
     display: flex;
