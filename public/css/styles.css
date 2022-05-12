@@ -7,6 +7,9 @@
     --Cuerpos_de_texto: 15px;
     --Titulares: 24px;
 }
+body{
+    margin: 0;
+}
 
 header{
     background-color: var(--Verde);

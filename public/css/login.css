@@ -45,9 +45,8 @@
     background-color: #E47718;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5em;
-    margin-top: -0px;
+    margin-top: 1px;
     margin-bottom: 20px;
-
 }
 
 
@@ -160,7 +159,12 @@ color: white;
         align-items: center;
     }
 
-
+    .enter-with button{
+        transition: all 0.5s;
+    }
+    .enter-with button:hover{
+        transform: scale(1.2);
+    }
 
     .enter-with p {
         text-align: center;
