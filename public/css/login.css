@@ -1,20 +1,22 @@
 
-/* .imagen-body{
-    width: 40%;
-    max-width: 30%;
-} */
 .follow-us {
     font-family: 'Quicksand', sans-serif;
     margin-top: 10px;
 }
-.account-register{
+
+.account-register {
     padding-bottom: 15px;
 }
-.logo-body{
+
+.logo-body {
     display: none;
 }
+
 .main-login {
-    background-color: #E47718;
+    background-color: #ff973b;
+    padding-top: 10px;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    border: solid 1px black;
 }
 
 .form-login {
@@ -33,27 +35,83 @@
     color: black;
 }
 
-.title-login {
-    text-align: center;
+.main-login form a {
+    display: flex;
+    text-decoration: underline;
 }
 
-/*footer h3{
-    margin: 0;
-}*/
+.title-login {
+    text-align: center;
+    background-color: #E47718;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5em;
+    margin-top: -0px;
+    margin-bottom: 20px;
+
+}
+
 
 .networks {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
 }
+
 .networks img {
     margin-top: 4px;
     border: 1px solid gray;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-.text-register{
+
+.text-register {
     text-align: center;
 }
+
+.start-session {
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+    width: 50%;
+}
+
+.input-size {
+    width: 47vw;
+    height: 26px;
+    border: none;
+    border-radius: 7px;
+}
+
+.back-to-index {
+    display: flex;
+    justify-content: center;
+    color: black;
+    text-decoration: none;
+}
+
+.enter-with button {
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    height: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+}
+
+.enter-with .facebook-button{
+background-color: rgb(62, 62, 255);
+color: white;
+}
+
+.fa-google,
+.fa-facebook-f {
+    display: inline;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
 
 
 
@@ -68,49 +126,30 @@
         justify-content: space-between;
         margin-right: 7px;
     }
-    /*.logo-body{
-        display: block;
-        justify-content: flex-end;
-    }*/
-    .main-login{
+
+    .main-login {
         position: relative;
     }
-
-    .main-login img{
-        height: 200px;
-        /* position: absolute;
-        right: 200px; */
-    }
-   
 
     .main-login a {
         display: flex;
         justify-content: center;
         text-decoration: none;
         color: black;
-        /* margin-top: 5px; */
-    }
-
-    .main-login input{
-        width: 50%;
+        
     }
 
     .title-login {
         text-align: center;
     }
-    
-    /*footer h3{
-        margin: 0;
-    }*/
 
-    .main-login form a {
-        display: flex;
-        color: blue;
+    .input-size {
+        margin-left: 15px;
+        width: 35vw;
     }
 
     .log {
         width: 38%;
-
     }
 
     .enter-with {
@@ -121,6 +160,8 @@
         align-items: center;
     }
 
+
+
     .enter-with p {
         text-align: center;
     }
@@ -130,29 +171,16 @@
         justify-content: center;
     }
 
-    .start-session {
-        padding-left: 10px;
-        padding-right: 10px;
+    .start-session:hover {
+        background-color: aquamarine;
     }
 
-    /*.nosotros {
-        width: 40%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }*/
-
-    
     .networks img {
         margin-top: 4px;
         border: 1px solid gray;
         box-shadow: 0px 0px 10px rgb(100, 100, 100);
 
     }
-
-    /*.nosotros img {
-        width: 90%;
-    }*/
 
     .networks {
         display: flex;

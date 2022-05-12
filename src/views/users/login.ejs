@@ -22,18 +22,20 @@
 <%- include("../partials/header") %>
 
     <body>
+        <a class="back-to-index"href="/">Volver a inicio</a>
+        <h3 class="title-login">Inicio de Sesion</h3>
         <main class="main-login">
-            <a href="/">Volver a inicio</a>
-            <h3 class="title-login">Inicio de Sesion</h3>
+            <!-- <a href="/">Volver a inicio</a> -->
+            <!-- <h3 class="title-login">Inicio de Sesion</h3> -->
             <div class="full-structure">
                 <form action="/users/log" method="POST" class="form-login">
 
                     <div class="login-form">
                         <div class="log">
                             <label for="email">Correo Electronico</label><br>
-                            <input type="email" name="email" id="email"><br>
+                            <input class="input-size" type="email" name="email" id="email"><br>
                             <label for="password-login">Contraseña</label><br>
-                            <input type="password" name="contraseña" id="contraseña"><br>
+                            <input class="input-size" type="password" name="contraseña" id="contraseña"><br>
                             <a href="#">Olvide mi contraseña</a><br>
                             <input class="start-session" type="submit" value="Iniciar Sesion">
                             <br><br>
@@ -41,11 +43,11 @@
                 </form>
                 <div class="enter-with">
                     <form action="reg/google" method="POST" class="form-login">
-                        <button>Continuar con Google</button><br><br>
+                        <button class="google-button"><i class="fa-brands fa-google"></i>Continuar con Google</i></button><br><br>
                     </form>
                     <div class="enter-with">
                         <form action="reg/facebook" method="POST" class="form-login">
-                            <button>Continuar con Facebook</button><br>
+                            <button class="facebook-button"><i class="fa-brands fa-facebook-f"></i>Continuar con Facebook</i></i></i></button><br>
                         </form>
                     </div>
                 </div>
