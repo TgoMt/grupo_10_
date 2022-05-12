@@ -42,10 +42,32 @@ header ul li{
     margin-top: 15px;
 }
 
+/* -------- Search bar ------------ */
+.search{
+    width: 45vw;
+    padding: 10px;
+    border: white;
+    outline: none;
+    border-radius: 7px;
+}
+
+.seeker{
+    background-color: white;
+    border-radius: 7px;
+}
+
+.lupa{
+    background-color: white;
+    border: none;
+}
+
 .fa-search{
     display: flex;
     flex-wrap: wrap;
+    background-color: white; 
 }
+
+/* ---------         ------------- */
 
 .header-links{
     display: flex;
@@ -57,8 +79,6 @@ header ul li{
     justify-content: space-around;
     align-items: center;
 }
-
-
 
 footer h3{
     margin: 0;
