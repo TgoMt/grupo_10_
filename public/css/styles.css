@@ -65,6 +65,7 @@ header ul li{
     display: flex;
     flex-wrap: wrap;
     background-color: white; 
+    padding-right: 6px;
 }
 
 /* ---------         ------------- */
