@@ -1,109 +1,149 @@
 * {
-          box-sizing: border-box;
+   box-sizing: border-box;
 }
 
-.main-homeb {
-          font-family: 'Gill Sans';
-       /*    background-image: url(/images/barra-de-bar.png);
+.main-homeb{
+   font-family: 'Gill Sans';
+   /*    background-image: url(/images/barra-de-bar.png);
           background-attachment: fixed;
           width: 100%;
            */
-           background-color: orange;
+   background-color: orange;
+
+
 }
 
 .main-homeb section article img {
-          width: 50%;
-          text-align: center;
+   width: 50%;
+   text-align: center;
 }
 
-.product {
-          width: 100%;
-          padding-top: 5px;
-          margin: 5px;
+article {
+   width: 100%;
+   padding-top: 5px;
+   margin: 5px;
 }
 
-.offers-title {
-          font-family: 'Gill Sans';
-          display: flex;
-          justify-content: center;
-          color: #BF9C53;
-          text-shadow: black 0.1em 0.1em 0.1em
+h2 {
+   font-family: 'Gill Sans';
+   display: flex;
+   justify-content: center;
+   color: #BF9C53;
+   text-shadow: black 0.1em 0.1em 0.1em
 }
 
 
 
-.product a {
-          text-decoration: none;
-          color: black;
-          font-family: 'Gill Sans';
+.Product a {
+   text-decoration: none;
+   color: black;
+   font-family: 'Gill Sans';
 
 }
 
-.product a:hover {
-          text-decoration: underline;
+.Product a:hover {
+   text-decoration: underline;
 }
 
-.product .imgProduct {
-          overflow: hidden;
-          border-radius: 15px;
-          
+.Product .imgProduct {
+   overflow: hidden;
+   border-radius: 15px;
+
 }
 
-.product .imgProduct img {
-          width: 100%;
-          transition: all 0.5s;
+.Product .imgProduct img {
+   width: 100%;
+   transition: all 0.5s;
 }
 
-.product:hover .imgProduct img {
-          transform: scale(1.2);
+.Product:hover .imgProduct img {
+   transform: scale(1.2);
 }
-.follow-us{
-   font-family: 'Quicksand', sans-serif;
-   margin-top: 10px;
-   font-weight:normal;
-   color: none;
-}
+
 
 
 /* estilo B */
-.product a .imgProduct .discount{
-          position: relative;
-          bottom: 550px;        
-          left: -245px;
-          font-size: 20px;
-          background: yellow;
-          padding: 10px;
-          color: black;
-          border-bottom-right-radius: 25px;
-          border-top-right-radius: 25px;
+.Product a .imgProduct .discount {
+   position: relative;
+   bottom: 550px;
+   left: -245px;
+   font-size: 20px;
+   background: yellow;
+   padding: 10px;
+   color: black;
+   border-bottom-right-radius: 25px;
+   border-top-right-radius: 25px;
 }
 
-.product .conjuntoDescriptivo .add-cart{
-          display: inline-block;
-          margin-top: 2px;
-          text-decoration: none;
-          background-color: #BF9C53;
-          padding: 10px;
-          border: 1px solid #BF9C53;
-          border-radius: 25px;
+.Product .descriptiveSet .add-cart {
+   display: inline-block;
+   margin-top: 2px;
+   text-decoration: none;
+   background-color: #BF9C53;
+   padding: 10px;
+   border: 1px solid #BF9C53;
+   border-radius: 25px;
 }
 
-.product .productDescription .add-cart:hover{
-          color:#BF9C53;
-          background-color: white;
-          border: 1px solid #BF9C53;
-          
+.Product .descriptiveSet .add-cart:hover {
+   color: #BF9C53;
+   background-color: white;
+   border: 1px solid #BF9C53;
+
 }
 
-.product .productDescription{
-         display: flex; 
-         flex-direction: column;
-         flex-wrap: wrap;
-         
+.Product .descriptiveSet {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+
 }
-.product .productDescription h4{
-          margin: 0px;
- }
+
+.Product .descriptiveSet h4 {
+   margin: 0px;
+}
+
+
+@media (min-width: 320px) {
+
+   article {
+      width: 95%;
+      padding-top: 5px;
+   }
+
+   main section article img {
+      width: 95%;
+   }
+
+
+   .Oferts {
+      display: flex;
+      justify-content: center;
+      display: flex;
+      text-align: center;
+   }
+
+   .Product {
+      font-family: sans-serif;
+   }
+
+   .Product a .imgProduct .discount {
+      position: relative;
+      bottom: 550px;
+      left: -240px;
+      font-size: 20px;
+      background: yellow;
+      padding: 10px;
+      color: black;
+      border-bottom-right-radius: 25px;
+      border-top-right-radius: 25px;
+   }
+
+
+
+
+
+}
 
 
 
