@@ -18,9 +18,11 @@
 <%- include("../partials/header") %>
 <body>
     <main>
-        <div class="main-productDetail">
+        <% products.forEach(function(product) { %>
+            <img class="product-img" src="/img/<%= product.image %>" alt="cerveza andes roja">
+        <!-- <div class="main-productDetail">
             <section class="product-price">
-                <img class="product-img" src="/img/cerveza_andes.jpg" alt="cerveza andes roja">
+                
                 <div class="title-prices">
                     <h1>Andes Roja x 473cc</h1>
                     <div class="prices-pdetail">
@@ -59,7 +61,9 @@
             <div class="valoration">Valoración de los clientes</div>
             <div>4.5- "Muy buena. Buenos precios y muy rapido"</div>
             <div>5- "Excelente, super recomendado"</div>
-        </div>
+        
+            </div> -->
+            <%  }); %>
     </main>
 </body>
 <%- include("../partials/footer.ejs") %>

@@ -22,7 +22,4 @@ const productsRoutes = require("./routes/productsRoutes")
 app.use("/users",userRoutes)
 app.use("/products",productsRoutes)
 app.use("/",indexRoutes)
-//por que en login(con google) va reg/google en vez de /reg/google
-//en el crear y editar tal vez sacar el follow us.......
-//falta hacer el productos
-//en el loguearse esta mal puesto el continuar con google y facebook--------------
+

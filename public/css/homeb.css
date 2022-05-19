@@ -54,6 +54,7 @@ h2 {
 .Product .imgProduct img {
    width: 100%;
    transition: all 0.5s;
+  
 }
 
 .Product:hover .imgProduct img {

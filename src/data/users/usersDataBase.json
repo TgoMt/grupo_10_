@@ -1,0 +1,10 @@
+[
+     {
+        "identificador": "1",
+        "nombre": "Admin",
+        "apellido": "Torres",
+        "email": "admin@gmail.com",
+        "contraseña": "Admin123",
+        "imagen": "default-image"
+     }
+]
