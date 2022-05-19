@@ -1,0 +1,65 @@
+[
+    {
+    "id": 1,
+    "name": "Cerveza Corona six pack",
+    "price": 800,
+    "discount": 5,
+    "category": "Cervezas",
+    "description":"",
+    "image": "Corona-out.jpg"
+   },
+{
+    "id": 2,
+    "name": "Jack Daniel's Old No. 7",
+    "price": 5600,
+    "discount": 10,
+    "category": "Licores",
+    "description": "",
+    "image": "jack daniels-out.jpg"
+},
+{
+    "id": 3,
+    "name": "Gin Bombay Sapphire",
+    "price":5000 ,
+    "discount": 15,
+    "category": "Bebidas blancas",
+    "description": "",
+    "image": "bombay - out.png"
+},
+{
+    "id": 4,
+    "name": "Ron Bacardi Carta Oro",
+    "price":1600,
+    "discount": 10,
+    "category": "Licores",
+    "description": "",
+    "image": "ronBacardi-out.jpg"
+},
+{
+    "id": 5,
+    "name": "Vodka Smirnoff",
+    "price": 1300,
+    "discount": 20,
+    "category": "Bebidas blancas",
+    "description": "",
+    "image": "Smirnoff-out.jpg"
+},
+{
+    "id": 6,
+    "name": "Fernet Branca",
+    "price": 1250,
+    "discount": 10,
+    "category": "Aperitivo",
+    "description": "",
+    "image": "fernet-out.jpg"
+},
+{
+    "id": 7,
+    "name": "Jägermeister",
+    "price": 5850,
+    "discount": 10,
+    "category": "Licores",
+    "description": "",
+    "image": "Jägermeister-out.png"
+}
+]
