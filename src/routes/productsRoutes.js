@@ -5,7 +5,7 @@ const productsControllers = require("../controllers/productsControllers.js")
 
 router.get("/productCart",productsControllers.productCart)
 
-router.get("/productDetail",productsControllers.productDetail)
+router.get("/productDetail/:id",productsControllers.productDetail)
 
 router.get("/crear", productsControllers.crear)
 router.post("/", productsControllers.crearAgregado)
