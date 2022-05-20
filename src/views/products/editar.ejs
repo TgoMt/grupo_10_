@@ -54,11 +54,17 @@
                         </select>
                     </div>
 
-                    <div class="create-questions">
-                        <label for="price">Precio</label>
-                        <input type="number" name="price" id="price" placeholder="Ejemplo: 150$"
-                            class="create-questions-input" />
-                    </div>
+                    <div class="create-questions-separated">
+                        <div class="create-questions">
+                            <label for="price">Precio</label>
+                        <input type="number" name="price" id="price"placeholder="Ejemplo: 150$" class="create-questions-input"/>
+                        </div>
+                    
+                        <div class="create-questions">
+                            <label for="off">Descuento</label>
+                        <input type="number" name="off" id="off"placeholder="Ejemplo: 10" class="create-questions-input"/>
+                        </div>
+                   </div>
                     <div class="edit-button">
                         <button type="submit" class="guardar">Guardar producto</button>
                     </div>

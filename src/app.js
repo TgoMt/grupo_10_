@@ -3,8 +3,12 @@ const app = express();
 const path = require("path");
 const methodOverride = require('method-override');
 
+
 app.use(express.static("./public"));
 app.use(methodOverride('_method'));
+
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, 'views'));

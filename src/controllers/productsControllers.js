@@ -18,9 +18,22 @@ crear:(req, res) => {
     res.render("./products/crear")
 },
 crearAgregado:(req, res) => {
-res.send("Producto Creado")
+    let newProduct = {
+    id: products[products.length - 1].id + 1,
+    name: req.body.name,
+	price: parseInt(req.body.price),
+	off: parseInt(req.body.off),
+	category: req.body.category,
+	/* description: req.body.description, */
+	image: req.file ? req.file.filename : "Smirnoff-out.jpg"
+}
+products.push(newProduct);
+fs.writeFileSync(productsFilePath, JSON.stringify(products,null," "));
+res.redirect("/")
+
 },
 editar:(req,res) => {
+    
     res.render("./products/editar")
 },
 sendEditar:(req, res) => {

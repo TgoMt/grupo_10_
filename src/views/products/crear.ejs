@@ -24,7 +24,7 @@
     <h2>Creando Un Producto</h2>
 </div>
 <article class="create-form">
-    <form action="/products" method="POST">
+    <form action="/products" method="POST" enctype="multipart/form-data">   
 <div class="create-questions-separated">
     <div class="create-questions">
         <label for="name">Nombre del producto</label>
@@ -38,7 +38,7 @@
 </div>
     <div class="create-questions">
         <label for="file">Imagen</label>
-        <input type="file" name="file" id="file" class="create-questions-input" accept="jpg,png" />
+        <input type="file" name="file-image-product" id="file" class="create-questions-input" accept="jpg,png" />
     </div>
 
     <div class="create-questions">
@@ -52,11 +52,17 @@
             <option value="">Aperitivos</option>
         </select>
     </div>
-
-    <div class="create-questions">
-        <label for="price">Precio</label>
+    <div class="create-questions-separated">
+        <div class="create-questions">
+            <label for="price">Precio</label>
         <input type="number" name="price" id="price"placeholder="Ejemplo: 150$" class="create-questions-input"/>
-    </div>
+        </div>
+    
+        <div class="create-questions">
+            <label for="off">Descuento</label>
+        <input type="number" name="off" id="off"placeholder="Ejemplo: 10" class="create-questions-input"/>
+        </div>
+   </div>
     <div class="create-buttons">
         <button type="submit" class="accept">Aceptar</button>
         <button type="reset" class="delete">Borrar</button>
