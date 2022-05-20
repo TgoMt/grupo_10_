@@ -21,10 +21,10 @@
 
         <main>
             <div class="title-create">
-                <h2>Editando: Product Name</h2>
+                <h2>Editando:<%=productToEdit.name%></h2>
             </div>
             <article class="create-form">
-                <form action="/products/edit/?_method=PATCH" method="POST">
+                <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
                     <div class="create-questions-separated">
                         <div class="create-questions">
                             <label for="name">Nombre del producto</label>
@@ -39,7 +39,7 @@
                     </div>
                     <div class="create-questions">
                         <label for="file">Imagen</label>
-                        <input type="file" name="file" id="file" class="create-questions-input-file" accept="jpg,png"/>
+                        <input type="file" name="file-image-product" id="file" class="create-questions-input-file" accept="jpg,png"/>
                     </div>
 
                     <div class="create-questions">

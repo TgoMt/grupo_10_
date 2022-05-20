@@ -17,7 +17,8 @@ const upload = multer({storage: storage});
 
 
 
-const productsControllers = require("../controllers/productsControllers.js")
+const productsControllers = require("../controllers/productsControllers.js");
+const { Route } = require("express");
 
 router.get("/productCart",productsControllers.productCart)
 
@@ -26,6 +27,9 @@ router.get("/productDetail/:id",productsControllers.productDetail)
 router.get("/crear", productsControllers.crear)
 router.post("/", upload.single("file-image-product"), productsControllers.crearAgregado)
 
-router.get("/editar", productsControllers.editar)
-router.patch("/edit",productsControllers.sendEditar)
+router.get("/editar/:id", productsControllers.editar)
+router.patch("/edit/:id",upload.single("file-image-product"),productsControllers.sendEditar)
+
+router.delete("/delete/:id",productsControllers.delete)
+
 module.exports = router;

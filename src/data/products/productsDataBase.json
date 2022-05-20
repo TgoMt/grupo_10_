@@ -61,13 +61,5 @@
   "category": "Licores",
   "description": "",
   "image": "Jägermeister-out.png"
- },
- {
-  "id": 8,
-  "name": "Jack Daniels",
-  "price": 1500,
-  "off": 10,
-  "category": "",
-  "image": "file-image-product1653079789298image.jpg"
  }
 ]

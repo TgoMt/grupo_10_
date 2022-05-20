@@ -59,7 +59,13 @@
             <div class="valoration">Valoración de los clientes</div>
             <div>4.5- "Muy buena. Buenos precios y muy rapido"</div>
             <div>5- "Excelente, super recomendado"</div>
-        </div>
+            
+            <a href="/products/editar/<%= product.id %>">EDITAR</a>
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                <button type="submit" class="action-button delete">ELIMINAR</button>
+            </form>
+
+        
     </main>
 </body>
 <%- include("../partials/footer.ejs") %>
