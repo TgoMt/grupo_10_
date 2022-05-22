@@ -12,7 +12,7 @@ body{
 }
 
 header{
-    background-color: var(--Verde);
+    background: linear-gradient(to top, #086603, #9ee09b);;
     display: block;
     padding: 10px;
 }

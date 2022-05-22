@@ -37,26 +37,11 @@
             </section>
             <section class="information">
                 <div class="over-andes">
-                    <h2>Sobre Andes pura malta roja</h2>
-                    <p>Dicen que la Andes Origen Roja es la favorita. Está hecha con tres maltas, entre ellas la malta
-                        Caramelo que además de darle un aroma suave y sabor balanceado, la visten de un color ámbar
-                        cobrizo.
-                        Al probarla va a notar una leve acidez con final seco, el amargor justo y un cuerpo intenso.
-                        Para
-                        que su experiencia sea mucho mejor, no es un dato menor tomarla en copa, así mantendrá los
-                        aromas
-                        por más tiempo.</p>
+                    <h2>Sobre <%= product.name %></h2>
+                    <p><%= product.description %></p>
                 </div>
                 <div class="data">
-                    <p class="data-row">ALCOHOL 5,1%
-                    <br>AMARGO 18 IBU
-                    <br>COLOR 18 EBC
-                    <br>Estilo: Vienna Lager.
-                    <br>Escuela cervecera: Alemana.
-                    <br>Ingredientes: Agua, Malta de Cebada, Lúpulo
-                    <br>Maltas: Pilsen (argentina), Munich (argentina), Caramelo (argentina)
-                    <br>Lúpulos: Cascade (argentina), Zeus (EEUU)
-                    <br>Levadura: Lager</p>
+                    <p class="data-row"><%= product.datos %></p>
                 </div>
             </section>
             <div class="valoration">Valoración de los clientes</div>

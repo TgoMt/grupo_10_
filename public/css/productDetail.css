@@ -1,5 +1,5 @@
 .main-productDetail{
-    background-color: var(--Rojo);
+    background: linear-gradient(to bottom, #042b02, #0a8c03);
 }
 .follow-us{
     font-family: 'Quicksand', sans-serif;
