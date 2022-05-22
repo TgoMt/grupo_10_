@@ -119,6 +119,18 @@ footer h3{
         justify-content: space-evenly;
         width: 100%;
     }
+    .product{
+        width: 20%;
+        margin-bottom: 30px;
+        
+    }
+    .products{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        
+    }
 }
 
 @media (min-width: 1024px){

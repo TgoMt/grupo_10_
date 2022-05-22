@@ -26,45 +26,46 @@ article {
 
 h2 {
    font-family: 'Gill Sans';
-   display: flex;
-   justify-content: center;
    color: #BF9C53;
-   text-shadow: black 0.1em 0.1em 0.1em
+   text-shadow: black 0.1em 0.1em 0.1em;
+   text-align: center;
+   margin-top: 0;
 }
 
 
 
-.Product a {
+.product a {
    text-decoration: none;
    color: black;
    font-family: 'Gill Sans';
 
 }
 
-.Product a:hover {
+.product a:hover {
    text-decoration: underline;
 }
 
-.Product .imgProduct {
+.product .imgProduct {
    overflow: hidden;
-   border-radius: 15px;
+   /* border-radius: 15px; */
 
 }
 
-.Product .imgProduct img {
+.product .imgProduct img {
    width: 100%;
    transition: all 0.5s;
-  
+   border: 3px solid white;
+   height: 50vh;
 }
 
-.Product:hover .imgProduct img {
+.product:hover .imgProduct img {
    transform: scale(1.2);
 }
 
 
 
 /* estilo B */
-.Product a .imgProduct .discount {
+.product a .imgProduct .discount {
    position: relative;
    bottom: 550px;
    left: -245px;
@@ -76,7 +77,7 @@ h2 {
    border-top-right-radius: 25px;
 }
 
-.Product .descriptiveSet .add-cart {
+.product .descriptiveSet .add-cart {
    display: inline-block;
    margin-top: 2px;
    text-decoration: none;
@@ -86,21 +87,21 @@ h2 {
    border-radius: 25px;
 }
 
-.Product .descriptiveSet .add-cart:hover {
+.product .descriptiveSet .add-cart:hover {
    color: #BF9C53;
    background-color: white;
    border: 1px solid #BF9C53;
 
 }
 
-.Product .descriptiveSet {
+.product .descriptiveSet {
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
 
 }
 
-.Product .descriptiveSet h4 {
+.product .descriptiveSet h4 {
    margin: 0px;
 }
 
@@ -124,11 +125,11 @@ h2 {
       text-align: center;
    }
 
-   .Product {
+   .product {
       font-family: sans-serif;
    }
 
-   .Product a .imgProduct .discount {
+   .product a .imgProduct .discount {
       position: relative;
       bottom: 550px;
       left: -240px;
