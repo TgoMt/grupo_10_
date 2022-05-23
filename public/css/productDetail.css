@@ -1,5 +1,5 @@
 .main-productDetail{
-    background-color: var(--Rojo);
+    background: linear-gradient(to bottom, #042b02, #0a8c03);
 }
 .follow-us{
     font-family: 'Quicksand', sans-serif;
@@ -16,6 +16,8 @@
 
 .product-price h1{
     display: block;
+    -webkit-text-stroke: 2px #5c2b03;
+    color:#914303 ;
 }
 
 .prices-pdetail ul{
@@ -29,9 +31,14 @@
     max-width: 50%;
 }
 
-.over-andes{
+.data-products{
     max-width: 50%;
     margin-left: 10px;
+}
+
+.data-products h2{
+    -webkit-text-stroke: 2px #5c2b03;
+    color:#914303 ;
 }
 
 .data{
@@ -55,6 +62,11 @@ justify-content: space-evenly;
 font-size: 50px;
 color: black;
 border-radius: 7px;
+}
+
+.prices-description{
+    -webkit-text-stroke: 2px #080706;
+    font-size: large;
 }
 
 @media (min-width: 767px) {

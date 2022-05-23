@@ -5,7 +5,8 @@
   "price": 800,
   "off": 5,
   "category": "Cervezas",
-  "description": "",
+  "description": "aca va la descripcion",
+  "datos":"aca van datos",
   "image": "Corona-out.jpg"
  },
  {
@@ -14,7 +15,8 @@
   "price": 5600,
   "off": 10,
   "category": "Licores",
-  "description": "",
+  "description": "aca va la descripcion",
+  "datos":"aca van datos",
   "image": "jack daniels-out.jpg"
  },
  {
@@ -23,7 +25,8 @@
   "price": 5000,
   "off": 15,
   "category": "Bebidas blancas",
-  "description": "",
+  "description": "aca va la descripcion",
+  "datos":"aca van datos",
   "image": "bombay - out.png"
  },
  {
@@ -32,7 +35,8 @@
   "price": 1600,
   "off": 10,
   "category": "Licores",
-  "description": "",
+  "description":"aca va la descripcion",
+  "datos":"aca van datos",
   "image": "ronBacardi-out.jpg"
  },
  {
@@ -41,7 +45,8 @@
   "price": 1300,
   "off": 20,
   "category": "Bebidas blancas",
-  "description": "",
+  "description": "aca va la descripcion",
+  "datos":"aca van datos",
   "image": "Smirnoff-out.jpg"
  },
  {
@@ -50,7 +55,8 @@
   "price": 1250,
   "off": 10,
   "category": "Aperitivo",
-  "description": "",
+  "description":"aca va la descripcion",
+  "datos":"aca van datos",
   "image": "fernet-out.jpg"
  },
  {
@@ -59,7 +65,8 @@
   "price": 5850,
   "off": 10,
   "category": "Licores",
-  "description": "",
+  "description":"aca va la descripcion",
+  "datos":"aca van datos",
   "image": "Jägermeister-out.png"
  }
 ]
