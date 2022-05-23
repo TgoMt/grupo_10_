@@ -104,6 +104,21 @@ h2 {
 .product .descriptiveSet h4 {
    margin: 0px;
 }
+.follow-us {
+   font-family: 'Quicksand', sans-serif;
+}
+.networks{
+   display: flex;
+   justify-content: space-evenly;
+   
+   }
+   .networks a{
+     font-size: 50px;
+     color: black;
+     border-radius: 7px;
+     
+   }
+
 
 
 @media (min-width: 320px) {

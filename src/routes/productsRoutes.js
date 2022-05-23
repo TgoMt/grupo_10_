@@ -21,6 +21,7 @@ const productsControllers = require("../controllers/productsControllers.js");
 const { Route } = require("express");
 
 router.get("/productCart",productsControllers.productCart)
+/* router.post("/productCart",upload.single("file-image-product"),productsControllers.agregarCart) */
 
 router.get("/productDetail/:id",productsControllers.productDetail)
 
@@ -31,5 +32,6 @@ router.get("/editar/:id", productsControllers.editar)
 router.patch("/edit/:id",upload.single("file-image-product"),productsControllers.sendEditar)
 
 router.delete("/delete/:id",productsControllers.delete)
+
 
 module.exports = router;

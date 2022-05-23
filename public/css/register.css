@@ -7,6 +7,38 @@ display: block;
 .networks{
 display: flex;
 justify-content: space-evenly;
+
+}
+.networks a{
+  font-size: 50px;
+  color: black;
+  border-radius: 7px;
+  
+}
+/* .networks i {
+ border-radius: 50px;  
+
+} */
+.input-create{
+    border-radius: 7px;
+    width: 95%;
+    height: 26px;
+    border: none;
+}
+.buttons-register{
+    
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
+    border: none;
+    height: 30px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+.buttons-register:hover{
+    background-color: aquamarine;
 }
 .main-register{
 background-color: white;
@@ -25,6 +57,7 @@ box-shadow: 0px 0px 10px rgb(100, 100, 100);
 .form-questions{
     border: solid 1px black;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    background-color: #ff973b;
 }
 .information-tablet{
     display: none;
@@ -64,9 +97,9 @@ display: none;
 /* Computadora */
 @media (min-width: 768px) {
 .questions label{
-display: contents;
+/* display: contents; */
 align-items: center;
-justify-content: center;
+/* justify-content: center; */
 text-align: center;
 }
 .questions{

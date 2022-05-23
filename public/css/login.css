@@ -49,8 +49,18 @@
     margin-bottom: 20px;
 }
 
-
-.networks {
+.networks{
+    display: flex;
+    justify-content: space-evenly;
+    
+    }
+    .networks a{
+      font-size: 50px;
+      color: black;
+      border-radius: 7px;
+      
+    }
+/* .networks {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
@@ -60,7 +70,7 @@
     margin-top: 4px;
     border: 1px solid gray;
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
+} */
 
 .text-register {
     text-align: center;

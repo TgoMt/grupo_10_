@@ -47,6 +47,15 @@
 .valoration{
     margin-left: 10px;
 }
+.networks{
+display: flex;
+justify-content: space-evenly;
+}
+.networks a{
+font-size: 50px;
+color: black;
+border-radius: 7px;
+}
 
 @media (min-width: 767px) {
     .title-prices{

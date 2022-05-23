@@ -7,17 +7,5 @@
   "email": "admin@gmail.com",
   "password": "Admin123",
   "adress": "B.s.a"
- },
- {
-  "identificador": "11",
-  "name": "AAAAA",
-  "lastname": "AAAAAAAA",
-  "dni": "44985321",
-  "email": "maximocolombo2003@gmail.com",
-  "password": [
-   "awdaw",
-   "dawdawd"
-  ],
-  "adress": "awdawd"
  }
 ]

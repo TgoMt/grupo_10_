@@ -58,6 +58,17 @@ background-color:#ff973b ;
     margin-bottom: 25px;
     width: 19vw;
 }
+.networks{
+    display: flex;
+    justify-content: space-evenly;
+    
+    }
+    .networks a{
+      font-size: 50px;
+      color: black;
+      border-radius: 7px;
+      
+    }
 
 
 /* ------- Edit View --------- */

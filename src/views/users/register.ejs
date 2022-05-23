@@ -37,39 +37,42 @@
                 <form action="/users/registrado" method="POST" class="form">
                     <div class="questions">
                         <label for="name">Nombre</label>
-                        <input type="text" name="name" id="name" required>
+                        <input class="input-create" type="text" name="name" id="name" required>
                     </div>
                     <div class="questions">
                         <label for="lastname">Apellido</label>
-                        <input type="text" name="lastname" id="lastname" required>
+                        <input class="input-create" type="text" name="lastname" id="lastname" required>
                     </div>
                     <div class="questions">
                         <label for="email">Correo Electronico</label>
-                        <input type="email" name="email" id="email">
+                        <input  class="input-create" type="email" name="email" id="email">
                     </div>
                     <div class="questions">
                         <label for="dni">D.N.I</label>
-                        <input type="number" name="dni" id="dni" minlength="8" maxlength="9" required>
+                        <input class="input-create" type="number" name="dni" id="dni" minlength="8" maxlength="9" required>
                     </div>
                     <div class="questions">
                         <label for="adress">Direccion</label>
-                        <input type="text" name="adress" id="adress" required>
+                        <input class="input-create" type="text" name="adress" id="adress" required>
                     </div>
                     <div class="questions">
                         <label for="password">Contraseña</label>
-                        <input type="password" name="password" id="password" required>
+                        <input  class="input-create" type="password" name="password" id="password" required>
                     </div>
                     <div class="questions">
                         <label for="ConfirmPassword">Confirmar Contraseña</label>
-                        <input type="password" name="password" id="password" required>
+                        <input  class="input-create" type="password" name="password" id="password" required>
                     </div>
                     <div class="questions">
                         <label for="Terms And Conditions">Terminos y Condiciones</label>
-                        <input type="checkbox" name="terms" id="terms" required>
+                        <input class="input-create" type="checkbox" name="terms" id="terms" required>
                     </div>
+
                     <div class="questions">
-                        <button type="submit">Enviar</button>
-                        <button type="reset">Borrar</button>
+                        <div class="buttons">
+                        <input class="buttons-register" type="submit" value="Enviar">
+                        <input class="buttons-register" type="submit" value="Borrar">
+                    </div>
                     </div>
                 </form>
             </article>
