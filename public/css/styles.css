@@ -34,12 +34,14 @@ header div{
 
 header nav ul{
     font-size: var(--Cuerpos_de_texto);
-    color: #750014;
+    /* color: #750014; */
+    color: black;
     list-style: none;
 }
 
 header ul a{
-    color: #750014;
+    /* color: #750014; */
+    color:black;
     text-decoration: none;
 }
 
