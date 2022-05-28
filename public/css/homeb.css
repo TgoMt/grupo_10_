@@ -117,13 +117,13 @@ h2 {
    display: flex;
    justify-content: space-evenly;
    
-   }
-   .networks a{
+}
+.networks a{
      font-size: 50px;
      color: black;
      border-radius: 7px;
      
-   }
+}
 
 
 
