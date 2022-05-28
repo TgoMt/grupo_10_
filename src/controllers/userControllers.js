@@ -19,12 +19,11 @@ const userControllers = {
             email: req.body.email,
             adress:req.body.adress,
             password: req.body.password,
-            
+            image: req.file ? req.file.filename : "default-users.jpg"
         }
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users,null," "));
-        res.send("Se registro correctamente en la base de datos")
-        /* res.redirect("/") */
+        res.redirect("/")
     },
     login: (req, res)=> {
         res.render("./users/login")
