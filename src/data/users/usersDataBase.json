@@ -1,37 +1,12 @@
 [
  {
-  "identificador": "1",
+  "identificador": 1,
   "name": "Admin",
   "dni": "22.350.540",
   "lastname": "Torres",
   "email": "admin@gmail.com",
   "password": "Admin123",
+  "passwordConfirm": "Admin123",
   "adress": "B.s.a"
- },
- {
-  "identificador": "11",
-  "name": "lucas",
-  "lastname": "garcia",
-  "dni": "34906269",
-  "email": "lucas531@hotmail.com",
-  "adress": "Villate 2362",
-  "password": [
-   "123",
-   "123"
-  ],
-  "image": "default-users.jpg"
- },
- {
-  "identificador": "111",
-  "name": "dfadf",
-  "lastname": "asdsads",
-  "dni": "43545656",
-  "email": "asdsd@hotmail.com",
-  "adress": "Villate 2362",
-  "password": [
-   "1234",
-   "1234"
-  ],
-  "image": "default-users.jpg"
  }
 ]
