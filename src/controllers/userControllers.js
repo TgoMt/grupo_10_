@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require('fs');
+const bcrypt = require ("bcryptjs");
 
 const usersFilePath = path.join(__dirname, '../data/users/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -11,6 +12,7 @@ const userControllers = {
         res.render("./users/register")
     },
     sendRegister : (req, res)=> {
+        let pass = bcrypt.hashSync(req.body.password, 10)
         let newUser = {
             identificador: users[users.length - 1].identificador + 1,
             name: req.body.name,
@@ -19,6 +21,7 @@ const userControllers = {
             email: req.body.email,
             adress:req.body.adress,
             password: req.body.password,
+            passwordConfirm: bcrypt.compareSync(req.body.passwordConfirm, pass),
             image: req.file ? req.file.filename : "default-users.jpg"
         }
         users.push(newUser);

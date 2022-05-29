@@ -17,7 +17,6 @@ const upload = multer({storage: storage});
 
 
 
-
 router.get("/register", userControllers.register);
 router.get("/login",userControllers.login)
 //cartel se logueo

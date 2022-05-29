@@ -6,6 +6,7 @@
   "lastname": "Torres",
   "email": "admin@gmail.com",
   "password": "Admin123",
+  "passwordConfirm": "Admin123",
   "adress": "B.s.a"
  }
  ]
