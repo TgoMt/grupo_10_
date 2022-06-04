@@ -1,13 +1,11 @@
 .main-carrito{
 background-color: orange;
-
+font-family: 'Quicksand', sans-serif;
+font-size: 18px;
 }
 .image-carrito{
     box-sizing: border-box;
     text-align: center;
-    
-    
-   
 }
 .image-carrito img {
     width: 80%;
@@ -81,4 +79,13 @@ margin-top: 10px;
 
 .product-description input{
     width:85%
+}
+
+@media (min-width: 581px) {
+.image-carrito img {
+    width: 60%;
+}
+
+
+
 }

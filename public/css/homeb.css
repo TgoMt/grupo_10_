@@ -209,11 +209,12 @@ h2 {
 
           }
 
-          .Producto {
+          .product {
                     font-family: sans-serif;
+                    width: 40%;
           }
 
-          .Producto a .imgProducto .descuento{
+          .product a .imgProducto .Oferts{
                     position: relative;
                     bottom: 550px;        
                     left: -245px;
