@@ -108,6 +108,7 @@ footer h3{
 }
 
 
+
 @media (min-width: 767px) {
     header nav ul{
         font-size: 24px;
@@ -137,7 +138,6 @@ footer h3{
         flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-        
     }
 }
 
