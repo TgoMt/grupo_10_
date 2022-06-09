@@ -19,38 +19,5 @@
   "password": "1234",
   "passwordConfirm": false,
   "image": "default-users.jpg"
- },
- {
-  "identificador": 3,
-  "name": "Maximo",
-  "lastname": "Colombo",
-  "dni": "44985321",
-  "email": "maximocolombo2003@gmail.com",
-  "adress": "ad",
-  "password": "1234",
-  "passwordConfirm": true,
-  "image": "default-users.jpg"
- },
- {
-  "identificador": 4,
-  "name": "Maximo",
-  "lastname": "Colombo",
-  "dni": "1234",
-  "email": "maximocolombo2003@gmail.com",
-  "adress": "AD",
-  "password": "123",
-  "passwordConfirm": true,
-  "image": "default-users.jpg"
- },
- {
-  "identificador": 5,
-  "name": "Maximo",
-  "lastname": "Colombo",
-  "dni": "44985321",
-  "email": "maximocolombo@hotmail.com.ar",
-  "adress": "adawd",
-  "password": "123",
-  "passwordConfirm": true,
-  "image": "default-users.jpg"
  }
 ]

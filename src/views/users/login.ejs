@@ -25,6 +25,10 @@
         <a class="back-to-index"href="/">Volver a inicio</a>
         <h3 class="title-login">Inicio de Sesion</h3>
         <main class="main-login">
+            <!-- express validator -->
+            <% if(locals.errors) { %> <% } %>
+            <!-- express validator -->
+
             <!-- <a href="/">Volver a inicio</a> -->
             <!-- <h3 class="title-login">Inicio de Sesion</h3> -->
             <div class="full-structure">
@@ -34,8 +38,18 @@
                         <div class="log">
                             <label for="email">Correo Electronico</label><br>
                             <input class="input-size" type="email" name="email" id="email"><br>
+
+                            <% if (locals.errors && errors.email) { %>
+                                <div class="text-errors"><%= errors.email.msg %></div>
+                                <% } %>
+
                             <label for="password-login">Contraseña</label><br>
-                            <input class="input-size" type="password" name="contraseña" id="contraseña"><br>
+                            <input class="input-size" type="password" name="password" id="password"><br>
+
+                            <% if (locals.errors && errors.password) { %>
+                                <div class="text-errors"><%= errors.password.msg %></div>
+                                <% } %>
+
                             <a href="#">Olvide mi contraseña</a><br>
                             <input class="start-session" type="submit" value="Iniciar Sesion">
                             <br><br>
