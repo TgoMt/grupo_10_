@@ -5,7 +5,6 @@ const app = express();
 const path = require("path");
 const methodOverride = require('method-override');
 
-
 app.use(express.static("./public"));
 app.use(methodOverride('_method'));
 
@@ -22,8 +21,10 @@ app.listen(3333, ()=>
 
 const indexRoutes = require("./routes/indexRoutes")
 const userRoutes = require("./routes/userRoutes")
-const productsRoutes = require("./routes/productsRoutes")
+const productsRoutes = require("./routes/productsRoutes");
+const cookieParser = require("cookie-parser");
 
+app.use(cookieParser());
 
 app.use("/users",userRoutes)
 app.use("/products",productsRoutes)

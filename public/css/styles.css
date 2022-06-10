@@ -12,7 +12,7 @@ body{
 }
 
 header{
-    background: linear-gradient(to top, #032101, #447d3f);;
+    background: linear-gradient(to top, orange, #032101);
     /* background: linear-gradient(to top, #043201, #43743f);; */
     /* background: linear-gradient(to top, orange,rgb(233, 189, 109),); */
     display: block;
