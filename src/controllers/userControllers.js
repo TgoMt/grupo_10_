@@ -29,6 +29,8 @@ const userControllers = {
         res.redirect("/")
     },
     login: (req, res)=> {
+        
+
         res.render("./users/login")
     },
     
