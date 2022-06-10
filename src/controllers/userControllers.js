@@ -1,6 +1,8 @@
 const path = require("path");
 const fs = require('fs');
 const bcrypt = require ("bcryptjs");
+const { validationResult } = require("express-validator");
+const User = require('../models/User');
 
 const usersFilePath = path.join(__dirname, '../data/users/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -8,12 +10,36 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userControllers = {
     register:(req, res)=> {
-        
+    
         res.render("./users/register")
     },
     sendRegister : (req, res)=> {
+        let userInDB = User.findByField('email', req.body.email);
+
+		if (userInDB) {
+			return res.render('./users/register', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				oldData: req.body
+			});
+		}
+        //Express validator
+        let resultValidation = validationResult(req);
+        
+        if (resultValidation.errors.length > 0){
+            return res.render("./users/register",{errors: resultValidation.mapped(),/* old:req.body */});
+        }else{
+            res.redirect("/")
+        }
+        //Usuario ya registrado
+        
+        //Encriptar contraseña
         let pass = bcrypt.hashSync(req.body.password, 10)
-        let newUser = {
+        //Formularios
+        let newUser = { 
             identificador: users[users.length - 1].identificador + 1,
             name: req.body.name,
             lastname:req.body.lastname,
@@ -26,7 +52,11 @@ const userControllers = {
         }
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users,null," "));
-        res.redirect("/")
+        /* res.redirect("/users/register") */
+
+    },
+    sendToRegister:(req, res)=> {
+        res.redirect("/users/register")
     },
     login: (req, res)=> {
         
@@ -35,11 +65,16 @@ const userControllers = {
     },
     
     sendLogin:(req, res)=> {
-        res.send("Se logueo correctamente")
+        //express validator
+        let resultValidation = validationResult(req);
+        
+        if (resultValidation.errors.length > 0){
+            return res.render("./users/login",{errors: resultValidation.mapped(),/* old:req.body */});
+        }else{
+            res.redirect("/")
+        }
     },
-    sendToRegister:(req, res)=> {
-        res.redirect("/users/register")
-    },
+    
     sendLoginGoogle:(req, res)=> {
         res.send("Se logueo correctamente con Google")
     },

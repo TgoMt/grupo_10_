@@ -1,9 +1,4 @@
 
-//arreglar el index(las fotos y la etiqueta)
-//arreglar el header
-//arreglar completamente el detailProducts y agregar datos de cada producto
-
-
 
 const express = require ("express");
 const app = express();
