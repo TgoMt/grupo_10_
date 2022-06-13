@@ -1,23 +1,24 @@
 [
  {
-  "identificador": 1,
-  "name": "Admin",
-  "dni": "22.350.540",
-  "lastname": "Torres",
-  "email": "admin@gmail.com",
-  "password": "Admin123",
-  "passwordConfirm": "Admin123",
-  "adress": "B.s.a"
- },
- {
   "identificador": 2,
-  "name": "Maximo",
+  "name": "Lucas",
   "lastname": "Colombo",
   "dni": "44985321",
   "email": "maximocolombo2003@gmail.com",
-  "adress": "AD",
-  "password": "1234",
-  "passwordConfirm": false,
+  "adress": "A",
+  "password": "$2a$10$zzclrCZjtspgB0fPS8JtCeveMc0JB741OzCAbn0jSMRg9QsvMKcD6",
+  "passwordConfirm": true,
+  "image": "default-users.jpg"
+ },
+ {
+  "identificador": 3,
+  "name": "Maximo",
+  "lastname": "Colombo",
+  "dni": "44985321",
+  "email": "admin@gmail.com",
+  "adress": "awdaw",
+  "password": "$2a$10$UemRp8ALbePYQm4iDVSideCnDZXnURiu/R2BoTDzT4RZbbisOfcwO",
+  "passwordConfirm": true,
   "image": "default-users.jpg"
  }
 ]
