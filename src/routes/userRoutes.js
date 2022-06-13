@@ -6,6 +6,7 @@ const {body} = require("express-validator");
 
 const userControllers = require("../controllers/userControllers.js")
 const guestMiddleware = require('../middlewares/guestMiddleware');
+const authMiddleware = require("../middlewares/authMiddleware")
 
 //multer image
 const storage = multer.diskStorage({
@@ -34,14 +35,17 @@ body("password").notEmpty().withMessage("Debe completar completar la contraseña
 
 
 //mostramos las vistas
-router.get("/register",guestMiddleware, userControllers.register);
+router.get("/register",guestMiddleware,userControllers.register);
 router.get("/login",guestMiddleware,userControllers.login)
 //cartel se logueo
 router.post("/log",validateLogin,userControllers.sendLogin)
 //nos manda de login a register
 router.post("/reg",upload.single("file-image-user"), userControllers.sendToRegister)
+//perfil
+router.get("/profile",authMiddleware,userControllers.profile)
+//log-out
+router.get("/logout",authMiddleware,userControllers.logout)
 
-router.get("/profile",userControllers.profile)
 
 
 

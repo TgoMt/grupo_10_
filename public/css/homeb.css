@@ -63,7 +63,7 @@ h2 {
 .product .imgProduct img {
    width: 100%;
    transition: all 0.5s;
-   border: 3px solid white;
+   border: 5px solid white;
    height: 50vh;
 }
 

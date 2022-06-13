@@ -111,6 +111,11 @@ const userControllers = {
         return res.render('./users/userProfile', {
             user: req.session.userLogged
         });
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        res.redirect("/")
     }
+    
 }
 module.exports = userControllers;

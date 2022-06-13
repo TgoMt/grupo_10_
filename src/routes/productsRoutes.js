@@ -3,6 +3,8 @@ const   router = express.Router();
 const path = require("path")
 const multer = require("multer");
 
+const authMiddleware = require("../middlewares/authMiddleware")
+
 const storage = multer.diskStorage({
     destination:function (req,file,callback){
     callback(null,"public/img/products");
@@ -20,12 +22,12 @@ const upload = multer({storage: storage});
 const productsControllers = require("../controllers/productsControllers.js");
 const { Route } = require("express");
 
-router.get("/productCart",productsControllers.productCart)
+router.get("/productCart",authMiddleware,productsControllers.productCart)
 /* router.post("/productCart",upload.single("file-image-product"),productsControllers.agregarCart) */
 
-router.get("/productDetail/:id",productsControllers.productDetail)
+router.get("/productDetail/:id",authMiddleware,productsControllers.productDetail)
 
-router.get("/crear", productsControllers.crear)
+router.get("/crear",authMiddleware, productsControllers.crear)
 router.post("/", upload.single("file-image-product"), productsControllers.crearAgregado)
 
 router.get("/editar/:id", productsControllers.editar)
