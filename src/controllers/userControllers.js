@@ -11,7 +11,7 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userControllers = {
     register: (req, res) => {
-
+    
         res.render("./users/register")
     },
     sendRegister: (req, res) => {
@@ -35,8 +35,6 @@ const userControllers = {
         } else {
             res.redirect("/")
         }
-        //Usuario ya registrado
-
         //Encriptar contraseña
         let pass = bcrypt.hashSync(req.body.password, 10)
         //Formularios
@@ -53,7 +51,7 @@ const userControllers = {
         }
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        /* res.redirect("/users/register") */
+        
 
     },
     sendToRegister: (req, res) => {
@@ -67,7 +65,6 @@ const userControllers = {
 
     sendLogin: (req, res) => {
 
-
         let userToLogin = User.findByField('email', req.body.email);
 
         if (userToLogin) {
@@ -75,7 +72,7 @@ const userControllers = {
             if (isOkThePassword) {
                 req.session.userLogged = userToLogin;
 
-                /* if(req.body.remember_user) {
+                /* if(req.body.rememberMe) {
                     res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
                 } */
 
@@ -108,11 +105,13 @@ const userControllers = {
     },
 
     profile: (req, res) => {
+        
         return res.render('./users/userProfile', {
             user: req.session.userLogged
         });
     },
     logout: (req, res) => {
+        
         req.session.destroy();
         res.redirect("/")
     }
