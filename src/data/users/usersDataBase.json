@@ -20,5 +20,16 @@
   "password": "$2a$10$UemRp8ALbePYQm4iDVSideCnDZXnURiu/R2BoTDzT4RZbbisOfcwO",
   "passwordConfirm": true,
   "image": "default-users.jpg"
+ },
+ {
+  "identificador": 4,
+  "name": "Thiago",
+  "lastname": "Duran",
+  "dni": "42945977",
+  "email": "thiaguiduran@hotmail.com",
+  "adress": "Larrea 199",
+  "password": "$2a$10$CH2gGyHjccC5n9KcDihPh.tk33N6i7XjiQrnLW27cRAL2nvpbI49W",
+  "passwordConfirm": true,
+  "image": "default-users.jpg"
  }
 ]

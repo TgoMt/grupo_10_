@@ -1,0 +1,42 @@
+img{
+    width: 100px;
+    border-radius: 50px;
+}
+.center{
+    margin: auto;
+    display: block;
+}
+
+body{
+background-color: orange;
+}
+
+.container{
+display: flex;
+justify-content: center;
+}
+
+.alert-success{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+
+
+
+@media (min-width: 767px){
+    img{
+        width: 15vw;
+        border-radius: 80px;
+    }
+}
+
+
+@media (min-width: 1000px){
+    img{
+        border-radius: 100px;
+    }
+}
