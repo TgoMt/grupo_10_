@@ -1,3 +1,4 @@
+const path = require("path")
 const express = require("express");
 const router = express.Router();
 const multer = require("multer");
@@ -39,8 +40,10 @@ router.get("/register",guestMiddleware,userControllers.register);
 router.get("/login",guestMiddleware,userControllers.login)
 //cartel se logueo
 router.post("/log",validateLogin,userControllers.sendLogin)
+//cartel de se registro
+router.post("/registrado",validateRegister,upload.single("file-image-user"),userControllers.sendRegister)
 //nos manda de login a register
-router.post("/reg",upload.single("file-image-user"), userControllers.sendToRegister)
+router.post("/reg", userControllers.sendToRegister)
 //perfil
 router.get("/profile",authMiddleware,userControllers.profile)
 //log-out
@@ -50,8 +53,7 @@ router.get("/logout",authMiddleware,userControllers.logout)
 
 
 
-//cartel de se registro
-router.post("/registrado",validateRegister,userControllers.sendRegister)
+
 //cartel se logueo con google
 router.post("/reg/google",userControllers.sendLoginGoogle)
 //cartel se logueo con facebook

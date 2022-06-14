@@ -1,171 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register</title>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-      rel="stylesheet"
-    />
-    <link href="/css/styles.css" rel="stylesheet" />
-    <link href="/css/register.css" rel="stylesheet" />
-    <script
-      src="https://kit.fontawesome.com/d9380e76ff.js"
-      crossorigin="anonymous"
-    ></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <%- include("../partials/header") %>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="/css/styles.css" rel="stylesheet" />
+  <link href="/css/register.css" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
+</head>
+<%- include("../partials/header") %>
 
   <body>
     <main class="main-register">
- <!-- express validator -->
-      <% if(locals.errors) { %> <% } %>
-  <!-- express validator -->
-      <article class="title-register">
-        <h2>Bienvenidos a Si Pinta, Pinta</h2>
-      </article>
-      <article class="information-register">
-        <p>
-          Nuestro trabajo se basa en poder formar una relacion cliente-prveedor,
-          lo que buscamos es poder vender bebibas a todo el pais dirigido a un
-          publico mayor de edad(Argentina +18)
-        </p>
-      </article>
-      
+      <!-- express validator -->
+      <% if(locals.errors) { %>
+        <% } %>
+          <!-- express validator -->
+          <article class="title-register">
+            <h2>Bienvenidos a Si Pinta, Pinta</h2>
+          </article>
+          <article class="information-register">
+            <p>
+              Nuestro trabajo se basa en poder formar una relacion cliente-prveedor,
+              lo que buscamos es poder vender bebibas a todo el pais dirigido a un
+              publico mayor de edad(Argentina +18)
+            </p>
+          </article>
 
-      <div class="information-questions">
-        <article class="information-tablet">
-          <p>
-            Nuestro trabajo se basa en poder formar una relacion
-            cliente-prveedor, lo que buscamos es poder vender bebibas a todo el
-            pais dirigido a un publico mayor de edad(Argentina +18)
-          </p>
-          <p>
-            Al ingresar tus datos, aceptas la politica y privacidad de la pagina
-            entendiendo que te haces responsable por todas las operaciones
-            realizadas dentro de la pagina
-          </p>
-        </article>
-        <article class="form-questions">
-          <form action="/users/registrado" method="POST" class="form">
-            <div class="questions">
-              <label for="name">Nombre</label>
-              <input class="input-create" type="text" name="name" id="name" />
-            </div>
+          <div class="information-questions">
+            <article class="information-tablet">
+              <p>
+                Nuestro trabajo se basa en poder formar una relacion
+                cliente-prveedor, lo que buscamos es poder vender bebibas a todo el
+                pais dirigido a un publico mayor de edad(Argentina +18)
+              </p>
+              <p>
+                Al ingresar tus datos, aceptas la politica y privacidad de la pagina
+                entendiendo que te haces responsable por todas las operaciones
+                realizadas dentro de la pagina
+              </p>
+            </article>
+            <article class="form-questions">
+              <form action="/users/registrado" method="POST" class="form">
+                <div class="questions">
+                  <label for="name">Nombre</label>
+                  <input class="input-create" type="text" name="name" id="name" />
+                </div>
 
-            <% if (locals.errors && errors.name) { %>
-            <div class="text-errors"><%= errors.name.msg %></div>
-            <% } %>
+                <% if (locals.errors && errors.name) { %>
+                  <div class="text-errors">
+                    <%= errors.name.msg %>
+                  </div>
+                  <% } %>
 
-            <div class="questions">
-              <label for="lastname">Apellido</label>
-              <input class="input-create" type="text" name="lastname" id="lastname"/>
-            </div>
-            <% if (locals.errors && errors.lastname) { %>
-            <div class="text-errors"><%= errors.lastname.msg %></div>
-            <% } %>
-            <div class="questions">
-              <label for="file">Imagen</label>
-              <input
-                type="file"
-                name="file-image-user"
-                id="file"
-                class="input-create"
-                accept="jpg,png"
-              />
-            </div>
-            <div class="questions">
-              <label for="email">Correo Electronico</label>
-              <input
-                class="input-create"
-                type="email"
-                name="email"
-                id="email"
-              />
-            </div>
-            <% if (locals.errors && errors.email) { %>
-            <div class="text-errors"><%= errors.email.msg %></div>
-            <% } %>
-            <div class="questions">
-              <label for="dni">D.N.I</label>
-              <input
-                class="input-create"
-                type="number"
-                name="dni"
-                id="dni"
-                minlength="8"
-                maxlength="9"
-              />
-            </div>
-            <% if (locals.errors && errors.dni) { %>
-            <div class="text-errors"><%= errors.dni.msg %></div>
-            <% } %>
-            <div class="questions">
-              <label for="adress">Direccion</label>
-              <input
-                class="input-create"
-                type="text"
-                name="adress"
-                id="adress"
-              />
-            </div>
-            <% if (locals.errors && errors.adress) { %>
-            <div class="text-errors"><%= errors.adress.msg %></div>
-            <% } %>
-            <div class="questions">
-              <label for="password">Contraseña</label>
-              <input
-                class="input-create"
-                type="password"
-                name="password"
-                id="password"
-              />
-            </div>
-            <% if (locals.errors && errors.password) { %>
-            <div class="text-errors"><%= errors.password.msg %></div>
-            <% } %>
-            <div class="questions">
-              <label for="passwordConfirm">Confirmar Contraseña</label>
-              <input
-                class="input-create"
-                type="password"
-                name="passwordConfirm"
-                id="passwordConfirm"
-              />
-            </div>
-            <% if (locals.errors && errors.passwordConfirm) { %>
-            <div class="text-errors"><%= errors.passwordConfirm.msg %></div>
-            <% } %>
-            <div class="questions">
-              <label for="Terms And Conditions">Terminos y Condiciones</label>
-              <input
-                class="input-create"
-                type="checkbox"
-                name="terms"
-                id="terms"
-                required
-              />
-            </div>
+                    <div class="questions">
+                      <label for="lastname">Apellido</label>
+                      <input class="input-create" type="text" name="lastname" id="lastname" />
+                    </div>
+                    <% if (locals.errors && errors.lastname) { %>
+                      <div class="text-errors">
+                        <%= errors.lastname.msg %>
+                      </div>
+                      <% } %>
 
-            <div class="questions">
-              <div class="buttons">
-                <input class="buttons-register" type="submit" value="Enviar" />
-                <input class="buttons-register" type="submit" value="Borrar" />
-              </div>
-            </div>
-          </form>
-        </article>
-      </div>
+                        <div class="questions">
+                          <label for="file">Imagen</label>
+                          <input type="file"  id="file" name="file-image-user" class="input-create" />
+                        </div>
+                        <div class="questions">
+                          <label for="email">Correo Electronico</label>
+                          <input class="input-create" type="email" name="email" id="email" />
+                        </div>
+                        <% if (locals.errors && errors.email) { %>
+                          <div class="text-errors">
+                            <%= errors.email.msg %>
+                          </div>
+                          <% } %>
+                            <div class="questions">
+                              <label for="dni">D.N.I</label>
+                              <input class="input-create" type="number" name="dni" id="dni" minlength="8"
+                                maxlength="9" />
+                            </div>
+                            <% if (locals.errors && errors.dni) { %>
+                              <div class="text-errors">
+                                <%= errors.dni.msg %>
+                              </div>
+                              <% } %>
+                                <div class="questions">
+                                  <label for="adress">Direccion</label>
+                                  <input class="input-create" type="text" name="adress" id="adress" />
+                                </div>
+                                <% if (locals.errors && errors.adress) { %>
+                                  <div class="text-errors">
+                                    <%= errors.adress.msg %>
+                                  </div>
+                                  <% } %>
+                                    <div class="questions">
+                                      <label for="password">Contraseña</label>
+                                      <input class="input-create" type="password" name="password" id="password" />
+                                    </div>
+                                    <% if (locals.errors && errors.password) { %>
+                                      <div class="text-errors">
+                                        <%= errors.password.msg %>
+                                      </div>
+                                      <% } %>
+                                        <div class="questions">
+                                          <label for="passwordConfirm">Confirmar Contraseña</label>
+                                          <input class="input-create" type="password" name="passwordConfirm"
+                                            id="passwordConfirm" />
+                                        </div>
+                                        <% if (locals.errors && errors.passwordConfirm) { %>
+                                          <div class="text-errors">
+                                            <%= errors.passwordConfirm.msg %>
+                                          </div>
+                                          <% } %>
+                                            <div class="questions">
+                                              <label for="Terms And Conditions">Terminos y Condiciones</label>
+                                              <input class="input-create" type="checkbox" name="terms" id="terms"
+                                                required />
+                                            </div>
+
+                                            <div class="questions">
+                                              <div class="buttons">
+                                                <input class="buttons-register" type="submit" value="Enviar" />
+                                                <input class="buttons-register" type="submit" value="Borrar" />
+                                              </div>
+                                            </div>
+              </form>
+            </article>
+          </div>
     </main>
     <%- include("../partials/footer.ejs") %>
   </body>
+
 </html>

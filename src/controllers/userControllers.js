@@ -31,27 +31,27 @@ const userControllers = {
         let resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
-            return res.render("./users/register", { errors: resultValidation.mapped(),/* old:req.body */ });
-        } else {
-            res.redirect("/")
+            return res.render("./users/register", { errors: resultValidation.mapped() });
         }
         //Encriptar contraseña
         let pass = bcrypt.hashSync(req.body.password, 10)
         //Formularios
         let newUser = {
-            identificador: users[users.length - 1].identificador + 1,
+            identificar: users[users.length - 1].identificar + 1,
             name: req.body.name,
             lastname: req.body.lastname,
             dni: req.body.dni,
+            image: req.file ? req.file.filename : "default-users.jpg",
             email: req.body.email,
             adress: req.body.adress,
             password: pass,
             passwordConfirm: bcrypt.compareSync(req.body.passwordConfirm, pass),
-            image: req.file ? req.file.filename : "default-users.jpg"
+            
+            
         }
         users.push(newUser);
         fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        
+        res.redirect("/")
 
     },
     sendToRegister: (req, res) => {
