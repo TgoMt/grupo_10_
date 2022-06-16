@@ -24,6 +24,7 @@ justify-content: space-evenly;
     width: 95%;
     height: 26px;
     border: none;
+    outline: none;
 }
 .buttons-register{
     

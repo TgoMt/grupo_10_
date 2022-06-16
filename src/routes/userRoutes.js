@@ -41,7 +41,7 @@ router.get("/login",guestMiddleware,userControllers.login)
 //cartel se logueo
 router.post("/log",validateLogin,userControllers.sendLogin)
 //cartel de se registro
-router.post("/registrado",validateRegister,upload.single("file-image-user"),userControllers.sendRegister)
+router.post("/registrado",upload.single("file-image-user"),validateRegister, userControllers.sendRegister)
 //nos manda de login a register
 router.post("/reg", userControllers.sendToRegister)
 //perfil

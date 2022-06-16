@@ -1,6 +1,6 @@
 img{
-    width: 100px;
-    border-radius: 50px;
+    width: 48vw;
+    border-radius: 50%;
 }
 .center{
     margin: auto;
@@ -29,14 +29,15 @@ h2{
 
 @media (min-width: 767px){
     img{
-        width: 15vw;
-        border-radius: 80px;
+        width: 30vw;
+        border-radius: 50%;
     }
 }
 
 
 @media (min-width: 1000px){
     img{
-        border-radius: 100px;
+        width: 20vw;
+        border-radius: 50%;
     }
 }
