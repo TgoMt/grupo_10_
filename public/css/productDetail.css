@@ -1,5 +1,6 @@
 .main-productDetail{
-    background: linear-gradient(to bottom, #042b02, #0a8c03);
+    /* background: linear-gradient(to bottom, #042b02, #0a8c03); */
+    background-color: orange;
 }
 .follow-us{
     font-family: 'Quicksand', sans-serif;
@@ -8,45 +9,39 @@
 
 .product-price{
     display: flex;
+    width: 100%;
 }
 
 .title-prices{
-    max-width: 50%;
+    /* max-width: 50%; */
+    width: 60%;
+    padding-left:20px;
+    font-family: 'Quicksand', sans-serif;
 }
-
-.product-price h1{
-    display: block;
-    -webkit-text-stroke: 2px #5c2b03;
-    color:#914303 ;
-}
-
-.prices-pdetail ul{
-    right: 15px;
-    list-style: none;
-    margin-right: 10px;
-    line-height: 25px;
-}
-
 .product-img{
     max-width: 50%;
+    width: 40%;
+    padding: 5px 0px 0px 5px;   
 }
-
+.product-price h1{
+    display: block;
+    
+}
+.prices-pdetail ul{
+    list-style: none;
+}
 .data-products{
     max-width: 50%;
     margin-left: 10px;
 }
-
 .data-products h2{
-    -webkit-text-stroke: 2px #5c2b03;
-    color:#914303 ;
+    font-family: 'Quicksand', sans-serif; 
 }
-
 .data{
     max-width: 50%;
     margin-left: 10px;
     line-height: 25px;
 }
-
 .information{
     display: flex;
 }
@@ -54,6 +49,11 @@
 .valoration{
     margin-left: 10px;
 }
+.buttons{
+    display: inline-flex;
+}
+
+
 .networks{
 display: flex;
 justify-content: space-evenly;
@@ -65,7 +65,6 @@ border-radius: 7px;
 }
 
 .prices-description{
-    -webkit-text-stroke: 2px #080706;
     font-size: large;
 }
 
@@ -81,11 +80,6 @@ border-radius: 7px;
     .valoration{
         font-size: 22px;
     }
-
-    /* .vinculos ul li{
-        padding: 10px;
-    } */
-
     .prices-pdetail ul{
         line-height: 70px;
     }

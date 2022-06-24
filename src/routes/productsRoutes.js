@@ -25,7 +25,7 @@ const { Route } = require("express");
 router.get("/productCart",authMiddleware,productsControllers.productCart)
 /* router.post("/productCart",upload.single("file-image-product"),productsControllers.agregarCart) */
 
-router.get("/productDetail/:id",authMiddleware,productsControllers.productDetail)
+router.get("/productDetail/:id",productsControllers.productDetail)
 
 router.get("/crear",authMiddleware, productsControllers.crear)
 router.post("/", upload.single("file-image-product"), productsControllers.crearAgregado)
