@@ -4,18 +4,29 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+const db = path.join(__dirname, '../database/models');
+
+console.log(db.User)
+
 const productsControllers = {
 
 productCart: (req, res)=> {
     res.render("./products/productCart")
 },
 productDetail:(req, res)=> {
+
+	
     let id = req.params.id
     let product = products.find(product => product.id == id)
     res.render("./products/productDetail",{product})
 },
 crear:(req, res) => {
-    res.render("./products/crear")
+	db.Product.findAll()
+	.then(function(Category){
+		return res.render("./products/crear",{Category:Category})
+	})
+
+    
 },
 crearAgregado:(req, res) => {
     let newProduct = {

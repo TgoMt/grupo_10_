@@ -1,6 +1,6 @@
 [
  {
-  "identificar": 2,
+  "id": 2,
   "name": "Lucas",
   "lastname": "Colombo",
   "dni": "44985321",
@@ -11,7 +11,7 @@
   "image": "default-users.jpg"
  },
  {
-  "identificar": 3,
+  "id": 3,
   "name": "a",
   "lastname": "a",
   "dni": "44985321",
@@ -19,17 +19,6 @@
   "email": "a@gmail.com",
   "adress": "a",
   "password": "$2a$10$P3d3hFaekaovQF30BAKJFOv1BeeE8D./bo/nAIvEgP5TvTmS6RJX2",
-  "passwordConfirm": true
- },
- {
-  "identificar": 4,
-  "name": "Maximo",
-  "lastname": "colombo",
-  "dni": "44985321",
-  "image": "file-image-user1655404656003image.png",
-  "email": "hola@gmail.com",
-  "adress": "a",
-  "password": "$2a$10$l15Z3KKlQnuoCo1V.gOfx.TLZOC1d58GTc4MQ3GpgRSWtIMwP1Q4m",
   "passwordConfirm": true
  }
 ]
