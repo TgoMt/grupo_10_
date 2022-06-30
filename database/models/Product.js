@@ -2,30 +2,30 @@ module.exports = function(sequelize,dataTypes){
     let alias = "Product"
 
     let cols = {
-   "id":{
+   id:{
     type:dataTypes.INTEGER,
     primaryKey:true,
     autoIncrement:true,
    },
-   "name":{
-    type:dataTypes.STRING(50)
+   name:{
+    type:dataTypes.STRING
    },
-   "price":{
+   price:{
     type:dataTypes.INTEGER
    },
-   "discount":{
+   discount:{
     type:dataTypes.INTEGER
    },
-   "description":{
-    type:dataTypes.STRING(200)
+   description:{
+    type:dataTypes.STRING
    },
-   "data":{
-    type:dataTypes.STRING(50)
+   data:{
+    type:dataTypes.STRING
    },
-   "image":{
-    type:dataTypes.STRING(200)
+   image:{
+    type:dataTypes.STRING
    },
-   "categoryId":{
+   categoryId:{
     type:dataTypes.INTEGER
    }
     }
@@ -34,13 +34,13 @@ module.exports = function(sequelize,dataTypes){
         timestamps:false
     }
 
-    Product.associate = function(models){
+    /* Product.associate = function(models){
         Product.hasMany(models.Category,{
             as:"categories",
             foreignKey:"categoryId"
         });
     }
-
+ */
     let Product = sequelize.define(alias,cols,config);
     return Product;
 }

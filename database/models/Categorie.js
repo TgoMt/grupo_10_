@@ -2,13 +2,13 @@ module.exports = function(sequelize,dataTypes){
     let alias = "Category"
 
     let cols = {
-   "id":{
+   id:{
     type:dataTypes.INTEGER,
     primaryKey:true,
     autoIncrement:true,
    },
    category:{
-    data: dataTypes.STRING(200)
+    type: dataTypes.STRING
    }
    
     }
@@ -16,12 +16,12 @@ module.exports = function(sequelize,dataTypes){
         tableName: "categories",
         timestamps:false
     }
-    Category.associate = function(models){
+    /* Category.associate = function(models){
         Category.belongsToMany(models.Product,{
             as:"products",
             foreignKey:"categoryId"
         });
-    }
+    } */
 
     let Category = sequelize.define(alias,cols,config);
 

@@ -4,9 +4,9 @@ const fs = require('fs');
 const productsFilePath = path.join(__dirname, '../data/products/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
-const db = path.join(__dirname, '../database/models');
+const db = require(path.join(__dirname, '../../database/models'));
 
-console.log(db.User)
+
 
 const productsControllers = {
 
@@ -22,9 +22,14 @@ productDetail:(req, res)=> {
 },
 crear:(req, res) => {
 	db.Product.findAll()
-	.then(function(Category){
-		return res.render("./products/crear",{Category:Category})
+	.then(function(products){
+		return res.send(products)
 	})
+	/* crear:(req, res) => {
+		db.Product.findAll()
+		.then(function(){
+			return res.render("./products/crear")
+		}) */
 
     
 },

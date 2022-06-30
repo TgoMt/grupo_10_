@@ -7,28 +7,28 @@ module.exports = function(sequelize,dataTypes){
     primaryKey:true,
     autoIncrement:true,
    },
-   "name":{
-    type:dataTypes.STRING(50)
+   name:{
+    type:dataTypes.STRING
    },
-   "lastname":{
-    type:dataTypes.STRING(50)
+   lastname:{
+    type:dataTypes.STRING
    },
-   "dni":{
+   dni:{
     type:dataTypes.INTEGER
    },
-   "email":{
-    type:dataTypes.STRING(100)
+   email:{
+    type:dataTypes.STRING
    },
-   "adress":{
-    type:dataTypes.STRING(50)
+   adress:{
+    type:dataTypes.STRING
    }
    ,
-   "password":{
-    type:dataTypes.STRING(50)
+   password:{
+    type:dataTypes.STRING
    }
    ,
    "image":{
-    type:dataTypes.STRING(200)
+    type:dataTypes.STRING
    }
    ,
    "roleId":{
@@ -40,12 +40,12 @@ module.exports = function(sequelize,dataTypes){
         timestamps:false
     }
 
-User.associate = function(models){
+/* User.associate = function(models){
     User.hasMany(models.Role,{
         as:"roles",
         foreignKey:"roleId"
     })
-}
+} */
 
     let User = sequelize.define(alias,cols,config);
     return User;
