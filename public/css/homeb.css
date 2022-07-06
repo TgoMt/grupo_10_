@@ -137,7 +137,7 @@ h2 {
       padding-top: 5px;
    }
    .products {
-      display: flex;
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
         width: 100vw;

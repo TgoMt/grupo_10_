@@ -1,64 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Si pinta, Pinta</title>
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-        <link href="/css/styles.css" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="css/homeb.css">
-        <link href="/css/styles.css" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
-    </head>
-    
-    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si pinta, Pinta</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/homeb.css">
+    <link href="/css/styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
 <body>
-    <%- include("./partials/header",{titulo:"home"}) %> 
-    <main class="main-homeb">
+    <%- include("./partials/header",{titulo:"home"}) %>
+        <main class="main-homeb">
 
-        <section>
-            <h2>Ofertas</h2>
-                  <div class="Oferts">
+            <section>
+                <h2>Ofertas</h2>
+                <div class="Oferts">
 
 
-                            <div class="products">
-                                      
-                                      <% products.forEach(product => { %>
-                                        <article class="product">
-                                          
-                                                  <a href="/products/productDetail/<%= product.id %>">
-                                                      
-                                                            <div class="imgProduct">
-                                                                  
-                                                                     <img src="img/products/<%= product.image %>" >
-                                                                     
-                                                                       <span class="discount"><%= product.off %>% Off</span>
-                                                            </div>
-                                                            
-                                                  </a>
-                                                  
-                                                  <div class="descriptiveSet">
-                                                            <h4><%= product.name %></h4>
-                                                            <strong class="price">$<%= product.price %> | <%= product.off %>% Off</strong>
-                                                            <a href="#" class="add-cart">Añadir al carrito</a>
-  
-  
-                                                  </div>
-  
-                                                  
-  
-                                        </article>
-                                        <%  }); %>
-                            </div>
-                  </div>
+                    <div class="products">
 
-        </section>
-</main>
+                        <% products.forEach(product=> { %>
+                            <article class="product">
+
+                                <a href="/products/productDetail/<%= product.id %>">
+
+                                    <div class="imgProduct">
+
+                                        <img src="img/products/<%= product.image %>">
+
+                                        <span class="discount">
+                                            <%= product.off %>% Off
+                                        </span>
+                                    </div>
+
+                                </a>
+
+                                <div class="descriptiveSet">
+                                    <h4>
+                                        <%= product.name %>
+                                    </h4>
+                                    <strong class="price">$<%= product.price %> | <%= product.off %>% Off</strong>
+                                    <a href="#" class="add-cart">Añadir al carrito</a>
+
+
+                                </div>
+
+
+
+                            </article>
+                            <% }); %>
+                    </div>
+                </div>
+
+            </section>
+        </main>
 </body>
 <%- include("./partials/footer.ejs") %>
+
 </html>
