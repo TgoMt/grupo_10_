@@ -27,7 +27,7 @@ router.get("/productCart",authMiddleware,productsControllers.productCart)
 
 router.get("/productDetail/:id",productsControllers.productDetail)
 
-router.get("/crear",authMiddleware, productsControllers.crear)
+router.get("/crear", productsControllers.crear)
 router.post("/", upload.single("file-image-product"), productsControllers.crearAgregado)
 
 router.get("/editar/:id", productsControllers.editar)

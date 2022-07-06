@@ -1,6 +1,6 @@
 [
  {
-  "identificar": 2,
+  "id": 2,
   "name": "Lucas",
   "lastname": "Colombo",
   "dni": "44985321",
@@ -11,7 +11,7 @@
   "image": "default-users.jpg"
  },
  {
-  "identificar": 3,
+  "id": 3,
   "name": "a",
   "lastname": "a",
   "dni": "44985321",

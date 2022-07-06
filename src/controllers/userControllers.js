@@ -4,6 +4,10 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const User = require('../models/User');
 const session = require("express-session");
+const db = path.join(__dirname, '../database/models');
+
+
+
 
 const usersFilePath = path.join(__dirname, '../data/users/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -37,7 +41,7 @@ const userControllers = {
         let pass = bcrypt.hashSync(req.body.password, 10)
         //Formularios
         let newUser = {
-            identificar: users[users.length - 1].identificar + 1,
+            id: users[users.length - 1].id + 1,
             name: req.body.name,
             lastname: req.body.lastname,
             dni: req.body.dni,
