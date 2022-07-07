@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
+<<<<<<< HEAD
 <%- include("../partials/header") %> 
 <body class="body">
     <main class="main-carrito">
@@ -37,49 +38,78 @@
             <div class="subtotal">
             <p>SubTotal</p>
             <input type="text" name="subtotal" id="subtotal">
-            </div>
+=======
+<%- include("../partials/header") %>
 
-            </div>
-            
-        </div>
+    <body>
+        <main class="main-carrito">
+            <section>
+                <article class="product">
+                    <div class="image-carrito">
+                        <img src="/img/products/jack daniels-out.jpg" alt="Cerveza Brahma">
+                    </div>
+                    <div class="product-description">
+                        <div class="description">
+                            <p>Descripcion</p>
+                            <input type="text" name="description" id="description">
+                        </div>
+                        <div class="price">
+                            <p>Precio</p>
+                            <input type="text" name="price" id="price">
+                        </div>
+                        <div class="quantity">
+                            <p>Cantidad</p>
+                            <input type="text" name="quantity" id="quantity">
+                        </div>
+                        <div class="subtotal">
+                            <p>SubTotal</p>
+                            <input type="text" name="subtotal" id="subtotal">
+                        </div>
 
-        <div class="image-carrito">
-            <img src="/img/products/Jägermeister-out.png" alt="Cerveza Ambar">
-        </div>
-        <div class="product-description">
-            <div class="description">
-                <p>Descripcion</p>
-                <input type="text" name="description" id="description">
-            </div>
-            <div class="price">
-                <p>Precio</p>
-                <input type="text" name="price" id="price">
-            </div>
-            <div class="quantity">
-                <p>Cantidad</p> 
-                <input type="text" name="quantity" id="quantity">
-            </div>
-            <div class="subtotal">
-            <p>SubTotal</p>
-            <input type="text" name="subtotal" id="subtotal">
-            </div>
-
-            </div>
-            
-        </div>
-        <div class="total">
-            <form action="#"></form>
-            <label for="total">Total</label>
-        </div>
-        <div class="total">
-            <input type="text" name="total" id="total">
-        </div>
+                    </div>
+                </article>
 
 
+            </section>
+
+            <!--        <div class="image-carrito">
+                <img src="/img/products/Jägermeister-out.png" alt="Cerveza Ambar">
+>>>>>>> c6357327a80752254de4b6808af6b7adf95e5e88
+            </div>
+            <div class="product-description">
+                <div class="description">
+                    <p>Descripcion</p>
+                    <input type="text" name="description" id="description">
+                </div>
+                <div class="price">
+                    <p>Precio</p>
+                    <input type="text" name="price" id="price">
+                </div>
+                <div class="quantity">
+                    <p>Cantidad</p>
+                    <input type="text" name="quantity" id="quantity">
+                </div>
+                <div class="subtotal">
+                    <p>SubTotal</p>
+                    <input type="text" name="subtotal" id="subtotal">
+                </div>
+
+            </div>
+
+            </div> -->
+            <div class="total">
+                <form action="#"></form>
+                <label for="total">Total</label>
+            </div>
+            <div class="total">
+                <input type="text" name="total" id="total">
+            </div>
 
 
-    </main>
-    <%- include("../partials/footer.ejs") %>
-</body>
+
+
+        </main>
+        <%- include("../partials/footer.ejs") %>
+    </body>
 
 </html>
