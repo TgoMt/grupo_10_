@@ -1,8 +1,8 @@
 const path = require("path");
 const fs = require('fs');
 
-const productsFilePath = path.join(__dirname, '../data/products/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+/* const productsFilePath = path.join(__dirname, '../data/products/productsDataBase.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
 
 const db = require(path.join(__dirname, '../../database/models'));
 
@@ -13,40 +13,50 @@ const productsControllers = {
 productCart: (req, res)=> {
     res.render("./products/productCart")
 },
-productDetail:(req, res)=> {
-
+productDetail:(req, res)=> {	
+   /*  let id = req.params.id */
+	db.Product.findByPk(req.params.id)
+	.then(function(product){
+		return res.render("./products/productDetail",{product})
+	})
 	
-    let id = req.params.id
-    let product = products.find(product => product.id == id)
-    res.render("./products/productDetail",{product})
+    /* let product = products.find(product => product.id == id)
+    res.render("./products/productDetail",{product}) */
 },
 crear:(req, res) => {
-	db.Product.findAll()
-	.then(function(products){
-		return res.send(products)
+	db.Category.findAll()
+	.then(function(categories){
+		return res.render("./products/crear",{categories:categories})
 	})
-	/* crear:(req, res) => {
-		db.Product.findAll()
-		.then(function(){
-			return res.render("./products/crear")
-		}) */
-
-    
 },
-crearAgregado:(req, res) => {
+/* crearAgregado:(req, res) => {
     let newProduct = {
+
     id: products[products.length - 1].id + 1,
     name: req.body.name,
 	price: parseInt(req.body.price),
 	off: parseInt(req.body.off),
 	category: req.body.category,
-	/* description: req.body.description, */
+	description: req.body.description,
 	image: req.file ? req.file.filename : "Smirnoff-out.jpg"
 }
 products.push(newProduct);
 fs.writeFileSync(productsFilePath, JSON.stringify(products,null," "));
 res.redirect("/")
 
+}, */
+crearAgregado:(req,res) => {
+db.Product.create({
+	name:req.body.name,
+	price:req.body.price,
+	discount:req.body.off,
+	description:req.body.description,
+	data:req.body.data,
+	image:req.file ? req.file.filename : "Smirnoff-out.jpg",
+	categoryId:req.body.category,
+
+});
+res.redirect("/")
 },
 editar:(req,res) => {
     let id = req.params.id

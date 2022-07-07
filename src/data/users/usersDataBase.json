@@ -20,5 +20,16 @@
   "adress": "a",
   "password": "$2a$10$P3d3hFaekaovQF30BAKJFOv1BeeE8D./bo/nAIvEgP5TvTmS6RJX2",
   "passwordConfirm": true
+ },
+ {
+  "id": 4,
+  "name": "Maximo",
+  "lastname": "Colombo",
+  "dni": "44985321",
+  "image": "file-image-user1657141284084image.jpg",
+  "email": "admin@gmail.com",
+  "adress": "a",
+  "password": "$2a$10$k973KUq32vi8kpzITh46ZOQkEMVEvBUc4OtyKY6kcxhQCTvG48FTq",
+  "passwordConfirm": true
  }
 ]

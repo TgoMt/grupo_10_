@@ -1,9 +1,11 @@
 * {
    box-sizing: border-box;
 }
-/* .Oferts{
-   text-align: center;
-} */
+
+
+.body{
+   font-family: 'Quicksand', sans-serif;
+}
 
 .products{
    text-align: center;
@@ -13,10 +15,7 @@
 
 .main-homeb{
    font-family: 'Gill Sans';
-   /*    background-image: url(/images/barra-de-bar.png);
-          background-attachment: fixed;
-          width: 100%;
-           */
+   
    background-color: orange;
 
 
@@ -39,6 +38,7 @@ h2 {
    text-shadow: black 0.1em 0.1em 0.1em;
    text-align: center;
    margin-top: 0;
+   font-size: 40px;
 }
 
 

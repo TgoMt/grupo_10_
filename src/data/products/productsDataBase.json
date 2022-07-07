@@ -5,7 +5,7 @@
   "price": 800,
   "off": 5,
   "category": "Cervezas",
-  "description": "aca va la descripcion",
+  "description": "Corona es una invitación para salir y relajarse. Su líquido dorado se elabora 100% en México y es la cerveza mexicana más popular del mundo. Corona ha estado complementando los momentos sencillos de la vida desde 1925, y ahora se disfruta en más de 180 países alrededor del mundo.",
   "datos": "aca van datos",
   "image": "Corona-out.jpg"
  },
@@ -15,7 +15,7 @@
   "price": 5600,
   "off": 10,
   "category": "Licores",
-  "description": "aca va la descripcion",
+  "description": "Ablandado gota a gota a través de carbón de arce de azúcar, luego madurado en barriles artesanales de nuestra propia fabricación. Y nuestro Tennessee Whiskey no sigue un calendario. Solo estará listo cuando nuestros catadores digan que lo está. Lo juzgamos por la forma en que se ve.",
   "datos": "aca van datos",
   "image": "jack daniels-out.jpg"
  },
@@ -25,7 +25,7 @@
   "price": 5000,
   "off": 15,
   "category": "Bebidas blancas",
-  "description": "aca va la descripcion",
+  "description": "Al paladar, transmite piel de limón y una dulzura media, seguidas de un enebro intenso y una dulzura ácida de limón, apoyados por notas de salida de cilantro y regaliz, equilibradas por las notas más profundas y especiadas que definen la base del paladar.",
   "datos": "aca van datos",
   "image": "bombay - out.png"
  },
@@ -35,7 +35,7 @@
   "price": 1600,
   "off": 10,
   "category": "Licores",
-  "description": "aca va la descripcion",
+  "description": "Bacardí Carta Oro es el primer ron dorado ligero del mundo. Se envejece en barricas de roble blanco tostado al fuego para darle carácter, sometiéndolo posteriormente a filtración hasta conseguir su suavidad característica. Es la orgullosa creación de los Maestros de Ron Bacardí.",
   "datos": "aca van datos",
   "image": "ronBacardi-out.jpg"
  },
@@ -45,7 +45,7 @@
   "price": 1300,
   "off": 20,
   "category": "Bebidas blancas",
-  "description": "aca va la descripcion",
+  "description": "Smirnoff es un vodka de origen ruso, de 37,5% alc./vol., obtenido por triple destilación del alcohol de grano, y filtrado por carbón, cuya fabricación se inició en el año 1864 por Pyotr Alexandrovich Smirnov.",
   "datos": "aca van datos",
   "image": "Smirnoff-out.jpg"
  },
@@ -55,7 +55,7 @@
   "price": 1250,
   "off": 10,
   "category": "Aperitivo",
-  "description": "aca va la descripcion",
+  "description": "Fernet-Branca es de color marrón claro con reflejos ámbar y desprende un aroma a menta que predomina sobre el resto de las hierbas con las que se elabora, aunque debajo de la menta se percibe pino, algunas notas florales y hasta caramelo.",
   "datos": "aca van datos",
   "image": "fernet-out.jpg"
  },
@@ -65,7 +65,7 @@
   "price": 5850,
   "off": 10,
   "category": "Licores",
-  "description": "aca va la descripcion",
+  "description": "Jägermeister es un licor de hierbas endulzado, pero con un dejo amargo, el cual tiene 34,5% de contenido alcohólico. Es muy popular en Baja Sajonia en la ciudad de Wolfenbüttel (Alemania). En esta ciudad se encuentra la raíz de la empresa que la comercializa: Mast-Jägermeister SE.",
   "datos": "aca van datos",
   "image": "Jägermeister-out.png"
  }

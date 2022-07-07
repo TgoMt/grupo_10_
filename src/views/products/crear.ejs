@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crear</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="/css/styles.css" rel="stylesheet" />
-    <link href="/css/crear.css" rel="stylesheet" />
+    <link href="/css/styles.css" rel="stylesheet"/>
+    <link href="/css/crear.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body class="body">
     <header>
         <%- include("../partials/header") %>
     </header>
@@ -43,24 +43,23 @@
 
     <div class="create-questions">
         <label for="category">Categoria</label>
-        <select name="category" id="category" class="create-questions-input">
-            <option value="">Elegi</option>
-            <option value="">Bebidas Blancas</option>
-            <option value="">Cervezas</option>
-            <option value="">Licores</option>
-            <option value="">Vinos</option>
-            <option value="">Aperitivos</option>
+        <select name="category"  class="create-questions-input">
+            <% for (let i = 0; i < categories.length;i++){ %>
+                <option value="<%=categories[i].id%>"> 
+                    <%=categories[i].category%>
+                </option>
+            <% } %> 
         </select>
     </div>
     <div class="create-questions-separated">
         <div class="create-questions">
             <label for="price">Precio</label>
-        <input type="number" name="price" id="price"placeholder="Ejemplo: 150$" class="create-questions-input"/>
+        <input type="number" name="price" id="price" placeholder="Ejemplo: 150$" class="create-questions-input"/>
         </div>
     
         <div class="create-questions">
             <label for="off">Descuento</label>
-        <input type="number" name="off" id="off"placeholder="Ejemplo: 10" class="create-questions-input"/>
+        <input type="number" name="off" id="off" placeholder="Ejemplo: 10" class="create-questions-input"/>
         </div>
    </div>
     <div class="create-buttons">

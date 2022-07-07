@@ -17,26 +17,22 @@
     </head>
     
     
-<body>
+<body class="body">
     <%- include("./partials/header",{titulo:"home"}) %> 
     <main class="main-homeb">
 
         <section>
             <h2>Ofertas</h2>
                   <div class="Oferts">
-
-
-                            <div class="products">
-                                      
-                                      <% products.forEach(product => { %>
+                            <div class="products">                                      
+                                      <% product.forEach(product => { %>
                                         <article class="product">
                                           
                                                   <a href="/products/productDetail/<%= product.id %>">
                                                       
-                                                            <div class="imgProduct">
-                                                                  
+                                                            <div class="imgProduct">                                                                  
                                                                      <img src="img/products/<%= product.image %>" >
-                                                                     
+
                                                                        <span class="discount"><%= product.off %>% Off</span>
                                                             </div>
                                                             
@@ -47,7 +43,7 @@
                                                             <strong class="price">$<%= product.price %> | <%= product.off %>% Off</strong>
                                                             <a href="#" class="add-cart">Añadir al carrito</a>
   
-  
+
                                                   </div>
   
                                                   
