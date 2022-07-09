@@ -28,7 +28,7 @@
                     <div class="create-questions-separated">
                         <div class="create-questions">
                             <label for="name">Nombre del producto</label>
-                            <input type="text" name="name" id="name" placeholder="Ejemplo: Cerveza Andes"
+                            <input type="text" name="name" id="name" value="<%= productToEdit.name %>"
                                 class="create-questions-input" />
                         </div>
 
@@ -45,24 +45,24 @@
                     <div class="create-questions">
                         <label for="category">Categoria</label>
                         <select name="category" id="category" class="create-questions-input">
-                            <option value="">Elegi</option>
-                            <option value="">Bebidas Blancas</option>
-                            <option value="">Cervezas</option>
-                            <option value="">Licores</option>
-                            <option value="">Vinos</option>
-                            <option value="">Aperitivos</option>
+                            <% for (let i = 0; i < categories.length;i++){ %>
+                        
+                                <option value="<%=categories[i].id%>"> 
+                                    <%=categories[i].category%>
+                                </option>
+                            <% } %> 
                         </select>
                     </div>
 
                     <div class="create-questions-separated">
                         <div class="create-questions">
                             <label for="price">Precio</label>
-                        <input type="number" name="price" id="price"placeholder="Ejemplo: 150$" class="create-questions-input"/>
+                        <input type="number" name="price" id="price" value="<%= productToEdit.price %>" class="create-questions-input"/>
                         </div>
                     
                         <div class="create-questions">
                             <label for="off">Descuento</label>
-                        <input type="number" name="off" id="off"placeholder="Ejemplo: 10" class="create-questions-input"/>
+                        <input type="number" name="off" id="off" value="<%= productToEdit.discount %>" class="create-questions-input"/>
                         </div>
                    </div>
                     <div class="edit-button">

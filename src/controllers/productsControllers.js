@@ -59,12 +59,35 @@ db.Product.create({
 res.redirect("/")
 },
 editar:(req,res) => {
-    let id = req.params.id
+    /* let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-		res.render("./products/editar", {productToEdit})
+		res.render("./products/editar", {productToEdit}) */	
+		let pedidoId = db.Product.findByPk(req.params.id)
+		let Category = db.Category.findAll()
+		Promise.all([pedidoId,Category]).then(function([productToEdit,categories]){
+		res.render("./products/editar",{productToEdit:productToEdit,categories:categories})
+		})
+
 },
 sendEditar:(req, res) => {
-    const id = req.params.id;
+	db.Product.update({
+		name:req.body.name,
+		price:req.body.price,
+		discount:req.body.off,
+		description:req.body.description,
+		data:req.body.data,
+		image:req.file ? req.file.filename : "Smirnoff-out.jpg",
+		categoryId:req.body.category,
+	
+	},{
+		where: {
+			id:req.params.id
+		}
+	});
+	res.redirect("/products/productDetail/" + req.params.id)
+
+},
+    /* const id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);
 		
 		let productToSave = {
@@ -74,7 +97,7 @@ sendEditar:(req, res) => {
 			off: req.body.off,
 			category: req.body.category,
 			description: req.body.description,
-			/* ...req.body, */
+			
 			image: req.file ? req.file.filename : productToEdit.image,
 		}
 
@@ -82,13 +105,20 @@ sendEditar:(req, res) => {
 		products[indice] = productToSave;
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, " "));
-		res.redirect("/")
-},
+		res.redirect("/") */
+
 delete:(req,res) => {
-	const id = req.params.id;
+	/* const id = req.params.id;
 		let finalProducts = products.filter(product => product.id != id);
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
+		res.redirect("/") */
+
+		db.Product.destroy({
+			where:{
+				id:req.params.id
+			}
+		})
 		res.redirect("/")
 }
 }
