@@ -72,7 +72,7 @@
 
                         <div class="questions">
                           <label for="file">Imagen</label>
-                          <input type="file"  id="file" name="file-image-user" class="input-create" />
+                          <input type="file" id="file" name="file-image-user" class="input-create" />
                         </div>
                         <div class="questions">
                           <label for="email">Correo Electronico</label>
@@ -94,12 +94,18 @@
                               </div>
                               <% } %>
                                 <div class="questions">
-                                  <label for="adress">Direccion</label>
-                                  <input class="input-create" type="text" name="adress" id="adress" />
+                                  <label for="role">Rol</label>
+                                  <select class="input-create" type="text" name="role" id="role">
+                                    <% for (let i=0; i < role.length;i++){ %>
+                                      <option value="<%=role[i].id%>">
+                                        <%=role[i].role%>
+                                      </option>
+                                      <% } %>
+                                  </select>
                                 </div>
-                                <% if (locals.errors && errors.adress) { %>
+                                <% if (locals.errors && errors.Role) { %>
                                   <div class="text-errors">
-                                    <%= errors.adress.msg %>
+                                    <%= errors.Role.msg %>
                                   </div>
                                   <% } %>
                                     <div class="questions">

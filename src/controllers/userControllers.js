@@ -11,12 +11,16 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 
 
 const userControllers = {
-    register: (req, res) => {
-    
-        res.render("./users/register")
+   
+        register: (req, res) => {
+            db.Role.findAll()
+            .then(function(role){
+                res.render("./users/register",{role})
+            })
+        
     },
     sendRegister: (req, res) => {
-        let userInDB = User.findByField('email', req.body.email);
+        /* let userInDB = User.findByField('email', req.body.email);
 
         if (userInDB) {
             return res.render('./users/register', {
@@ -28,31 +32,32 @@ const userControllers = {
                 oldData: req.body
             });
         }
-        //Express validator
+        Express validator
         let resultValidation = validationResult(req);
 
         if (resultValidation.errors.length > 0) {
             return res.render("./users/register", { errors: resultValidation.mapped() });
-        }
+        } */
         //Encriptar contraseña
         let pass = bcrypt.hashSync(req.body.password, 10)
         //Formularios
-        let newUser = {
-            id: users[users.length - 1].id + 1,
+        db.User.create({
             name: req.body.name,
             lastname: req.body.lastname,
             dni: req.body.dni,
             image: req.file ? req.file.filename : "default-users.jpg",
             email: req.body.email,
-            adress: req.body.adress,
+            roleId: req.body.role,
             password: pass,
             passwordConfirm: bcrypt.compareSync(req.body.passwordConfirm, pass),
             
             
-        }
-        users.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+        });
+
         res.redirect("/")
+        /* users.push(newUser);
+        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
+        res.redirect("/") */
 
     },
     sendToRegister: (req, res) => {
@@ -60,13 +65,16 @@ const userControllers = {
     },
     login: (req, res) => {
 
-
+    db.User.findAll()
+    .then(function(){
         res.render("./users/login")
+    })
+
     },
 
     sendLogin: (req, res) => {
 
-        let userToLogin = User.findByField('email', req.body.email);
+        /* let userToLogin = User.findByField('email', req.body.email);
 
         if (userToLogin) {
             let isOkThePassword = bcrypt.compareSync(req.body.password, userToLogin.password);
@@ -90,8 +98,8 @@ const userControllers = {
                     msg: 'No se encuentra este email en nuestra base de datos'
                 }
             }
-        });
-
+        }); */
+        
     },
 
     sendLoginGoogle: (req, res) => {
