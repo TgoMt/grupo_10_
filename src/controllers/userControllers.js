@@ -4,13 +4,10 @@ const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
 const User = require('../models/User');
 const session = require("express-session");
-const db = path.join(__dirname, '../database/models');
+const db = require(path.join(__dirname, '../../database/models'));
 
-
-
-
-const usersFilePath = path.join(__dirname, '../data/users/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+/* const usersFilePath = path.join(__dirname, '../data/users/usersDataBase.json');
+const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8')); */
 
 
 const userControllers = {
