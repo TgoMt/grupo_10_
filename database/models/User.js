@@ -2,7 +2,7 @@ module.exports = function(sequelize,dataTypes){
     let alias = "User";
 
     let cols = {
-   "id":{
+   id:{
     type:dataTypes.INTEGER,
     primaryKey:true,
     autoIncrement:true,
@@ -27,11 +27,11 @@ module.exports = function(sequelize,dataTypes){
     type:dataTypes.STRING
    }
    ,
-   "image":{
+   image:{
     type:dataTypes.STRING
    }
    ,
-   "roleId":{
+   roleId:{
     type:dataTypes.INTEGER
    }
     }
