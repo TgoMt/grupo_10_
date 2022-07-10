@@ -96,9 +96,9 @@
                                 <div class="questions">
                                   <label for="role">Rol</label>
                                   <select class="input-create" type="text" name="role" id="role">
-                                    <% for (let i=0; i < role.length;i++){ %>
-                                      <option value="<%=role[i].id%>">
-                                        <%=role[i].role%>
+                                    <% for (let i = 0; i < roles.length;i++){ %>
+                                      <option value="<%=roles[i].id%>">
+                                        <%=roles[i].role%>
                                       </option>
                                       <% } %>
                                   </select>
@@ -132,7 +132,7 @@
                                               <input class="input-create" type="checkbox" name="terms" id="terms"
                                                 required />
                                             </div>
-
+                                          
                                             <div class="questions">
                                               <div class="buttons">
                                                 <input class="buttons-register" type="submit" value="Enviar" />

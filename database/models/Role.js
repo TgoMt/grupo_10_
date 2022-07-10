@@ -16,7 +16,7 @@ module.exports = function(sequelize,dataTypes){
         tableName: "roles",
         timestamps:false
     }
-
+    let Role = sequelize.define(alias,cols,config);
     /* Role.associate = function(models){
         Role.belongsToMany(models.User,{
             as:"users",
@@ -25,6 +25,6 @@ module.exports = function(sequelize,dataTypes){
     } */
 
 
-    let Role = sequelize.define(alias,cols,config);
+    
     return Role;
 }
