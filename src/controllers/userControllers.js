@@ -2,8 +2,8 @@ const path = require("path");
 const fs = require('fs');
 const bcrypt = require("bcryptjs");
 const { validationResult } = require("express-validator");
-const User = require('../models/User');
-const session = require("express-session");
+/* const User = require('../models/User'); */
+
 const db = require(path.join(__dirname, '../../database/models'));
 
 /* const usersFilePath = path.join(__dirname, '../data/users/usersDataBase.json');
@@ -14,22 +14,25 @@ const userControllers = {
    
         register: (req, res) => {
             db.Role.findAll()
-            .then(function(role){
-                return res.render("./users/register",{role:role})
+            .then(function(roles){
+                return res.render("./users/register",{roles:roles})
             })
         
     },
     sendRegister: (req, res) => {
         /* let userInDB = User.findByField('email', req.body.email); */
-        db.User.findOne({where:{email:req.body.email}})
-        .then(function(userInDB){
+        let roles = db.Role.findAll();
+        let usersInDB = db.User.findOne({where:{email:req.body.email}})
+
+        Promise.all([roles,usersInDB])
+        .then(function([roles,userInDB]){
             if (userInDB) {
                 return res.render('./users/register', {
                     errors: {
                         email: {
                             msg: 'Este email ya está registrado'
                         }
-                    },
+                    },roles:roles
                     
                 });
             }
@@ -37,10 +40,8 @@ const userControllers = {
             
     
             if (resultValidation.errors.length > 0) {
-                return res.render("./users/register", { errors: resultValidation.mapped() });
+                return res.render("./users/register", { errors: resultValidation.mapped(), roles:roles }); 
             }
-        })
-        
         //Encriptar contraseña
         let pass = bcrypt.hashSync(req.body.password, 10)
         //Formularios
@@ -53,9 +54,11 @@ const userControllers = {
             roleId: req.body.role,
             password: pass,
             passwordConfirm: bcrypt.compareSync(req.body.passwordConfirm, pass),
-            
-            
         });
+        res.redirect("/")
+        })
+        
+        
 
         
         /* users.push(newUser);

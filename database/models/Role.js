@@ -23,8 +23,5 @@ module.exports = function(sequelize,dataTypes){
             foreignKey:"roleId"
         })
     } */
-
-
-    
     return Role;
 }

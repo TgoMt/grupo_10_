@@ -139,7 +139,7 @@ h2 {
    .products {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
         width: 100vw;
         margin-left: 0;
    }
@@ -172,26 +172,6 @@ h2 {
       border-top-right-radius: 25px;
    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media (min-width: 768px) {
 

@@ -78,7 +78,7 @@ margin-top: 10px;
 .text-errors{
     color: red;
     padding: 2px;
-    font-family: 'Libre Franklin', sans-serif; 
+    
 }
 /* TABLET */
 @media (min-width: 425px) {
