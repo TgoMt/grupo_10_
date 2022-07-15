@@ -21,13 +21,30 @@ const storage = multer.diskStorage({
 const upload = multer({storage: storage});
 //express validator
 const validateRegister = [
-body("name").notEmpty().withMessage("Debe completar el nombre"),/* .bail().isLength({max:20}).withMessage("El maximo es de 20 caracteres"), */
+body("name").notEmpty().withMessage("Debe completar el nombre").bail().isLength({min:2}).withMessage("El minimo es de 2 caracteres"),
 body("lastname").notEmpty().withMessage("Debe completar el apellido"),/* .bail().isLength({max:20}).withMessage("El maximo es de 20 caracteres"), */
-body("email")/* .isEmail() */.notEmpty().withMessage("Debe completar el email"),/* .bail().isLength({max:70}).withMessage("El maximo es de 70 caracteres"), */
+body("email").notEmpty().withMessage("Debe completar el email").isEmail().withMessage("Debe ser un formato de email valido"),/* .bail().isLength({max:70}).withMessage("El maximo es de 70 caracteres"), */
 body("dni").notEmpty()/* .isNumeric() */.withMessage("Debe completar el dni"),/* .bail().isLength({max:8}).withMessage("El maximo es de 8 caracteres"), */
-body("adress").notEmpty().withMessage("Debe completar el domicilio"),/* .bail().isLength({max:70}).withMessage("El maximo es de 70 caracteres"), */
-body("password").notEmpty().withMessage("Debe completar la contraseña"),/* .bail().isLength({max:30}).withMessage("El maximo es de 30 caracteres"), */
-body("passwordConfirm").notEmpty().withMessage("Debe confirmar la contraseña")/* .bail().isLength({max:30}).withMessage("El maximo es de 30 caracteres"), */
+/* body("password").notEmpty().withMessage("Debe completar la contraseña").bail().isLength({min:8}).withMessage("El minimo de caracteres es de 8"), */
+body("password").notEmpty().withMessage("Debe completar con una contraseña").bail().isLength({ min: 8 }).withMessage("La contraseña debe ser mayor de 8 caracteres").bail()
+.matches(
+        /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z\d@$.!%*#?&]/,).withMessage("Debe contener un caracter especial(@$.!#?&)"),
+body("passwordConfirm").notEmpty().withMessage("Debe confirmar la contraseña").bail().isLength({max:30}).withMessage("El maximo es de 30 caracteres"),
+body("image").custom((value,{req})=> {
+    let file = req.file;
+    let acceptedExt = [".jpg",".jpeg",".png",".gif"]
+    if(!file){
+        throw new Error("Debe subir una imagen")
+
+    }else{
+        let fileExt = path.extname(file.originalname);
+        if (!acceptedExt.includes(fileExt)){
+            throw new Error("Las extenciones aceptadas son"+ ", jpg"+", png"+", jpeg" +", gif")
+        }
+    }
+    return true;
+})
+
 ]
 const validateLogin=[
 body("email").notEmpty().withMessage("Debe completar el email"),

@@ -74,6 +74,11 @@
                           <label for="file">Imagen</label>
                           <input type="file" id="file" name="file-image-user" class="input-create" />
                         </div>
+                        <% if (locals.errors && errors.image) { %>
+                          <div class="text-errors">
+                            <%= errors.image.msg %>
+                          </div>
+                          <% } %>
                         <div class="questions">
                           <label for="email">Correo Electronico</label>
                           <input class="input-create" type="email" name="email" id="email" />
@@ -96,6 +101,7 @@
                                 <div class="questions">
                                   <label for="role">Rol</label>
                                   <select class="input-create" type="text" name="role" id="role">
+                                    <option value="" disabled selected>Elegir un rol</option>
                                     <% for (let i = 0; i < roles.length;i++){ %>
                                       <option value="<%=roles[i].id%>">
                                         <%=roles[i].role%>
