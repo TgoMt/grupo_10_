@@ -11,7 +11,10 @@ const db = require(path.join(__dirname, '../../database/models'));
 const productsControllers = {
 
 productCart: (req, res)=> {
-    res.render("./products/productCart")
+    db.Product.findByPk(req.params.id)
+	.then(function(product){
+		return res.render("./products/productCart",{product:product})
+	})
 },
 productDetail:(req, res)=> {	
    /*  let id = req.params.id */

@@ -20,62 +20,36 @@
         <%- include("../partials/header") %>
         <main class="main-carrito">
             <section>
+                
                 <article class="product">
                     <div class="image-carrito">
-                        <img src="/img/products/jack daniels-out.jpg" alt="Cerveza Brahma">
+                        <img src="/img/products/<%= product.image %>" alt="Cerveza Brahma">
                     </div>
                     <div class="product-description">
                         <div class="description">
-                            <p>Descripcion</p>
-                            <input type="text" name="description" id="description">
+                            <p>Nombre</p>
+                            <input type="text" name="description" id="description" value="<%= product.name %> ">
                         </div>
                         <div class="price">
                             <p>Precio</p>
-                            <input type="text" name="price" id="price">
+                            <input type="text" name="price" id="price" value="<%= product.price %> ">
                         </div>
                         <div class="quantity">
                             <p>Cantidad</p>
-                            <input type="text" name="quantity" id="quantity">
+                            <input type="text" name="quantity" id="quantity" value="<%= product.name %> ">
                         </div>
                         <div class="subtotal">
                             <p>SubTotal</p>
-                            <input type="text" name="subtotal" id="subtotal">
+                            <input type="text" name="subtotal" id="subtotal" value="" >
                         </div>  
                     </div>
 
                     </div>
                 </article>
 
-
+                
             </section>
-            <section>
-            <article class="product">
-                   <div class="image-carrito">
-                <img src="/img/products/Jägermeister-out.png" alt="Cerveza Ambar">
-            </div>
-            <div class="product-description">
-                <div class="description">
-                    <p>Descripcion</p>
-                    <input type="text" name="description" id="description">
-                </div>
-                <div class="price">
-                    <p>Precio</p>
-                    <input type="text" name="price" id="price">
-                </div>
-                <div class="quantity">
-                    <p>Cantidad</p>
-                    <input type="text" name="quantity" id="quantity">
-                </div>
-                <div class="subtotal">
-                    <p>SubTotal</p>
-                    <input type="text" name="subtotal" id="subtotal">
-                </div>
-
-            </div>
-
-            </div>
-        </article>
-    </section>
+            
             <div class="total">
                 
                 <label for="total">Total</label>

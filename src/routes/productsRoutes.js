@@ -22,7 +22,7 @@ const upload = multer({storage: storage});
 const productsControllers = require("../controllers/productsControllers.js");
 const { Route } = require("express");
 
-router.get("/productCart",authMiddleware,productsControllers.productCart)
+router.get("/productCart/:id",authMiddleware,productsControllers.productCart)
 /* router.post("/productCart",upload.single("file-image-product"),productsControllers.agregarCart) */
 
 router.get("/productDetail/:id",productsControllers.productDetail)

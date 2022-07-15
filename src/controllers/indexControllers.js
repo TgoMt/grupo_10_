@@ -5,7 +5,8 @@ const path = require("path");
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
 
 const db = require(path.join(__dirname, '../../database/models'));
-
+const sequelize = require("sequelize");
+const Op = sequelize.Op;
 const indexControllers = {
 
 
@@ -13,13 +14,19 @@ const indexControllers = {
         res.render("index",{products})
     }, */
     index:(req,res) => {
+        
         db.Product.findAll()
         .then(function(product){
         return res.render("index",{product:product})
     })
     },
     search:(req, res)=> {
-    res.send("Se busco")
+    let search ="%" + req.body.seeker + "%"
+       db.Product.findAll({where:{name:{[Op.like]:search}}})
+       .then(function(product){
+        return res.render("index",{product:product})
+       }) 
+        
     }
 
 }

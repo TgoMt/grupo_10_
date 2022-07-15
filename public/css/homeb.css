@@ -94,6 +94,7 @@ h2 {
    padding: 10px;
    border: 1px solid #BF9C53;
    border-radius: 25px;
+   width: 100%;
 }
 
 .product .descriptiveSet .add-cart:hover {
