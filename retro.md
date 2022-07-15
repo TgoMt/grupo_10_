@@ -5,3 +5,5 @@ Se vio una buena predisposicion por parte de los integrantes, ya que cada uno fu
 
 mejorar las planificaciones de grupo,  y ordenar los tiempos . continuar con la comunicacion implementada en los ultimos sprints, ya que añadir el whatsapp nos ayudo a agilizar las respuestas del grupo. 
 Trabajar mas sobre los puntos marcados en los sprints anteriores. 
+
+Ultimamente sentimos que nos falto comunicacion y dedicacion, ya que no solo entregamos tarde por hacer las cosas casi a ultimo momento sino por que estuvimos muy separados a la hora de hacer las cosas, pero se tendra en cuenta para la entrega de proximos sprints el trabajo en equipo necesario 
