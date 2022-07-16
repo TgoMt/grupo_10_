@@ -20,6 +20,10 @@
         <%- include("../partials/header") %>
     </header>
 <main>
+    <!-- Express Validator -->
+    <% if(locals.errors) { %>
+        <% } %>
+    <!-- Express Validator -->
 <div class="title-create">
     <h2>Creando Un Producto</h2>
 </div>
@@ -30,16 +34,32 @@
         <label for="name">Nombre del producto</label>
         <input type="text" name="name" id="name" placeholder="Ejemplo: Cerveza Andes" class="create-questions-input"/>
     </div>
+    <% if (locals.errors && errors.name) { %>
+        <div class="text-errors">
+          <%= errors.name.msg %>
+        </div>
+        <% } %>
 
     <div class="create-questions">
-        <label for="Description">Descripcion del producto</label>
+        <label for="description">Descripcion del producto</label>
         <textarea name="description" id="description" class="create-questions-input"></textarea>
     </div>
+    <% if (locals.errors && errors.description) { %>
+        <div class="text-errors">
+          <%= errors.description.msg %>
+        </div>
+        <% } %>
 </div>
     <div class="create-questions">
         <label for="file">Imagen</label>
         <input type="file" name="file-image-product" id="file" class="create-questions-input" accept="jpg,png" />
     </div>
+    <% if (locals.errors && errors.image) { %>
+        <div class="text-errors">
+          <%= errors.image.msg %>
+        </div>
+        <% } %>
+    
 
     <div class="create-questions">
         <label for="category">Categoria</label>
