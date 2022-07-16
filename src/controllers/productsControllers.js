@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require('fs');
+const { validationResult } = require("express-validator");
 
 /* const productsFilePath = path.join(__dirname, '../data/products/productsDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
@@ -48,7 +49,20 @@ fs.writeFileSync(productsFilePath, JSON.stringify(products,null," "));
 res.redirect("/")
 
 }, */
+
+
+
+
+
+
 crearAgregado:(req,res) => {
+	let resultValidation = validationResult(req);
+            
+    
+	if (resultValidation.errors.length > 0) {
+	    return res.render("./products/crear", { errors: resultValidation.mapped(), categories:categories }); 
+	}
+
 db.Product.create({
 	name:req.body.name,
 	price:req.body.price,
@@ -61,6 +75,10 @@ db.Product.create({
 });
 res.redirect("/")
 },
+
+
+
+
 editar:(req,res) => {
     /* let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
