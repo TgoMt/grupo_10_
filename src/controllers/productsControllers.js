@@ -56,6 +56,7 @@ res.redirect("/")
 
 
 crearAgregado:(req,res) => {
+	let categories = db.Category.findAll();
 	let resultValidation = validationResult(req);
             
     
