@@ -22,8 +22,7 @@ app.use(session({
     saveUninitialized:false
 }));
 
-app.use(usserLoggedMiddleware)
-
+app.use(usserLoggedMiddleware);
 
 app.set("view engine", "ejs");
 app.set("views", path.resolve(__dirname, 'views'));

@@ -4,7 +4,6 @@
         <nav class="header-links">
             
             <% if (locals.isLogged){ %>
-                
                 <ul>
                     <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>
                 </ul>
@@ -13,6 +12,9 @@
                     <li><a href="/users/logout">Logout</a><i class="fas fa-sign-out"></i></li>
                     <li><a href="/products/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
                 </ul>
+                
+                
+
                 <% } else { %>
                     <ul>
                         <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>

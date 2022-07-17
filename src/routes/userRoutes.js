@@ -47,7 +47,7 @@ body("image").custom((value,{req})=> {
 
 ]
 const validateLogin=[
-body("email").notEmpty().withMessage("Debe completar el email"),
+body("email").notEmpty().withMessage("Debe completar el email").isEmail().withMessage("Debe ser un formato de email valido"),
 body("password").notEmpty().withMessage("Debe completar completar la contraseña")
 ]
 

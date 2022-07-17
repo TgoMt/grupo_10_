@@ -20,6 +20,8 @@
     <%- include("../partials/header") %>
 
         <main>
+            <% if(locals.errors) { %>
+                <% } %>
             <div class="title-create">
                 <h2>Editando:<%=productToEdit.name%></h2>
             </div>
@@ -30,17 +32,33 @@
                             <label for="name">Nombre del producto</label>
                             <input type="text" name="name" id="name" value="<%= productToEdit.name %>"
                                 class="create-questions-input" />
+
                         </div>
+                        <% if (locals.errors && errors.name) { %>
+                            <div class="text-errors">
+                              <%= errors.name.msg %>
+                            </div>
+                            <% } %>
 
                         <div class="create-questions">
                             <label for="Description">Descripcion del producto</label>
                             <textarea name="description" id="description" class="create-questions-input"></textarea>
                         </div>
                     </div>
+                    <% if (locals.errors && errors.description) { %>
+                        <div class="text-errors">
+                          <%= errors.description.msg %>
+                        </div>
+                        <% } %>
                     <div class="create-questions">
                         <label for="file">Imagen</label>
                         <input type="file" name="file-image-product" id="file" class="create-questions-input-file" accept="jpg,png"/>
                     </div>
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="text-errors">
+                          <%= errors.image.msg %>
+                        </div>
+                        <% } %>
 
                     <div class="create-questions">
                         <label for="category">Categoria</label>
@@ -54,21 +72,32 @@
                         </select>
                     </div>
 
+
                     <div class="create-questions-separated">
                         <div class="create-questions">
                             <label for="price">Precio</label>
                         <input type="number" name="price" id="price" value="<%= productToEdit.price %>" class="create-questions-input"/>
                         </div>
+                        <% if (locals.errors && errors.price) { %>
+                            <div class="text-errors">
+                              <%= errors.price.msg %>
+                            </div>
+                            <% } %>
                     
                         <div class="create-questions">
                             <label for="off">Descuento</label>
                         <input type="number" name="off" id="off" value="<%= productToEdit.discount %>" class="create-questions-input"/>
                         </div>
                    </div>
+                   <% if (locals.errors && errors.discount) { %>
+                    <div class="text-errors">
+                      <%= errors.discount.msg %>
+                    </div>
+                    <% } %>
                     <div class="edit-button">
                         <button type="submit" class="guardar">Guardar producto</button>
                     </div>
-
+                    
 
                 </form>
             </article>

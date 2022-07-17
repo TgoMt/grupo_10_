@@ -92,7 +92,16 @@ editar:(req,res) => {
 
 },
 sendEditar:(req, res) => {
+	let resultValidation = validationResult(req);
 
+	if (resultValidation.errors.length > 0) {
+		let pedidoId = db.Product.findByPk(req.params.id)
+		let Category = db.Category.findAll()
+
+		Promise.all([pedidoId,Category]).then(function([productToEdit,categories]){
+		res.render("./products/editar",{errors: resultValidation.mapped(),productToEdit:productToEdit,categories:categories})
+		})
+	}else{
 	db.Product.update({
 		name:req.body.name,
 		price:req.body.price,
@@ -105,10 +114,12 @@ sendEditar:(req, res) => {
 	},{
 		where: {
 			id:req.params.id
-		}
-	});
-		
 
+		}
+
+	});
+	 res.redirect("/" )
+	}
 },
     /* const id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);
