@@ -56,6 +56,7 @@ res.redirect("/")
 
 
 crearAgregado:(req,res) => {
+	let categories = db.Category.findAll();
 	let resultValidation = validationResult(req);
             
     
@@ -91,6 +92,7 @@ editar:(req,res) => {
 
 },
 sendEditar:(req, res) => {
+
 	db.Product.update({
 		name:req.body.name,
 		price:req.body.price,
@@ -105,7 +107,7 @@ sendEditar:(req, res) => {
 			id:req.params.id
 		}
 	});
-	res.redirect("/products/productDetail/" + req.params.id)
+		
 
 },
     /* const id = req.params.id;

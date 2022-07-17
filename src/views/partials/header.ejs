@@ -2,16 +2,13 @@
     <div class="header-full">
         <img class="logo" src="/img/logo_duende.png" alt="logo SiPintaPinta">
         <nav class="header-links">
+            
             <% if (locals.isLogged){ %>
-                <% console.log(locals.isLogged) %>
+                
                 <ul>
                     <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>
                 </ul>
                 <ul>
-                    
-                <!-- </ul>
-
-                <ul> -->
                     <li><a href="/users/profile">Perfil</a><i class="fas fa-id-badge"></i></li>
                     <li><a href="/users/logout">Logout</a><i class="fas fa-sign-out"></i></li>
                     <li><a href="/products/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
@@ -23,22 +20,10 @@
                     <ul>
                     <li><a href="/users/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
                     <li><a href="/users/register">Registrarse</a><i class="fas fa-registered"></i></li>
-                    
-
-
-
-
                     </ul>
                     <ul>
-                        <!-- <li><a href="/products/productDetail">Productos</a><i class="fas fa-beer"></i></li> -->
-                        <!-- <li><a href="/products/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li> -->
-                        <!-- <li><a href="/products/editar">Editar</a><i class="fas fa-edit"></i></li> -->
                         <li><a href="/products/crear">Crear</a><i class="fas fa-plus"></i></li>
-                        <!-- <li><a href="/users/logout">Logout</a><i class="fas fa-sign-out"></i></li> -->
-
-
                     </ul>
-
                     <% } %>
         </nav>
     </div>
