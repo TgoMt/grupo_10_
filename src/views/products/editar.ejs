@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="/css/crear.css">
     <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body class="body">
     <%- include("../partials/header") %>
 
         <main>
@@ -32,24 +32,25 @@
                             <label for="name">Nombre del producto</label>
                             <input type="text" name="name" id="name" value="<%= productToEdit.name %>"
                                 class="create-questions-input" />
-
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="text-errors">
+                                      <%= errors.name.msg %>
+                                    </div>
+                                    <% } %>
                         </div>
-                        <% if (locals.errors && errors.name) { %>
-                            <div class="text-errors">
-                              <%= errors.name.msg %>
-                            </div>
-                            <% } %>
+                        
 
                         <div class="create-questions">
                             <label for="Description">Descripcion del producto</label>
                             <textarea name="description" id="description" class="create-questions-input"></textarea>
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="text-errors">
+                                  <%= errors.description.msg %>
+                                </div>
+                                <% } %>
                         </div>
                     </div>
-                    <% if (locals.errors && errors.description) { %>
-                        <div class="text-errors">
-                          <%= errors.description.msg %>
-                        </div>
-                        <% } %>
+                    
                     <div class="create-questions">
                         <label for="file">Imagen</label>
                         <input type="file" name="file-image-product" id="file" class="create-questions-input-file" accept="jpg,png"/>
@@ -63,8 +64,9 @@
                     <div class="create-questions">
                         <label for="category">Categoria</label>
                         <select name="category" id="category" class="create-questions-input">
+                            <option value="" disabled selected>Elegi una categoria</option>
+                            
                             <% for (let i = 0; i < categories.length;i++){ %>
-                        
                                 <option value="<%=categories[i].id%>"> 
                                     <%=categories[i].category%>
                                 </option>

@@ -3,11 +3,16 @@
 }
 .create-questions{
     padding: 7px;
+   
+    
 }
 .create-questions label{
     display: block;
     text-align: center;
     
+}
+.create-questions-separated{
+    width: 50%;
 }
 .create-questions-input{
     border-radius: 10px;
@@ -65,13 +70,17 @@ background-color:#ff973b ;
     display: flex;
     justify-content: space-evenly;
     
-    }
+}
     .networks a{
       font-size: 50px;
       color: black;
       border-radius: 7px;
       
-    }
+}
+.text-errors{
+    color: red;
+    /* text-align: center; */
+}
 
 
 /* ------- Edit View --------- */
