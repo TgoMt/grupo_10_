@@ -59,11 +59,11 @@
                         </div>
                 </form>
                 <div class="enter-with">
-                    <form action="reg/google" method="POST" class="form-login">
+                    <form action="reg/google" method="POST" class="form-login(CAMBIAR)">
                         <button class="google-button"><i class="fa-brands fa-google"></i>Continuar con Google</i></button><br><br>
                     </form>
                     <div class="enter-with">
-                        <form action="reg/facebook" method="POST" class="form-login">
+                        <form action="reg/facebook" method="POST" class="form-login(CAMBIAR)">
                             <button class="facebook-button"><i class="fa-brands fa-facebook-f"></i>Continuar con Facebook</i></i></i></button><br>
                         </form>
                     </div>
@@ -72,12 +72,15 @@
             </div>
             <div class="account-register">
                 <p class="text-register">¿Aun no tienes una cuenta?</p>
-                <form action="/users/reg" method="POST" class="form-login">
+                <form action="/users/reg" method="POST" class="form-login(CAMBIAR)">
                     <input class="start-session" type="submit" value="Registrarse">
                 </form>
             </div>
         </main>
+        <footer>
         <%- include("../partials/footer.ejs") %>
+    </footer>
+    <script src="../js/login.js"></script>
     </body>
 
 </html>
