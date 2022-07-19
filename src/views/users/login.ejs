@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -34,6 +35,7 @@
             <!-- <a href="/">Volver a inicio</a> -->
             <!-- <h3 class="title-login">Inicio de Sesion</h3> -->
             <div class="full-structure">
+                
                 <form action="/users/log" method="POST" class="form-login">
 
                     <div class="login-form">
@@ -68,16 +70,19 @@
                         </form>
                     </div>
                 </div>
-                
+            
             </div>
             <div class="account-register">
                 <p class="text-register">¿Aun no tienes una cuenta?</p>
-                <form action="/users/reg" method="POST" class="form-login">
+                <form action="/users/reg" method="POST" class="form-login(CAMBIAR)">
                     <input class="start-session" type="submit" value="Registrarse">
                 </form>
             </div>
         </main>
+        <footer>
         <%- include("../partials/footer.ejs") %>
+    </footer>
+        <script src="../js/login.js"></script>
     </body>
 
 </html>

@@ -50,20 +50,14 @@ res.redirect("/")
 
 }, */
 
-
-
-
-
-
 crearAgregado:(req,res) => {
 	let categories = db.Category.findAll();
 	let resultValidation = validationResult(req);
             
     
-	if (resultValidation.errors.length > 0) {
-	    return res.render("./products/crear", { errors: resultValidation.mapped(), categories:categories }); 
-	}else{
-
+if (resultValidation.errors.length > 0) {	   
+ return res.render("./products/crear", { errors: resultValidation.mapped(), categories:categories }); 
+}else{
 db.Product.create({
 	name:req.body.name,
 	price:req.body.price,
