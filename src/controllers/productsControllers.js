@@ -62,7 +62,7 @@ crearAgregado:(req,res) => {
     
 	if (resultValidation.errors.length > 0) {
 	    return res.render("./products/crear", { errors: resultValidation.mapped(), categories:categories }); 
-	}
+	}else{
 
 db.Product.create({
 	name:req.body.name,
@@ -75,6 +75,7 @@ db.Product.create({
 
 });
 res.redirect("/")
+}
 },
 
 
@@ -92,15 +93,16 @@ editar:(req,res) => {
 
 },
 sendEditar:(req, res) => {
-	let productToEdit = db.Product.findByPk(req.params.id);
-	let categories = db.Category.findAll();
 	let resultValidation = validationResult(req);
-    
+
 	if (resultValidation.errors.length > 0) {
-	 return res.render("./products/editar", { errors: resultValidation.mapped(),productToEdit:productToEdit, categories:categories });
-	/* console.log("hola")
-	console.log(resultValidation.mapped()) */
-	}
+		let pedidoId = db.Product.findByPk(req.params.id)
+		let Category = db.Category.findAll()
+
+		Promise.all([pedidoId,Category]).then(function([productToEdit,categories]){
+		res.render("./products/editar",{errors: resultValidation.mapped(),productToEdit:productToEdit,categories:categories})
+		})
+	}else{
 	db.Product.update({
 		name:req.body.name,
 		price:req.body.price,
@@ -118,7 +120,7 @@ sendEditar:(req, res) => {
 
 	});
 	 res.redirect("/" )
-
+	}
 },
     /* const id = req.params.id;
 		let productToEdit = products.find(product => product.id == id);

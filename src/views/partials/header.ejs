@@ -2,6 +2,7 @@
     <div class="header-full">
         <img class="logo" src="/img/logo_duende.png" alt="logo SiPintaPinta">
         <nav class="header-links">
+            
             <% if (locals.isLogged){ %>
                 <ul>
                     <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>
@@ -21,17 +22,10 @@
                     <ul>
                     <li><a href="/users/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
                     <li><a href="/users/register">Registrarse</a><i class="fas fa-registered"></i></li>
-                    
-
-
-
-
                     </ul>
-                  <ul>
+                    <ul>
                         <li><a href="/products/crear">Crear</a><i class="fas fa-plus"></i></li>
-
-                    </ul> -->
-
+                    </ul>
                     <% } %>
         </nav>
     </div>
