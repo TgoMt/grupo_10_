@@ -33,7 +33,8 @@ window.onload = function(){
         } else {
             res.send("Exito")
             form.submit();
-        } 
+        }         
     })
+
 
 }
