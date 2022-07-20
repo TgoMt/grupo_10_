@@ -23,20 +23,20 @@ window.onload = function(){
         }else{
             formulario.price.focus()
         };
-        
-       /*  let acceptedExt = [".jpg",".jpeg",".png",".gif"]
-        let fileExt = path.extname(image.value.originalname);
-        if(!acceptedExt.includes(fileExt)){
+
+        //
+  /*       let acceptedExt = "([^ \\ s] + (\\. (? i) (jpe? g | png | gif | bmp)) $)";
+        if(!acceptedExt.test(image.value)){
             errors.push("Las extensiones aceptadas son"+ ", jpg"+", png"+", jpeg" +", gif")
         } else {
             formulario.price.focus()
-        } */
+        }   */
 
         if(price.value <= 0){
             errors.push("Debe indicar el precio la del producto")
         }
 
-
+        console.log(errors);
 
 
         if (errors.length > 0) {
