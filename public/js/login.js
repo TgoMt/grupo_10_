@@ -2,7 +2,7 @@ window.onload = function(){
     let formulario = document.querySelector(".form-login")
 
     formulario.addEventListener("submit",function(event){
-        let email = document.querySelector("#email")
+        let email = document.querySelector("#email");
         let password = document.querySelector("#password")
         let errors=[]
         if(email.value==""){
