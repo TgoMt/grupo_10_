@@ -23,7 +23,7 @@ window.onload = function(){
         }else{
             formulario.price.focus()
         };
-
+        // bien planteado pero no funciona, no pudimos ver con Guido porque era
         //
   /*       let acceptedExt = "([^ \\ s] + (\\. (? i) (jpe? g | png | gif | bmp)) $)";
         if(!acceptedExt.test(image.value)){

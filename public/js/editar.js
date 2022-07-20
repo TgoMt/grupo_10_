@@ -7,7 +7,7 @@ window.onload = function(){
         let image =  document.querySelector("#file") ;
         let price = document.querySelector("#price");
         let errors=[]
-
+        // no funciona y no encuentramos porque. esta planteado igual que la validacion de crear que si funciona
         if(name.value==""){
             errors.push("Debe completar el nombre")
         }else if(name.value.length < 5){

@@ -42,7 +42,7 @@ window.onload = function(){
                 }else{
                     formulario.dni.focus()
                }
-
+               
                /* let file = req.file;
                let fileExt = path.extname(file.originalname);
                let acceptedExt = [".jpg",".jpeg",".png",".gif"]
