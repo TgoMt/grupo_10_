@@ -14,21 +14,21 @@ window.onload = function(){
               let email = document.querySelector("#email")
               let password = document.querySelector("#password")
               let errors=[]
-              if(email.value==""){
+              /* if(email.value==""){
                   errors.push("Debe completar el email")
               }else{
                   formulario.password.focus()
               }
-      
-              let regEmail = /\S+@\S+\.\S+/;
+       */
+             /*  let regEmail = /\S+@\S+\.\S+/;
               if(!regEmail.test(email.value)){
                   errors.push("Debe ser un formato de email valido")
               
-              }
+              } */
 
               if(name.value == ""){
                     errors.push("Debe Ingresar un nombre")
-                }else if (name.length < 2){
+                }else if (name.value.length < 2){
                     errors.push("El minimo es de 2 caracteres") 
                 }else{
                     formulario.lastname.focus()
