@@ -5,22 +5,15 @@ window.onload = function(){
         let email = document.querySelector("#email")
         let password = document.querySelector("#password")
         let errors=[]
+        let regEmail = /\S+@\S+\.\S+/;
         if(email.value==""){
             errors.push("Debe completar el email")
-        }else{
+        } else if (!regEmail.test(email.value)){
+            errors.push("Debe ser un formato de email valido") 
+        } else {
             formulario.password.focus()
         }
-
-        let regEmail = /\S+@\S+\.\S+/;
-        if(!regEmail.test(email.value)){
-            errors.push("Debe ser un formato de email valido")
         
-        }
-        
-
-
-
-
 
         if (errors.length > 0) {
             event.preventDefault();
