@@ -32,6 +32,7 @@ window.onload = function(){
             formulario.price.focus()
         }   */
 
+        
         if(price.value <= 0){
             errors.push("Debe indicar el precio la del producto")
         }
