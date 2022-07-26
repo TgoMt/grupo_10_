@@ -19,10 +19,14 @@ productCart: (req, res)=> {
 },
 productDetail:(req, res)=> {	
    /*  let id = req.params.id */
+   
 	db.Product.findByPk(req.params.id)
 	.then(function(product){
-		return res.render("./products/productDetail",{product})
+		return res.render("./products/productDetail",{product:product,user: req.session.userLogged})
 	})
+	let user = req.session
+	console.log(user)
+
 	
     /* let product = products.find(product => product.id == id)
     res.render("./products/productDetail",{product}) */
@@ -30,7 +34,7 @@ productDetail:(req, res)=> {
 crear:(req, res) => {
 	db.Category.findAll()
 	.then(function(categories){
-		return res.render("./products/crear",{categories:categories})
+		return res.render("./products/crear",{categories:categories,user: req.session.userLogged})
 	})
 },
 /* crearAgregado:(req, res) => {
@@ -82,7 +86,7 @@ editar:(req,res) => {
 		let pedidoId = db.Product.findByPk(req.params.id)
 		let Category = db.Category.findAll()
 		Promise.all([pedidoId,Category]).then(function([productToEdit,categories]){
-		res.render("./products/editar",{productToEdit:productToEdit,categories:categories})
+		res.render("./products/editar",{productToEdit:productToEdit,categories:categories,user: req.session.userLogged})
 		})
 
 },

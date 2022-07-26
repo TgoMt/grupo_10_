@@ -1,6 +1,6 @@
+
 window.onload = function () {
     let formulario = document.querySelector(".form")
-
 
     formulario.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -23,6 +23,22 @@ window.onload = function () {
         } else {
             formulario.lastname.focus()
         }
+//Valid LastName
+if(lastname.value == ""){
+    errors.push("Debe ingresar un apellido")
+}else if (lastname.value.length < 2){
+    errors.push("El minimo del" + " apellido " + "es de 2 caracteres") 
+}else{
+    formulario.dni.focus()
+}
+//Valid IMAGEN( NO FUNCIONA, NO SABEMOS POR QUE )
+ /* let acceptedExt = [".jpg",".jpeg",".png",".gif"]
+        let fileExt = path.extname(image.value.originalname);
+        if(!acceptedExt.includes(fileExt)){
+            errors.push("Las extensiones aceptadas son"+ ", jpg"+", png"+", jpeg" +", gif")
+        } else {
+            formulario.email.focus()
+        } */
 
 
 
@@ -37,14 +53,30 @@ window.onload = function () {
             formulario.dni.focus()
         }
 //Valid DNI
+if(dni.value == ""){
+    errors.push("Debe ingresar un dni")
+}else if (dni.value.length < 9){
+    errors.push("El minimo del" + " dni " + "es de 9 caracteres") 
+}else{
+    formulario.role.focus()
+}     
+//Valid Role
+if(role.value == ""){
+    errors.push("Debe ingresar que rol ocupara")
+    
+}else{
+formulario.password.focus()
+}
+//Valid Password
+if(password.value==""){
+    errors.push("Debe completar la contraseña")  
+}else if(password.value.length < 8){
+    errors.push("La contraseña debe tener al menos 8 caracteres")
+}else{
+    formulario.passwordConfirm.focus()
+}
 
-        
-
-
-
-
-
-
+//PARA PUSHEAR ERRRES
         if (errors.length > 0) {
             event.preventDefault();
             let ulErrors = document.querySelector(".errores");
@@ -54,8 +86,7 @@ window.onload = function () {
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>";
             };
         } else {
-            res.send("Exito")
-            form.submit();
+            formulario.submit();
         }
     })
 

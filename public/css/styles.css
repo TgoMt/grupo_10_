@@ -31,6 +31,10 @@ header div{
     flex-wrap: nowrap;
     max-width: 35%
 }
+.logo:hover{
+    transition: 1s;
+    transform: rotate(361deg);
+}
 
 header nav ul{
     font-size: var(--Cuerpos_de_texto);

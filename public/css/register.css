@@ -78,6 +78,7 @@ margin-top: 10px;
 .text-errors{
     color: red;
     padding: 2px;
+    margin-left: 40px;
     
 }
 /* TABLET */
@@ -120,5 +121,9 @@ text-align: center;
 .form-questions{
     padding-left: 10px;
 }
+.text-errors{
+    margin-left: 30px;
+}
+
 
 }

@@ -47,6 +47,8 @@
             <div class="valoration">Valoración de los clientes</div>
             <div>4.5- "Muy buena. Buenos precios y muy rapido"</div>
             <div>5- "Excelente, super recomendado"</div>
+            <% console.log(locals.user) %>
+            <% if(locals.isLogged==true && locals.user.roleId===1){ %>
             <div class="buttons">
             <div class="button-edit">
             <a href="/products/editar/<%= product.id %>">EDITAR</a>
@@ -55,10 +57,10 @@
             </form>
         </div>
         </div>
-                <form action="/products/productCart">
+        <% }  %>
+        <form action="/products/productCart">
                     <button type="submit" value="Agregar Al Carrito"></button>
-            
-            </form>
+        </form>
 
         
     </main>

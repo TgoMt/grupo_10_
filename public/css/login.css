@@ -116,6 +116,7 @@ color: white;
 .text-errors{
     color: red;
     padding: 2px;
+    margin-left: 50px;
     
 }
 
@@ -202,5 +203,8 @@ color: white;
 
     .follow-us {
         font-family: 'Quicksand', sans-serif;
+    }
+    .text-errors{
+        margin-left: 40px;
     }
 }

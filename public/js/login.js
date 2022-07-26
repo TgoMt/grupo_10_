@@ -2,7 +2,7 @@ window.onload = function(){
     let formulario = document.querySelector(".form-login")
 
     formulario.addEventListener("submit",function(event){
-        let email = document.querySelector("#email")
+        let email = document.querySelector("#email");
         let password = document.querySelector("#password")
         let errors=[]
         let regEmail = /\S+@\S+\.\S+/;
@@ -14,6 +14,11 @@ window.onload = function(){
             formulario.password.focus()
         }
         
+        if(password.value==""){
+            errors.push("Debe completar la contraseña")  
+        }else if(password.value.length < 8){
+            errors.push("La contraseña debe tener al menos 8 caracteres")
+        }
 
         if (errors.length > 0) {
             event.preventDefault();
@@ -24,8 +29,7 @@ window.onload = function(){
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>";
             };
         } else {
-            res.send("Exito")
-            form.submit();
+            formulario.submit();
         }         
     })
 
