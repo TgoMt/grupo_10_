@@ -11,42 +11,65 @@
     <link rel="stylesheet" href="/css/crear.css">
     <script src="https://kit.fontawesome.com/d9380e76ff.js" crossorigin="anonymous"></script>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
 </head>
 
-<body>
+<body class="body">
     <%- include("../partials/header") %>
 
         <main>
+            <% if(locals.errors) { %>
+                <% } %>
             <div class="title-create">
                 <h2>Editando:<%=productToEdit.name%></h2>
             </div>
             <article class="create-form">
-                <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                <ul class="errores">
+                
+                </ul>
+                <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="form-editar">
                     <div class="create-questions-separated">
                         <div class="create-questions">
                             <label for="name">Nombre del producto</label>
                             <input type="text" name="name" id="name" value="<%= productToEdit.name %>"
                                 class="create-questions-input" />
+                                <% if (locals.errors && errors.name) { %>
+                                    <div class="text-errors">
+                                      <%= errors.name.msg %>
+                                    </div>
+                                    <% } %>
                         </div>
+                        
 
                         <div class="create-questions">
                             <label for="Description">Descripcion del producto</label>
                             <textarea name="description" id="description" class="create-questions-input"></textarea>
+                            <% if (locals.errors && errors.description) { %>
+                                <div class="text-errors">
+                                  <%= errors.description.msg %>
+                                </div>
+                                <% } %>
                         </div>
                     </div>
+                    
                     <div class="create-questions">
                         <label for="file">Imagen</label>
                         <input type="file" name="file-image-product" id="file" class="create-questions-input-file" accept="jpg,png"/>
                     </div>
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="text-errors">
+                          <%= errors.image.msg %>
+                        </div>
+                        <% } %>
 
                     <div class="create-questions">
                         <label for="category">Categoria</label>
                         <select name="category" id="category" class="create-questions-input">
+                            <option value="" disabled selected>Elegi una categoria</option>
+                            
                             <% for (let i = 0; i < categories.length;i++){ %>
-                        
                                 <option value="<%=categories[i].id%>"> 
                                     <%=categories[i].category%>
                                 </option>
@@ -54,21 +77,32 @@
                         </select>
                     </div>
 
+
                     <div class="create-questions-separated">
                         <div class="create-questions">
                             <label for="price">Precio</label>
                         <input type="number" name="price" id="price" value="<%= productToEdit.price %>" class="create-questions-input"/>
                         </div>
+                        <% if (locals.errors && errors.price) { %>
+                            <div class="text-errors">
+                              <%= errors.price.msg %>
+                            </div>
+                            <% } %>
                     
                         <div class="create-questions">
                             <label for="off">Descuento</label>
                         <input type="number" name="off" id="off" value="<%= productToEdit.discount %>" class="create-questions-input"/>
                         </div>
                    </div>
+                   <% if (locals.errors && errors.discount) { %>
+                    <div class="text-errors">
+                      <%= errors.discount.msg %>
+                    </div>
+                    <% } %>
                     <div class="edit-button">
                         <button type="submit" class="guardar">Guardar producto</button>
                     </div>
-
+                    
 
                 </form>
             </article>
@@ -77,5 +111,6 @@
         <footer>
             <%- include("../partials/footer.ejs") %>
         </footer>
+        <script src="../js/editar.js"> </script>
 </body>
 </html>

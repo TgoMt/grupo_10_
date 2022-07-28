@@ -14,7 +14,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet" />
 </head>
-
 <body class="body">
     <header>
         <%- include("../partials/header") %>
@@ -28,27 +27,32 @@
     <h2>Creando Un Producto</h2>
 </div>
 <article class="create-form">
-    <form action="/products" method="POST" enctype="multipart/form-data">   
+    <ul class="errores">
+                
+    </ul>
+    <form action="/products" method="POST" enctype="multipart/form-data" class="form-crear">   
 <div class="create-questions-separated">
     <div class="create-questions">
         <label for="name">Nombre del producto</label>
         <input type="text" name="name" id="name" placeholder="Ejemplo: Cerveza Andes" class="create-questions-input"/>
+        <% if (locals.errors && errors.name) { %>
+            <div class="text-errors">
+              <%= errors.name.msg %>
+            </div>
+            <% } %>
     </div>
-    <% if (locals.errors && errors.name) { %>
-        <div class="text-errors">
-          <%= errors.name.msg %>
-        </div>
-        <% } %>
+    
 
     <div class="create-questions">
         <label for="description">Descripcion del producto</label>
         <textarea name="description" id="description" class="create-questions-input"></textarea>
+        <% if (locals.errors && errors.description) { %>
+            <div class="text-errors">
+              <%= errors.description.msg %>
+            </div>
+            <% } %>
     </div>
-    <% if (locals.errors && errors.description) { %>
-        <div class="text-errors">
-          <%= errors.description.msg %>
-        </div>
-        <% } %>
+    
 </div>
     <div class="create-questions">
         <label for="file">Imagen</label>
@@ -64,6 +68,7 @@
     <div class="create-questions">
         <label for="category">Categoria</label>
         <select name="category"  class="create-questions-input">
+            <option value="" disabled selected>Elegi una categoria</option>
             <% for (let i = 0; i < categories.length;i++){ %>
                 <option value="<%=categories[i].id%>"> 
                     <%=categories[i].category%>
@@ -92,5 +97,6 @@
 <footer>
     <%- include("../partials/footer.ejs") %>
 </footer>
+<script src="../js/crear.js"> </script>
 </body>
 </html>

@@ -31,7 +31,7 @@ const validateCreateAndEdit = [
         }else{
             let fileExt = path.extname(file.originalname);
             if (!acceptedExt.includes(fileExt)){
-                throw new Error("Las extenciones aceptadas son"+ ", jpg"+", png"+", jpeg" +", gif")
+                throw new Error("Las extensiones aceptadas son"+ ", jpg"+", png"+", jpeg" +", gif")
             }
         }
         return true;

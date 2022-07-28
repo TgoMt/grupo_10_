@@ -23,7 +23,6 @@ const userControllers = {
         /* let userInDB = User.findByField('email', req.body.email); */
         let roles = db.Role.findAll();
         let usersInDB = db.User.findOne({where:{email:req.body.email}})
-
         Promise.all([roles,usersInDB])
         .then(function([roles,userInDB]){
             if (userInDB) {
@@ -45,6 +44,8 @@ const userControllers = {
         //Encriptar contraseña
         let pass = bcrypt.hashSync(req.body.password, 10)
         //Formularios
+
+        
         db.User.create({
             name: req.body.name,
             lastname: req.body.lastname,

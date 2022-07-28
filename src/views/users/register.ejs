@@ -20,6 +20,7 @@
   <body class="body">
 
   <header>
+    
         <%- include("../partials/header") %>
   </header>
 
@@ -30,13 +31,6 @@
           <!-- express validator -->
           <article class="title-register">
             <h2>Bienvenidos a Si Pinta, Pinta</h2>
-          </article>
-          <article class="information-register">
-            <p>
-              Nuestro trabajo se basa en poder formar una relacion cliente-prveedor,
-              lo que buscamos es poder vender bebibas a todo el pais dirigido a un
-              publico mayor de edad(Argentina +18)
-            </p>
           </article>
 
           <div class="information-questions">
@@ -53,6 +47,9 @@
               </p>
             </article>
             <article class="form-questions">
+              <ul class="errores">
+                
+              </ul>
               <form action="/users/registrado" method="POST" class="form" enctype="multipart/form-data">
                 <div class="questions">
                   <label for="name">Nombre</label>
@@ -106,8 +103,9 @@
                                 <div class="questions">
                                   <label for="role">Rol</label>
                                   <select class="input-create" type="text" name="role" id="role">
-                                    <option value="" disabled selected>Elegir un rol</option>
+                                    <option value="" disabled selected>Elegi una categoria</option>
                                     <% for (let i = 0; i < roles.length;i++){ %>
+                                      
                                       <option value="<%=roles[i].id%>">
                                         <%=roles[i].role%>
                                       </option>
@@ -140,7 +138,7 @@
                                           <% } %>
                                             <div class="questions">
                                               <label for="Terms And Conditions">Terminos y Condiciones</label>
-                                              <input class="input-create" type="checkbox" name="terms" id="terms"
+                                              <input class="input-create" type="week" name="terms" id="terms"
                                                 required />
                                             </div>
                                           
@@ -154,7 +152,10 @@
             </article>
           </div>
     </main>
+    
     <%- include("../partials/footer.ejs") %>
+
+  <script src="../js/register.js"> </script>
   </body>
 
 </html>

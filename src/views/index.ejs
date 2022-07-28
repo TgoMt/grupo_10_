@@ -26,6 +26,7 @@
 
   <body class="body">
     <%- include("./partials/header",{titulo:"home"}) %>
+
     <main class="main-homeb">
       <section>
         <h2>Ofertas</h2>
@@ -38,7 +39,6 @@
                 <div class="imgProduct">
                   <img src="img/products/<%= product.image %>" />
 
-                  <span class="discount"> <%= product.off %>% Off </span>
                 </div>
               </a>
 
@@ -57,6 +57,7 @@
         </div>
       </section>
     </main>
+    
   </body>
   <%- include("./partials/footer.ejs") %>
 </html>

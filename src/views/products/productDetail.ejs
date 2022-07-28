@@ -17,17 +17,22 @@
 </head>
 <%- include("../partials/header") %>
 <body class="body">
+    <div class="descipcion">
+        <h2>Descipcion</h2>
+    </div>
     <main>
         <div class="main-productDetail">
+           
+            
             <section class="product-price">
                 <img class="product-img" src="/img/products/<%= product.image %>" >
                 <div class="title-prices">
                     <h1><%= product.name %></h1>
                     <div class="prices-pdetail">
                         <ul>
-                            <li class="prices-description">Precio por unidad $<%= product.price %><i class="fas fa-wine-glass-alt"></i></li>
-                            <% if (product.category == "Cervezas") { %>
-                            <li class="prices-description">Precio por pack $<%= product.price * 6 %><i class="fas fa-glass-cheers"></i></li>
+                            <li class="prices-description">Precio por unidad: $<%= product.price %><i class="fas fa-wine-glass-alt"></i></li>
+                            <% if (product.categoryId == 1) { %>
+                            <li class="prices-description">Precio por pack de 6: $<%= product.price * 6 %><i class="fas fa-glass-cheers"></i></li>
                             <% }else { %>
                             <li class="prices-description">Precio al por mayor (más de 12 unidades) $150,00 c/u</li>
                             <% } %>
@@ -47,18 +52,25 @@
             <div class="valoration">Valoración de los clientes</div>
             <div>4.5- "Muy buena. Buenos precios y muy rapido"</div>
             <div>5- "Excelente, super recomendado"</div>
+            <% if(locals.isLogged==true && locals.user.roleId===1){ %>
             <div class="buttons">
-            <div class="button-edit">
-            <a href="/products/editar/<%= product.id %>">EDITAR</a>
-            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                <button type="submit" class="button-delete">ELIMINAR</button>
-            </form>
-        </div>
-        </div>
-                <form action="/products/productCart">
-                    <button type="submit" value="Agregar Al Carrito"></button>
+            <div class="button">
+                <form action="/products/editar/<%= product.id %>">
+                <button class="buttonEditDelete" type="submit">EDITAR</button>
+                </form>
+            </div>
             
+            <div class="button">
+            <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                <button type="submit" class="buttonEditDelete">ELIMINAR</button>
             </form>
+            
+        </div>
+        </div>
+        <% }  %>
+        <form action="/products/productCart">
+                    <button type="submit" value="Agregar Al Carrito"></button>
+        </form>
 
         
     </main>

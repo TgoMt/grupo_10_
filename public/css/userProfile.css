@@ -2,7 +2,7 @@
     font-family: 'Quicksand', sans-serif;
 }
 img{
-    width: 48vw;
+    width: 40%;
     border-radius: 50%;
 }
 .center{
@@ -21,6 +21,7 @@ justify-content: center;
 
 .alert-success{
     text-align: center;
+    font-size: 1.4em;
 }
 
 h2{
@@ -32,7 +33,7 @@ h2{
 
 @media (min-width: 767px){
     img{
-        width: 30vw;
+        width: 40%;
         border-radius: 50%;
     }
 }
@@ -40,7 +41,7 @@ h2{
 
 @media (min-width: 1000px){
     img{
-        width: 20vw;
+        width: 40%;
         border-radius: 50%;
     }
 }
