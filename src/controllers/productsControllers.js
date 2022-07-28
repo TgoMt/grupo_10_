@@ -77,9 +77,6 @@ db.Product.create({
 res.redirect("/")
 },
 
-
-
-
 editar:(req,res) => {
     /* let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
@@ -144,5 +141,6 @@ delete:(req,res) => {
 		res.redirect("/")
 }
 }
+
 
 module.exports = productsControllers;
