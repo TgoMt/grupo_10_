@@ -68,7 +68,7 @@
     <div class="create-questions">
         <label for="category">Categoria</label>
         <select name="category"  class="create-questions-input">
-            
+            <option value="" disabled selected>Elegi una categoria</option>
             <% for (let i = 0; i < categories.length;i++){ %>
                 <option value="<%=categories[i].id%>"> 
                     <%=categories[i].category%>

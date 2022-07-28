@@ -9,6 +9,14 @@
     font-family: 'Quicksand', sans-serif;
     margin-top: 10px;    
 }
+.descipcion{
+    text-align: center;
+    background-color: #e08739;
+    margin: 4px 0 4px 0;
+}
+.descipcion h2{
+    margin: 0px;
+}
 
 .product-price{
     display: flex;
@@ -24,7 +32,8 @@
 .product-img{
     max-width: 50%;
     width: 30%;
-    padding: 5px 0px 0px 5px;   
+    margin: 5px 0px 0px 5px;
+    border: 4px white solid; 
 }
 .product-price h1{
     display: block;
@@ -53,7 +62,41 @@
     margin-left: 10px;
 }
 .buttons{
-    display: inline-flex;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.buttonEditDelete{
+    background-color: #BF9C53; 
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #BF9C53;
+  transition: 1s;
+}
+/* ESTE CSS TENIAN ANTES CADA BOTON */
+/* .button{
+    display: inline-block;
+   margin-top: 2px;
+   text-decoration: none;
+   background-color: #BF9C53;
+   padding: 10px;
+   border: 1px solid #BF9C53;
+   border-radius: 25px;
+   width: 20%;
+   transition: 0.5s;
+   text-align: center;
+}
+ */
+.buttonEditDelete:hover{
+    background-color: white;
+    transition: 1s;
+
 }
 
 
@@ -69,6 +112,7 @@ border-radius: 7px;
 
 .prices-description{
     font-size: large;
+    font-size: 1.1em;
 }
 
 @media (min-width: 767px) {

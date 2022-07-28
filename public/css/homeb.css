@@ -36,6 +36,8 @@ h2 {
    font-family: 'Gill Sans';
    color: #BF9C53;
    text-shadow: black 0.1em 0.1em 0.1em;
+   /* color: #746138;
+   text-shadow: gray 0.1em 0.1em 0.1em; */
    text-align: center;
    margin-top: 0;
    font-size: 40px;
@@ -69,6 +71,7 @@ h2 {
 
 .product:hover .imgProduct img {
    transform: scale(1.2);
+   
 }
 
 
@@ -95,6 +98,7 @@ h2 {
    border: 1px solid #BF9C53;
    border-radius: 25px;
    width: 100%;
+   transition: 0.5s;
 }
 
 .product .descriptiveSet .add-cart:hover {

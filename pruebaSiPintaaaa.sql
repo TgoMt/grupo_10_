@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS `siPintaDb`;
+
 CREATE DATABASE `siPintaDb`;
 USE `siPintaDb`;
 
