@@ -31,6 +31,7 @@ if(lastname.value == ""){
 }else{
     formulario.dni.focus()
 }
+
 //Valid IMAGEN( NO FUNCIONA, NO SABEMOS POR QUE )
  /* let acceptedExt = [".jpg",".jpeg",".png",".gif"]
         let fileExt = path.extname(image.value.originalname);
