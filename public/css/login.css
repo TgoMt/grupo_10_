@@ -13,9 +13,16 @@
 .logo-body {
     display: none;
 }
-
+.forgotPassword{
+    transition: 1s;
+}
+.forgotPassword:hover{
+    transition: 1s;
+    transform: scale(1.1);  
+}
 .main-login {
     background-color: #e88b39;
+    
     /* background-color: #ff973b; */
     padding-top: 10px;
     /* box-shadow: 0px 0px 10px rgb(100, 100, 100); */
@@ -50,8 +57,8 @@
     background-color: #E47718;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5em;
-    margin-top: 2px;
-    margin-bottom: 12px;
+    margin-top: 6px;
+    margin-bottom: 11px;
 }
 
 .networks{
@@ -118,6 +125,12 @@ color: white;
     padding: 2px;
     margin-left: 50px;
     
+}
+.errores{
+    color: red;
+}
+.form-register{
+    text-align: center;
 }
 
 
