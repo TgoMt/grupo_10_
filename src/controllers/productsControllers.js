@@ -86,7 +86,7 @@ editar:(req,res) => {
 		let pedidoId = db.Product.findByPk(req.params.id)
 		let Category = db.Category.findAll()
 		Promise.all([pedidoId,Category]).then(function([productToEdit,categories]){
-		res.render("./products/editar",{productToEdit:productToEdit,categories:categories,user: req.session.userLogged})
+		return res.render("./products/editar",{productToEdit:productToEdit,categories:categories,user: req.session.userLogged})
 		})
 
 },
@@ -98,7 +98,7 @@ sendEditar:(req, res) => {
 		let Category = db.Category.findAll()
 
 		Promise.all([pedidoId,Category]).then(function([productToEdit,categories]){
-		res.render("./products/editar",{errors: resultValidation.mapped(),productToEdit:productToEdit,categories:categories})
+		return res.render("./products/editar",{errors: resultValidation.mapped(),productToEdit:productToEdit,categories:categories,user: req.session.userLogged})
 		})
 	}else{
 	db.Product.update({

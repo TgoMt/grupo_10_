@@ -1,7 +1,7 @@
 window.onload = function(){
     let formulario = document.querySelector(".form-editar")
-
     formulario.addEventListener("submit",function(event){
+        event.preventDefault();
         let name = document.querySelector("#name");
         let description = document.querySelector("#description");
         let image =  document.querySelector("#file") ;
@@ -15,6 +15,11 @@ window.onload = function(){
         }else{
             formulario.description.focus()
         };
+        if(name.value=""){
+            console.log(name.value)
+        }else{
+            console.log("FUNCIONA2");
+        }
 
         if(description.value==""){
             errors.push("Debe completar la descripcion del producto")
@@ -48,8 +53,7 @@ window.onload = function(){
                 ulErrors.innerHTML += "<li>" + errors[i] + "</li>";
             };
         } else {
-            res.send("Exito")
-            form.submit();
+            formulario.submit();
         }         
     })
 
