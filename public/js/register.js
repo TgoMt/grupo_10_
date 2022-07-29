@@ -56,8 +56,8 @@ if(lastname.value == ""){
 //Valid DNI
 if(dni.value == ""){
     errors.push("Debe ingresar un dni")
-}else if (dni.value.length < 9){
-    errors.push("El minimo del" + " dni " + "es de 9 caracteres") 
+}else if (dni.value.length > 8){
+    errors.push("El minimo del" + " dni " + "es de 8 caracteres") 
 }else{
     formulario.role.focus()
 }     
