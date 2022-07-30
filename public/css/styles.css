@@ -12,8 +12,6 @@ body{
 }
 
 
-
-
 header{
     background: linear-gradient(to top, orange, #032101);
     /* background: linear-gradient(to top, #043201, #43743f);; */
@@ -136,9 +134,16 @@ color:#1d9bf0
 .networks .whatsapp:hover{
 color:#25d366
 }
-.networks .instagram:hover{
-color:linear-gradient(to top, #f09433,#e6683c,#dc2743,#cc2366,#bc1888); 
-color:#8d226b}
+
+.networks .instagram:hover{     
+    background: -moz-linear-gradient(45deg, #f09433 0%, #ff8051 25%, #e25167 50%, #cc2366 75%, #911369 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#ff8051 25%,#e25167 50%,#cc2366 75%,#83115f 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#ff8051 25%,#e25167 50%,#cc2366 75%,#771257 100%); 
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+   -webkit-text-fill-color:transparent;
+   }
 
 @media (min-width: 767px) {
     header nav ul{

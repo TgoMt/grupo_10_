@@ -29,7 +29,7 @@
                 <ul class="errores">
                 
                 </ul>
-                <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="form-editar">
+                <form action="/products/edit/<%=productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data" class="form-editar">
                     <div class="create-questions-separated">
                         <div class="create-questions">
                             <label for="name">Nombre del producto</label>
@@ -108,10 +108,10 @@
             </article>
             
         </main>
-        <footer>
+        
             <%- include("../partials/footer.ejs") %>
-        </footer>
+        
        
-        <script src="../js/editar.js"></script>
+            <script src="/js/editar.js"></script>
 </body>
 </html>

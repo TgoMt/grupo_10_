@@ -15,12 +15,6 @@ window.onload = function(){
         }else{
             formulario.description.focus()
         };
-        if(name.value=""){
-            console.log(name.value)
-        }else{
-            console.log("FUNCIONA2");
-        }
-
         if(description.value==""){
             errors.push("Debe completar la descripcion del producto")
         }else if(description.value.length < 20){

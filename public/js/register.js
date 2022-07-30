@@ -1,6 +1,7 @@
 
 window.onload = function () {
     let formulario = document.querySelector(".form")
+    alert("HOLA")
 
     formulario.addEventListener("submit", function (event) {
         event.preventDefault();
