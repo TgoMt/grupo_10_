@@ -40,10 +40,12 @@ const indexRoutes = require("./routes/indexRoutes");
 const userRoutes = require("./routes/userRoutes");
 const productsRoutes = require("./routes/productsRoutes");
 const routesApiProducts = require("./routes/api/routesApiProdcuts");
+const routesApiUsers = require("./routes/api/routesApiUsers")
 
 app.use("/users",userRoutes);
 app.use("/products",productsRoutes);
 app.use("/api",routesApiProducts);
+app.use("/api",routesApiUsers)
 app.use("/",indexRoutes);
 
 

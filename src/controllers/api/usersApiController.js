@@ -6,52 +6,52 @@ const db = require(path.join(__dirname, "../../../database/models"));
 
 module.exports = {
     list: (req, res) => {
-        db.Product.findAll()
-            .then(products => {
+        db.User.findAll()
+            .then(users => {
                 return res.status(200).json({
-                    total: products.length,
-                    data: products,
+                    total: users.length,
+                    data: users,
                     status: 200
                 });
             });
     },
     showOne: (req, res) => {
-        db.Product.findByPk(req.params.id)
-            .then(product => {
+        db.User.findByPk(req.params.id)
+            .then(user => {
                 return res.status(200).json({
-                    data: product,
+                    data: user,
                     status: 200
                 });
             });
     },
 
-    createProduct: (req, res) => {
-        db.Product.create(req.body)
-        .then(product => {
+    register: (req, res) => {
+        db.User.create(req.body)
+        .then(user => {
             return res.status(200).json({
-                data:product,
+                data:user,
                 status:200,
-                created:"Se creo"
+                created:"Se registro"
             })
         })
     },
-    deleteProduct: (req, res) => {
-        db.Product.destroy({where:{id:req.params.id}})
+    delete: (req, res) => {
+        db.User.destroy({where:{id:req.params.id}})
         .then(response => {
             return res.json(response)
         })
     },
-    searchProductByName: (req, res) => {
-        db.Product.findAll({
+    searchUserByName: (req, res) => {
+        db.User.findAll({
             where:{
                 name:{[Op.like]: "%"+req.query.keyword+"%"}
         }
     })
-    .then(products => {
-        if(products.length > 0){
-        return res.status(200).json(products)
+    .then(users => {
+        if(users.length > 0){
+        return res.status(200).json(users)
     }
-        return res.status(200).json("No se encontraron productos")
+        return res.status(200).json("No se encontraron usuarios con ese nombre")
     
     })
 
