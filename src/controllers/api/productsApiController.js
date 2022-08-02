@@ -6,13 +6,19 @@ const db = require(path.join(__dirname, "../../../database/models"));
 
 module.exports = {
     list: (req, res) => {
-        db.Product.findAll()
+        let products = db.Product.findAll()
+        let category = db.Category.findAll()
+        Promise.all([products,category]).then(function([product,categories]){
+            /* let groupCategories = categories.group((category)) */
+        return res.status(200).json({
+            total: product.length,
+            data: categories,
+            status: 200
+        });
+            })
+
             .then(products => {
-                return res.status(200).json({
-                    total: products.length,
-                    data: products,
-                    status: 200
-                });
+                return 
             });
     },
     showOne: (req, res) => {
@@ -27,9 +33,10 @@ module.exports = {
 
     createProduct: (req, res) => {
         db.Product.create(req.body)
+        db.Category.findAll()
         .then(product => {
             return res.status(200).json({
-                data:product,
+                data: product,
                 status:200,
                 created:"Se creo"
             })
