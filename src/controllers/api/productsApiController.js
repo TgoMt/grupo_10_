@@ -1,6 +1,9 @@
 const path = require("path");
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
+const groupBy = require("array.prototype.groupby")
+groupBy.shim();
+
 
 const db = require(path.join(__dirname, "../../../database/models"));
 
@@ -12,14 +15,18 @@ module.exports = {
             /* let groupCategories = categories.group((category)) */
         return res.status(200).json({
             total: product.length,
-            data: categories,
+            data: product,
+            c:categories,
             status: 200
+            
         });
             })
+//  
 
-            .then(products => {
-                return 
-            });
+
+
+
+
     },
     showOne: (req, res) => {
         db.Product.findByPk(req.params.id)
