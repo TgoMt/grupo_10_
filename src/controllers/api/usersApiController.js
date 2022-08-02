@@ -10,9 +10,14 @@ module.exports = {
             .then(users => {
                 return res.status(200).json({
                     total: users.length,
-                    data: users,
-                    status: 200,
-                    
+                    data: users.map(function (user,i,users) {
+                        return {id: users[i].id,
+                                name: users[i].name,
+                                lastname: users[i].lastname,
+                                dni: users[i].dni,
+                                email: users[i].email}
+                    }),
+                    status: 200
                 });
                 
             });
