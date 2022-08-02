@@ -10,7 +10,13 @@ module.exports = {
             .then(users => {
                 return res.status(200).json({
                     total: users.length,
-                    data: users,
+                    data: users.map(function (i, users) {
+                        return {id: users[i].id,
+                                name: users[i].name,
+                                lastname: users[i].lastname,
+                                dni: users[i].dni,
+                                email: users[i].email}
+                    }),
                     status: 200
                 });
             });
