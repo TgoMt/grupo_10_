@@ -11,9 +11,12 @@ module.exports = {
                 return res.status(200).json({
                     total: users.length,
                     data: users,
-                    status: 200
+                    status: 200,
+                    
                 });
+                
             });
+            
     },
     showOne: (req, res) => {
         db.User.findByPk(req.params.id)

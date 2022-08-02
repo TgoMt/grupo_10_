@@ -16,51 +16,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
 </head>
 
-    <body class="body">
-        <%- include("../partials/header") %>
+<body class="body">
+    <%- include("../partials/header") %>
         <main class="main-carrito">
             <section>
-                
-                <article class="product">
-                    <div class="image-carrito">
-                        <img src="/img/products/<%= product.image %>" alt="Cerveza Brahma">
-                    </div>
-                    <div class="product-description">
-                        <div class="description">
-                            <p>Nombre</p>
-                            <input type="text" name="description" id="description" value="<%= product.name %> ">
-                        </div>
-                        <div class="price">
-                            <p>Precio</p>
-                            <input type="text" name="price" id="price" value="<%= product.price %> ">
-                        </div>
-                        <div class="quantity">
-                            <p>Cantidad</p>
-                            <input type="text" name="quantity" id="quantity" value="<%= product.name %> ">
-                        </div>
-                        <div class="subtotal">
-                            <p>SubTotal</p>
-                            <input type="text" name="subtotal" id="subtotal" value="" >
-                        </div>  
-                    </div>
+                <% product.forEach(product=> { %>
 
-                    </div>
-                </article>
+                    
+                    <article class="product">
+                        <div class="image-carrito">
+                            <img src="/img/products/<%= product.image %>" alt="Cerveza Brahma">
+                        </div>
+                        <div class="product-description">
+                            <div class="description">
+                                <p>Nombre</p>
+                                <input type="text" name="description" id="description" value="<%= product.name %> ">
+                            </div>
+                            <div class="price">
+                                <p>Precio</p>
+                                <input type="text" name="price" id="price" value="<%= product.price %> ">
+                            </div>
+                            <div class="quantity">
+                                <p>Cantidad</p>
+                                <input type="number" name="quantity" id="quantity" min="1" value="1">
+                            </div>
+                            <div class="subtotal">
+                                <p>SubTotal</p>
+                                <input type="text" name="subtotal" id="subtotal" value="<%= product.price%>">
+                            </div>
+                        </div>
 
-                
+                        
+                    </article>
+                    <% }) %>
+
+                    
             </section>
-            
+
             <div class="total">
-                
+
                 <label for="total">Total</label>
                 <input type="text" name="total" id="total">
             </div>
-        
 
-    
+
+
 
         </main>
         <%- include("../partials/footer.ejs") %>
-    </body>
+</body>
 
 </html>
