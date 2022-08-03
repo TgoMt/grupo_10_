@@ -16,7 +16,7 @@ module.exports = {
                                 lastname: users[i].lastname,
                                 dni: users[i].dni,
                                 email: users[i].email,
-                               /*  image:  */
+                               imagen:"http://localhost:3333//img/users/"+users[i].image
                             }
                     }),
                     status: 200

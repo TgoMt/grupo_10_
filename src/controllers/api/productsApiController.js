@@ -1,5 +1,11 @@
+const { group } = require("console");
 const path = require("path");
-const sequelize = require("sequelize");
+const Sequelize = require('sequelize');
+
+const sequelize = new Sequelize('sipintadb', 'root', '', {
+    host: 'localhost',
+    dialect: 'mysql',
+})
 const Op = sequelize.Op;
 
 
@@ -9,19 +15,39 @@ const db = require(path.join(__dirname, "../../../database/models"));
 module.exports = {
 
     list: (req,res) => {
-        db.Product.findAll({attributes: ["categoryId",[sequelize.fn("COUNT", sequelize.col("categoryId")), "cerveza"],],group: "categoryId"})
+        db.Product.findAll().then(producto => {
+
+        
+        sequelize.query("select category,count(*) as Conteo from categories inner join products on categoryId=categories.id group by categoryId")
         .then(products => {
+        [countByCategory, metadata] = products
             return res.status(200).json({
-            products
+                total: producto.length,
+                countByCategory,
+                products: producto.map(function (parametro, i, products) {
+                    return {id: products[i].id,
+                            name: products[i].name,
+                            price: products[i].price,
+                            discount: products[i].discount,
+                            description: products[i].description,
+                           imagen:"http://localhost:3333/img/products/"+products[i].image,
+
+                           detail:"http://localhost:3333/products/productDetail/"+products[i].id
+                           
+                           
+                        }
+                }),
+                
             })
         })
-        
+    })
         
     },
 
 
 
-//(FINDALL)({attributes: ["categoryId"],group: "categoryId"})
+//(FINDALL({attributes: ["categoryId",[sequelize.fn("COUNT", sequelize.col("categoryId")), "cerveza"],],group: "categoryId"})
+
    /*  list: (req, res) => {
         let products = db.Product.findAll()//count group by  
         let category = db.Category.findAll()
