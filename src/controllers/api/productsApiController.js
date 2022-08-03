@@ -2,6 +2,8 @@ const path = require("path");
 const sequelize = require("sequelize");
 const Op = sequelize.Op;
 
+
+
 const db = require(path.join(__dirname, "../../../database/models"));
 
 module.exports = {
@@ -9,43 +11,46 @@ module.exports = {
         let products = db.Product.findAll()
         let category = db.Category.findAll()
         Promise.all([products,category]).then(function([product,categories]){
-           /*  var cervezas = []
-            var licores = []
-            var bebidasBlancas = []
-            var aperitivos = [] */
             return res.status(200).json({
+                
                 total: products.length,
-                countCategory: /* categories.map(function (parametro, a, categoriesMap) { */
-            product.map(function (parametro, i, productMap){
-                productMap[i].groupBy(categoryId)
-            /* if (productMap[i].categoryId === categoriesMap[a].id){
-             productMap[i].name
-            } */ /* else if (productMap[i].categoryId  === 2){
-             licores.push(productMap[i])
-            }else if (productMap[i].categoryId  === 3){
-             bebidasBlancas.push(productMap[i])
-            }else if (productMap[i].categoryId === 4){
-             aperitivos.push(productMap[i])
-            } */
-          /*   }) */
-             }),
-             
-            /* var categoriesGroup = {
-                cervezas: cervezas,
-                licores: licores,
-                bebidasBlancas: bebidasBlancas,
-                aperitivos: aperitivos
-               } */
+                countCategory: 
+               /*   categories.map(function (parametro, i, categoriesMap){
+            for (let a = 0; a <= product.length; a++){
+                if (product[a].categoryId === categoriesMap[i].id) 
+                    {
+                        return{
+                    categoriesP : product[a] 
+                        }
+                } 
+            } 
         
+        }) */
+        product.map(function (parametro, i, productMap){
+            for (let a = 0; a <= categories.length; a++){
+                if (productMap[i].categoryId === categories[a].id) 
+                    {
+                        let categorias = {categories : product[i] }
+
+                        return{
+                    categoriesP : product[i] 
+                        }
+                } 
+            } 
+        
+        }),
              
-            status: 200
-        });
-            })
+    
+             
+            status: 200 
+            
+                
+                })
+        })
+         
           
             
-           /*  .then(products => {
-                return 
-            }); */
+           
     },
     showOne: (req, res) => {
         db.Product.findByPk(req.params.id)
