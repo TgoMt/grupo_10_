@@ -9,7 +9,7 @@ const db = require(path.join(__dirname, "../../../database/models"));
 module.exports = {
 
     list: (req,res) => {
-        db.Product.findAll({attributes: ["categoryId"],group: "categoryId"})
+        db.Product.findAll({attributes: ["categoryId",[sequelize.fn("COUNT", sequelize.col("categoryId")), "cerveza"],],group: "categoryId"})
         .then(products => {
             return res.status(200).json({
             products
@@ -21,8 +21,7 @@ module.exports = {
 
 
 
-//(FINDALL({attributes: ["categoryId",[sequelize.fn("COUNT", sequelize.col("categoryId")), "cerveza"],],group: "categoryId"}))
-
+//(FINDALL)({attributes: ["categoryId"],group: "categoryId"})
    /*  list: (req, res) => {
         let products = db.Product.findAll()//count group by  
         let category = db.Category.findAll()
