@@ -33,43 +33,13 @@ module.exports = {
                            imagen:"http://localhost:3333/img/products/"+products[i].image,
 
                            detail:"http://localhost:3333/products/productDetail/"+products[i].id
-                           
-                           
                         }
-                }),
-                
+                    }),
+                })
             })
         })
-    })
-        
     },
 
-
-
-//(FINDALL({attributes: ["categoryId",[sequelize.fn("COUNT", sequelize.col("categoryId")), "cerveza"],],group: "categoryId"})
-
-   /*  list: (req, res) => {
-        let products = db.Product.findAll()//count group by  
-        let category = db.Category.findAll()
-        Promise.all([products, category]).then(function ([product, categories]) {
-            return res.status(200).json({
-
-                total: products.length,
-                countCategory:
-                    categories.map(function (parametro, a, categoriesMap) {
-                        return product.map(function (parametro, i, productMap) {
-                            if (productMap[i].categoryId === categoriesMap[a].id) {
-                                return productMap[i].name
-                            } else {
-                                return {}//no sabemos como hacer para que no aparezca nada
-                            }
-                        })
-                    }),
-                status: 200
-                
-            });
-        })
-    }, */
     showOne: (req, res) => {
         db.Product.findByPk(req.params.id)
             .then(product => {
