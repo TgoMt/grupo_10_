@@ -47,6 +47,8 @@ app.use("/products",productsRoutes);
 app.use("/api",routesApiProducts);
 app.use("/api",routesApiUsers)
 app.use("/",indexRoutes);
-
+app.use((req, res, next)=>{
+    res.status(404).render("error404")
+})
 
 
