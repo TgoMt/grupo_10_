@@ -1,0 +1,67 @@
+.image {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.gif {
+    border-radius: 100%;
+}
+
+.error {
+    width: 400px;
+    margin: auto;
+}
+
+body {
+    margin: 0;
+    background-image: url('../img/background.jpg');
+    background-size: cover;
+}
+
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+h5 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-bottom: 4px;
+}
+
+.button {
+    text-align: center;
+}
+
+button {
+    border-radius: 7px;
+    border: none;
+    width: 80x;
+    height: 30px;
+    background-color: #007E88;
+    color: white;
+    padding: 5px 16px;
+    font-weight: bold;
+}
+
+.arrow {
+    transform: rotate(-10deg);
+}
+
+@media (min-width: 768px){
+h1{
+    font-size: 28px;
+}
+button{
+    transition: all 0.5s;
+}
+
+button:hover{
+    transform: scale(1.2);
+}
+}
