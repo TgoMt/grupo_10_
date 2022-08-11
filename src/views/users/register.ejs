@@ -53,7 +53,7 @@
               <form action="/users/registrado" method="POST" class="form" enctype="multipart/form-data">
                 <div class="questions">
                   <label for="name">Nombre</label>
-                  <input class="input-create" type="text" name="name" id="name" />
+                  <input class="input-create" type="text" name="name" id="name" value="<%= locals.oldData ? oldData.name : null %>" >
                 </div>
 
                 <% if (locals.errors && errors.name) { %>
@@ -64,7 +64,7 @@
 
                     <div class="questions">
                       <label for="lastname">Apellido</label>
-                      <input class="input-create" type="text" name="lastname" id="lastname" />
+                      <input class="input-create" type="text" name="lastname" id="lastname" value="<%= locals.oldData ? oldData.lastname : null %>">
                     </div>
                     <% if (locals.errors && errors.lastname) { %>
                       <div class="text-errors">
@@ -74,7 +74,7 @@
 
                         <div class="questions">
                           <label for="file">Imagen</label>
-                          <input type="file" id="file" name="file-image-user" class="input-create" />
+                          <input type="file" id="file" name="file-image-user" class="input-create" value="<%= locals.oldData ? oldData.file : null %>">
                         </div>
                         <% if (locals.errors && errors.image) { %>
                           <div class="text-errors">
@@ -83,7 +83,7 @@
                           <% } %>
                         <div class="questions">
                           <label for="email">Correo Electronico</label>
-                          <input class="input-create" type="email" name="email" id="email" />
+                          <input class="input-create" type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>">
                         </div>
                         <% if (locals.errors && errors.email) { %>
                           <div class="text-errors">
@@ -92,8 +92,7 @@
                           <% } %>
                             <div class="questions">
                               <label for="dni">D.N.I</label>
-                              <input class="input-create" type="number" name="dni" id="dni" minlength="8"
-                                maxlength="9" />
+                              <input class="input-create" type="number" name="dni" id="dni" value="<%= locals.oldData ? oldData.dni : null %>" >
                             </div>
                             <% if (locals.errors && errors.dni) { %>
                               <div class="text-errors">
@@ -102,7 +101,7 @@
                               <% } %>
                                 <div class="questions">
                                   <label for="role">Rol</label>
-                                  <select class="input-create" type="text" name="role" id="role">
+                                  <select class="input-create" type="text" name="role" id="role" value="<%= locals.oldData ? oldData.role : null %>">
                                     <option value="" disabled selected>Elegi una categoria</option>
                                     <% for (let i = 0; i < roles.length;i++){ %>
                                       
@@ -119,7 +118,7 @@
                                   <% } %>
                                     <div class="questions">
                                       <label for="password">Contraseña</label>
-                                      <input class="input-create" type="password" name="password" id="password" />
+                                      <input class="input-create" type="password" name="password" id="password" >
                                     </div>
                                     <% if (locals.errors && errors.password) { %>
                                       <div class="text-errors">

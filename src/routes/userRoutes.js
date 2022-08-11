@@ -24,7 +24,7 @@ const validateRegister = [
 body("name").notEmpty().withMessage("Debe completar el nombre").bail().isLength({min:2}).withMessage("El minimo es de 2 caracteres"),
 body("lastname").notEmpty().withMessage("Debe completar el apellido"),/* .bail().isLength({max:20}).withMessage("El maximo es de 20 caracteres"), */
 body("email").notEmpty().withMessage("Debe completar el email").isEmail().withMessage("Debe ser un formato de email valido"),/* .bail().isLength({max:70}).withMessage("El maximo es de 70 caracteres"), */
-body("dni").notEmpty()/* .isNumeric() */.withMessage("Debe completar el dni"),/* .bail().isLength({max:8}).withMessage("El maximo es de 8 caracteres"), */
+body("dni").notEmpty()/* .isNumeric() */.withMessage("Debe completar el dni").bail().isLength({max:8}).withMessage("El maximo es de 8 caracteres"),
 /* body("password").notEmpty().withMessage("Debe completar la contraseña").bail().isLength({min:8}).withMessage("El minimo de caracteres es de 8"), */
 body("password").notEmpty().withMessage("Debe completar con una contraseña").bail().isLength({ min: 8 }).withMessage("La contraseña debe ser mayor de 8 caracteres").bail()
 .matches(

@@ -31,7 +31,7 @@ const userControllers = {
                         email: {
                             msg: 'Este email ya está registrado'
                         }
-                    },roles:roles
+                    },roles:roles,oldData:req.body
                     
                 });
             }
@@ -39,7 +39,7 @@ const userControllers = {
             
     
             if (resultValidation.errors.length > 0) {
-                return res.render("./users/register", { errors: resultValidation.mapped(), roles:roles }); 
+                return res.render("./users/register", { errors: resultValidation.mapped(), roles:roles, oldData:req.body}); 
             }
         //Encriptar contraseña
         let pass = bcrypt.hashSync(req.body.password, 10)
@@ -109,11 +109,11 @@ const userControllers = {
                 }
             });
         });
-     /*    req.session.userLogged = userToLogin;
+        req.session.userLogged = userToLogin;
 
         if (req.body.rememberMe !== undefined) {
             res.cookie("rememberMe", userToLogin.email, {maxAge: 1000 * 60 })
-        } */
+        }
         
         
     },
