@@ -97,7 +97,7 @@ const userControllers = {
                         email: {
                             msg: 'Las credenciales son inválidas'
                         }
-                    }
+                    }, oldData:req.body
                 });
             }
     
@@ -109,12 +109,12 @@ const userControllers = {
                 }
             });
         });
-        req.session.userLogged = userToLogin;
+        /* req.session.userLogged = userToLogin; */
 
-        if (req.body.rememberMe !== undefined) {
+        /* if (req.body.rememberMe !== undefined) {
             res.cookie("rememberMe", userToLogin.email, {maxAge: 1000 * 60 })
         }
-        
+         */
         
     },
 
