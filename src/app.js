@@ -54,11 +54,11 @@ app.use((req, res, next)=>{
 
 
 
-//Header
+
 
 
 //Product Detail Precio por mayor
 //boton product detail --> carrito
 //css React 
 
-//recordar formularios
+

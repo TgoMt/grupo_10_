@@ -1,45 +1,54 @@
 <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
-<header>
-    <div class="header-full">
-        <img class="logo" src="/img/logo_duende.png" alt="logo SiPintaPinta">
-        <nav class="header-links">
-            <% if (locals.isLogged){ %>
-                
-                <ul>
-                    <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>
-                </ul>
-                <ul>
-                    <li><a href="/users/profile">Perfil</a><i class="fas fa-id-badge"></i></li>
-                    <li><a href="/users/logout">Logout</a><i class="fas fa-sign-out"></i></li>
-                    <li><a href="/products/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
-                </ul>
-                
-                <% if(locals.isLogged==true && locals.user.roleId===1){ %>
-                <ul>
-                    <li><a href="/products/crear">Crear</a><i class="fas fa-plus"></i></li>
-                </ul>
-                
-                <% } %>
-                
-                <% } else { %>
-                    <link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">  
+<link href="/css/headerNuevo.css" rel="stylesheet" />
+<header class="headerraro">
     
-                    <ul>
-                        <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>
-                    </ul>
-                    <ul>
-                    <li><a href="/users/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
-                    <li><a href="/users/register">Registrarse</a><i class="fas fa-registered"></i></li>
-                    </ul>
+
+
+    <div class="allHeader">
+        
+        <div class="homeT">
+            <ul>
+            
+                <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>
+                
+              </ul>
+    </div>
+        <div class="logoT">
+            <img class="logo" src="/img/logo_duende.png" alt="logo SiPintaPinta">
+        </div>
+        <div class="finderbar">
+            <form class="seeker" action="/search" method="POST">
+                <input type="text" name="seeker" placeholder="Buscar productos, marcas" class="search">
+                <button class="lupa" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+        <% if (locals.isLogged){ %>
+        <div class="logueados">
+            <ul>
+                <li><a href="/users/profile">Perfil</a><i class="fas fa-id-badge"></i></li>
+                <li><a href="/users/logout">Logout</a><i class="fas fa-sign-out"></i></li>
+                <li><a href="/products/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
+                <% if(locals.isLogged==true && locals.user.roleId===1){ %>
+                    
+                        <li><a href="/products/crear">Crear</a><i class="fas fa-plus"></i></li>
+                    
                     
                     <% } %>
-                    
-        </nav>
+            </ul>
+        
+            
+        </div>
+        <% } else { %>
+        
+    
+        <div class="nologueados"><ul>
+            <li><a href="/users/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
+            <li><a href="/users/register">Registrarse</a><i class="fas fa-registered"></i></li>
+            </ul></div>
     </div>
-    <div class="finder-bar">
-        <form class="seeker" action="/search" method="POST">
-            <input type="text" name="seeker" placeholder="Buscar productos, marcas" class="search">
-            <button class="lupa" type="submit"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
+    <% } %>
+   
+
+
+
 </header>

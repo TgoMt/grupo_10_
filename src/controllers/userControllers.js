@@ -109,12 +109,6 @@ const userControllers = {
                 }
             });
         });
-        req.session.userLogged = userToLogin;
-
-        if (req.body.rememberMe !== undefined) {
-            res.cookie("rememberMe", userToLogin.email, {maxAge: 1000 * 60 })
-        }
-        
         
     },
 
