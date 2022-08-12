@@ -1,0 +1,157 @@
+.headerraro {
+  height: 50%;
+}
+
+.allHeader {
+  display: flex;
+  background: linear-gradient(to top, orange, #032101);
+
+  max-height: 150px;
+  justify-content: space-evenly;
+}   
+.allHeader a {
+  text-decoration: none;
+  color: black;
+}
+.allHeader ul {
+  text-decoration: none;
+  list-style: none;
+  padding-inline-start: 0px;
+}
+.homeT {
+  width: 40%;
+
+  text-align: center;
+}
+.homeT li {
+  padding-top: 60px;
+  font-size: 1.2em;
+}
+.logoT {
+  width: 60%;
+  justify-content: center;
+  text-align: center;
+}
+.logoT .logo {
+  height: 100%;
+  width: 200px;
+  transition: all 1s;
+}
+
+.logoT .logo:hover{
+  -webkit-transform: rotateY(180deg);
+-webkit-transform-style: preserve-3d;
+transform: rotateY(180deg);
+transform-style: preserve-3d;
+}
+.finderbar {
+ display: none;
+}
+.logueados {
+  width: 40%;
+  
+}
+.logueados ul {
+  padding-top: 30px;
+  font-size: 1.2em;
+}
+.nologueados {
+  width: 40%;
+}
+
+.nologueados ul {
+  padding-top: 40px;
+  font-size: 1em;
+  margin-right: 10px;
+}
+@media (min-width: 760px) {
+  .logoT .logo {
+    width: 200px;
+    height: 100%;
+  }
+
+  .homeT li {
+    padding-top: 60px;
+    font-size: 1.5em;
+  }
+  .logueados {
+    width: 40%;
+   
+  }
+  .logueados ul {
+    padding-top: 30px;
+    font-size: 1.5em;
+  }
+  .nologueados {
+    width: 40%;
+
+  }
+
+  .nologueados ul {
+    padding-top: 45px;
+    font-size: 1.5em;
+  }
+
+ 
+  
+
+  @media (min-width: 1024px) {
+    .finderbar {
+      display: flex;
+      padding: 10px;
+      border: white;
+      outline: none;
+      border-radius: 7px;
+    }
+
+    .seeker{
+      background-color: white;
+      border-radius: 8px;
+      height: 35px;
+      width: 75%;
+  }
+  
+  .lupa{
+      background-color: white;
+      border: none;
+      transition: 0.5s;
+  }
+  .lupa:hover{
+      transform: scale(1.2);
+      background-color: transparent;
+  
+  }
+  /* Lupa ICONO*/
+  .fa-search{
+      display: flex;
+      flex-wrap: wrap;
+      padding-right: 6px;
+  }
+  .logoT{
+    width: 60%;
+  }
+
+  .nologueados{
+    width: 30%;
+  }
+
+  .logueados{
+    width: 30%;
+  }
+
+  .finderbar{
+    width: 50%;
+    padding-top: 80px ;
+  }
+  .search{
+    width: 80%;
+    padding: 10px;
+    border: white;
+    outline: none;
+    border-radius: 7px;
+}
+
+
+
+  }
+}
