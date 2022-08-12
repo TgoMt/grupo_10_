@@ -97,7 +97,7 @@ const userControllers = {
                         email: {
                             msg: 'Las credenciales son inválidas'
                         }
-                    }
+                    }, oldData:req.body
                 });
             }
     
@@ -109,6 +109,7 @@ const userControllers = {
                 }
             });
         });
+
         
     },
 

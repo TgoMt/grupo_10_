@@ -42,7 +42,7 @@
                     <div class="login-form">
                         <div class="log">
                             <label for="email">Correo Electronico</label><br>
-                            <input class="input-size" type="email" name="email" id="email"><br>
+                            <input class="input-size" type="email" name="email" id="email" value="<%= locals.oldData ? oldData.email : null %>"><br>
 
                             <% if (locals.errors && errors.email) { %>
                                 <div class="text-errors"><%= errors.email.msg %></div>
