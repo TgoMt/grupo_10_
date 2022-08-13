@@ -2,15 +2,11 @@
 <link href="/css/headerNuevo.css" rel="stylesheet" />
 
 <header class="headerraro">
-    
 
     <div class="allHeader">
-        
         <div class="homeT">
             <ul>
-            
                 <li><a href="/">Inicio</a><i class="fas fa-house-user"></i></li>
-                
               </ul>
     </div>
         <div class="logoT">
@@ -29,26 +25,15 @@
                 <li><a href="/users/logout">Logout</a><i class="fas fa-sign-out"></i></li>
                 <li><a href="/products/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
                 <% if(locals.isLogged==true && locals.user.roleId===1){ %>
-                    
                         <li><a href="/products/crear">Crear</a><i class="fas fa-plus"></i></li>
-                    
-                    
                     <% } %>
             </ul>
-        
-            
         </div>
         <% } else { %>
-        
-    
         <div class="nologueados"><ul>
             <li><a href="/users/login">Loguearse</a><i class="fas fa-sign-in-alt"></i></li>
             <li><a href="/users/register">Registrarse</a><i class="fas fa-registered"></i></li>
             </ul></div>
     </div>
     <% } %>
-   
-
-
-
 </header>
