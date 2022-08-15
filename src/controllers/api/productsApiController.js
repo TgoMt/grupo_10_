@@ -12,6 +12,9 @@ const Op = sequelize.Op;
 
 const db = require(path.join(__dirname, "../../../database/models"));
 
+
+
+
 module.exports = {
 
     list: (req,res) => {
