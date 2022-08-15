@@ -33,7 +33,7 @@ const indexControllers = {
     let search ="%" + req.body.seeker + "%"
        db.Product.findAll({where:{name:{[Op.like]:search}}})
        .then(function(product){
-        return res.render("index",{product:product})
+        return res.render("index",{product:product,user: req.session.userLogged})
        }) 
         
     }
