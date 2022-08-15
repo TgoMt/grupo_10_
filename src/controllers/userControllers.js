@@ -54,9 +54,17 @@ const userControllers = {
             email: req.body.email,
             roleId: req.body.role,
             password: pass,
-            passwordConfirm: bcrypt.compareSync(req.body.passwordConfirm, pass),
+            passwordConfirm:  bcrypt.compareSync(req.body.passwordConfirm, pass),
         });
-        res.redirect("/")
+        let passwordConfirm = bcrypt.compareSync(req.body.passwordConfirm, pass)
+        if(passwordConfirm){
+            res.redirect("/")
+        } else{
+            return res.render("./users/register", { errors:{ password: {
+                msg: 'Los contraseñas nos son iguales'
+            }
+        }, roles:roles, oldData:req.body})
+        }
         })
         
         
