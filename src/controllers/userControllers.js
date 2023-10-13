@@ -20,7 +20,6 @@ const userControllers = {
         
     },
     sendRegister: (req, res) => {
-        /* let userInDB = User.findByField('email', req.body.email); */
         let roles = db.Role.findAll();
         let usersInDB = db.User.findOne({where:{email:req.body.email}})
         Promise.all([roles,usersInDB])
@@ -66,13 +65,6 @@ const userControllers = {
         }, roles:roles, oldData:req.body})
         }
         })
-        
-        
-
-        
-        /* users.push(newUser);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, " "));
-        res.redirect("/") */
 
     },
     sendToRegister: (req, res) => {

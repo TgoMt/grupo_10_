@@ -1,3 +1,6 @@
+
+//PARA CORRER PROGRAMA node src/app.js
+
 //session
 const session = require("express-session");
 //express
@@ -8,7 +11,7 @@ const path = require("path");
 
 const methodOverride = require('method-override');
 const cookieParser = require('cookie-parser');
-const rememberMeMiddleware = require ("./middlewares/rememberMeMiddleware");
+const rememberMeMiddleware = require ("./middlewares/rememberMeMiddleware"); //por que no lo estoy ocupando????
 
 app.use(express.static("./public"));
 app.use(methodOverride('_method'));
@@ -40,7 +43,7 @@ const indexRoutes = require("./routes/indexRoutes");
 const userRoutes = require("./routes/userRoutes");
 const productsRoutes = require("./routes/productsRoutes");
 const routesApiProducts = require("./routes/api/routesApiProdcuts");
-const routesApiUsers = require("./routes/api/routesApiUsers")
+const routesApiUsers = require("./routes/api/routesApiUsers");
 
 app.use("/users",userRoutes);
 app.use("/products",productsRoutes);
@@ -48,7 +51,7 @@ app.use("/api",routesApiProducts);
 app.use("/api",routesApiUsers)
 app.use("/",indexRoutes);
 app.use((req, res, next)=>{
-    res.status(404).render("error404")
+    res.status(404).render("Error404")
 })
 
 

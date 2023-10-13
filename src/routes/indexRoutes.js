@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 
-const indexControllers = require("../controllers/indexControllers.js")
+const indexControllers = require("../controllers/indexControllers.js");
 const rememberMeMiddleware = require('../middlewares/rememberMeMiddleware');
 
 router.get("/", indexControllers.index)

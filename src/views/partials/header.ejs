@@ -18,15 +18,19 @@
                 <button class="lupa" type="submit"><i class="fa fa-search"></i></button>
             </form>
         </div>
+      
         <% if (locals.isLogged){ %>
         <div class="logueados">
             <ul>
                 <li><a href="/users/profile">Perfil</a><i class="fas fa-id-badge"></i></li>
                 <li><a href="/users/logout">Logout</a><i class="fas fa-sign-out"></i></li>
                 <li><a href="/products/productCart">Carrito</a><i class="fas fa-shopping-cart"></i></li>
+                <!-- PARA VER EL CARRITO TENGO QUE COMENTAR LINEA 29 Y 32 -->
                 <% if(locals.isLogged==true && locals.user.roleId===1){ %>
+                    
                         <li><a href="/products/crear">Crear</a><i class="fas fa-plus"></i></li>
                     <% } %>
+                    
             </ul>
         </div>
         <% } else { %>

@@ -2,8 +2,7 @@ const path = require("path");
 const fs = require('fs');
 const { validationResult } = require("express-validator");
 
-/* const productsFilePath = path.join(__dirname, '../data/products/productsDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8')); */
+
 
 const db = require(path.join(__dirname, '../../database/models'));
 
@@ -24,8 +23,8 @@ productDetail:(req, res)=> {
 	.then(function(product){
 		return res.render("./products/productDetail",{product:product,user: req.session.userLogged})
 	})
-	let user = req.session
-	console.log(user)
+	/* let user = req.session
+	console.log(user) */
 
 	
     /* let product = products.find(product => product.id == id)

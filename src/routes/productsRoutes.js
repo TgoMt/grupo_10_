@@ -37,9 +37,6 @@ const validateCreateAndEdit = [
         return true;
     }),   
 ]
-
-
-
 const productsControllers = require("../controllers/productsControllers.js");
 
 
